@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2018, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<device name="Android">
+    <!-- Number of cores each CPU cluster contains -->
+    <array name="cpu.clusters.cores">
+      <value>4</value> <!-- Cluster 0 has 4 cores (cpu0, cpu1, cpu2, cpu3) -->
+      <value>2</value> <!-- Cluster 1 has 2 cores (cpu4, cpu5) -->
+      <value>2</value> <!-- Cluster 2 has 2 cores (cpu6, cpu7) -->
+    </array>
+
+    <item name="cpu.suspend">4.35</item>
+    <item name="cpu.idle">5.78</item>
+    <item name="cpu.active">2.35</item>
+    <item name="cpu.cluster_power.cluster0">32.58</item>
+    <item name="cpu.cluster_power.cluster1">6.44</item>
+    <item name="cpu.cluster_power.cluster2">0</item>
+
+    <array name="cpu.core_speeds.cluster0">
+      <value>300000</value>
+      <value>574000</value>
+      <value>738000</value>
+      <value>889000</value>
+      <value>1098000</value>
+      <value>1197000</value>
+      <value>1328000</value>
+      <value>1459000</value>
+      <value>1598000</value>
+      <value>1745000</value>
+      <value>1868000</value>
+    </array>
+
+    <array name="cpu.core_speeds.cluster1">
+      <value>400000</value>
+      <value>553000</value>
+      <value>696000</value>
+      <value>799000</value>
+      <value>910000</value>
+      <value>1024000</value>
+      <value>1197000</value>
+      <value>1328000</value>
+      <value>1491000</value>
+      <value>1663000</value>
+      <value>1836000</value>
+      <value>1999000</value>
+      <value>2130000</value>
+      <value>2253000</value>
+    </array>
+
+    <array name="cpu.core_speeds.cluster2">
+      <value>500000</value>
+      <value>848000</value>
+      <value>984000</value>
+      <value>1106000</value>
+      <value>1237000</value>
+      <value>1426000</value>
+      <value>1582000</value>
+      <value>1745000</value>
+      <value>1901000</value>
+      <value>2048000</value>
+      <value>2188000</value>
+      <value>2302000</value>
+      <value>2401000</value>
+      <value>2507000</value>
+      <value>2630000</value>
+    </array>
+
+    <array name="cpu.core_power.cluster0">
+      <value>13.58</value>
+      <value>38.22</value>
+      <value>48.59</value>
+      <value>64.02</value>
+      <value>79.69</value>
+      <value>89.66</value>
+      <value>105.64</value>
+      <value>113.30</value>
+      <value>142.24</value>
+      <value>158.91</value>
+      <value>180.73</value>
+    </array>
+
+    <array name="cpu.core_power.cluster1">
+      <value>59.00</value>
+      <value>87.69</value>
+      <value>114.54</value>
+      <value>134.19</value>
+      <value>157.72</value>
+      <value>184.69</value>
+      <value>229.99</value>
+      <value>264.08</value>
+      <value>316.56</value>
+      <value>375.74</value>
+      <value>450.94</value>
+      <value>529.79</value>
+      <value>603.34</value>
+      <value>684.48</value>
+    </array>
+
+    <array name="cpu.core_power.cluster2">
+      <value>199.11</value>
+      <value>332.32</value>
+      <value>389.40</value>
+      <value>452.85</value>
+      <value>547.22</value>
+      <value>629.93</value>
+      <value>735.84</value>
+      <value>861.23</value>
+      <value>946.15</value>
+      <value>1137.98</value>
+      <value>1318.48</value>
+      <value>1396.56</value>
+      <value>1583.05</value>
+      <value>1811.61</value>
+      <value>2050.00</value>
+    </array>
+
+    <!-- Additional power used when screen is ambient mode -->
+    <item name="ambient.on">32</item>
+
+    <!-- Additional power used when screen is turned on at minimum brightness -->
+    <item name="screen.on">98</item>
+    <!-- Additional power used when screen is at maximum brightness, compared to
+         screen at minimum brightness -->
+    <item name="screen.full">470</item>
+
+    <!-- Average power used by the camera flash module when on -->
+    <item name="camera.flashlight">240.47</item>
+    <!-- Average power use by the camera subsystem for a typical camera
+         application. Intended as a rough estimate for an application running a
+         preview and capturing approximately 10 full-resolution pictures per
+         minute. -->
+    <item name="camera.avg">900</item>
+
+    <!-- Additional power used when video is playing -->
+    <item name="video">25</item>
+    <!-- Additional power used when audio is playing -->
+    <item name="audio">75</item>
+
+    <!-- Cellular modem related values.-->
+    <item name="modem.controller.sleep">1</item>
+    <item name="modem.controller.idle">289</item>
+    <item name="modem.controller.rx">221</item>
+    <array name="modem.controller.tx"> <!-- Strength 0 to 4 -->
+        <value>233</value>
+        <value>323</value>
+        <value>445</value>
+        <value>547</value>
+        <value>718</value>
+    </array>
+    <item name="modem.controller.voltage">3700</item>
+</device>
+

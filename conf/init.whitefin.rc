@@ -1,0 +1,21 @@
+# Whitefin specific init.rc
+import /vendor/etc/init/hw/init.gs101.rc
+
+on init && property:ro.build.flavor=factory_whitefin-userdebug
+    import /vendor/etc/init/hw/init.factory.rc
+
+on early-boot
+    # Wait for insmod_sh to finish all common modules
+    wait_for_prop vendor.common.modules.ready 1
+    start insmod_sh_whitefin
+
+service insmod_sh_whitefin /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.whitefin.cfg
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on fs
+    # Fingerprint
+    chown system system /dev/goodix_fp
