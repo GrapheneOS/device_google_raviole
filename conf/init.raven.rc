@@ -1,0 +1,33 @@
+# Raven specific init.rc
+import /vendor/etc/init/hw/init.gs101.rc
+
+on init && property:ro.build.flavor=factory_raven-userdebug
+    import /vendor/etc/init/hw/init.factory.rc
+
+on init
+    # logbuffer
+    chown system system /dev/logbuffer_5-0057
+    # register/nvmem dump
+    chown system system /d/regmap/6-0036/registers
+    chown system system /sys/bus/nvmem/devices/5-00500/nvmem
+
+on early-boot
+    # Wait for insmod_sh to finish all common modules
+    wait_for_prop vendor.common.modules.ready 1
+    start insmod_sh_raven
+
+service insmod_sh_raven /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.raven.cfg
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on fs
+    # Fingerprint
+    chown system system /dev/goodix_fp
+    exec_background /vendor/bin/trusty_apploader /vendor/firmware/g6.app
+
+on property:mfgapi.touchpanel.permission=1
+    chmod 0600 /sys/devices/virtual/sec/tsp/cmd
+    chown system system /sys/devices/virtual/sec/tsp/cmd
