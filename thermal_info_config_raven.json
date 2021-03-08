@@ -300,16 +300,16 @@
             "Type":"UNKNOWN",
             "VirtualSensor":true,
             "Formula":"COUNT_THRESHOLD",
-            "TriggerSensor": "smpl_gm",
+            "TriggerSensor": "vdroop1",
             "Combination":[
                 "battery",
                 "battery_cycle",
-                "smpl_gm"
+                "vdroop1"
             ],
             "Coefficient":[
                 "-10000",
                 "400",
-                "1400"
+                "1200"
             ],
             "HotThreshold":[
                 "NAN",
@@ -340,6 +340,38 @@
             "VrThreshold":"NAN",
             "Multiplier":1,
             "Monitor":false
+        },
+        {
+            "Name":"vdroop1",
+            "Type":"BCL_VOLTAGE",
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                1200,
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":1,
+            "Monitor":true
+        },
+        {
+            "Name":"vdroop2",
+            "Type":"BCL_VOLTAGE",
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                1200,
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"smpl_gm",
