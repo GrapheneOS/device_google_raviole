@@ -124,9 +124,13 @@
         <usecase id="UC_COMPRESSED_OFFLOAD_PLAYBACK" dev1="6" dyn_path="true" dsp_vol="true" mmap="false" period="131072" period_num="4" pre_proc_id="14"/>
         <!-- dev1: audio dev2: haptic -->
         <usecase id="UC_HAPTIC_AUDIO" dev1="2" dev2="7" period="10" period_num="4"/>
+        <!-- for VOIP output, 4 * 10ms buffer -->
+        <usecase id="UC_VOIP_PLAYBACK" dev1="16" dyn_path="true" dsp_vol="true" mmap="false" period="10" period_num="4"/>
         <!-- for input -->
         <usecase id="UC_AUDIO_RECORD" dev1="8" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
         <usecase id="UC_HOSTLESS_UL" dev1="15"/>
+        <!-- for VOIP input, 4 * 10ms buffer -->
+        <usecase id="UC_VOIP_RECORD" dev1="17" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
     </usecase_attr>
 
     <dsp_latency>
@@ -178,6 +182,10 @@
         <item component="TUNING_COMPONENT_FORTEMEDIA" id="3"/>
         <item component="TUNING_COMPONENT_CAMCORDER" id="6"/>
     </xlate_id>
+
+    <voip_db_mapping>
+        <voip_path id="VOIP_RX_USB" value="0.01,0.02,0.04,0.1,0.21,0.47,1.0"/>
+    </voip_db_mapping>
 
     <device_handle>
         <hadnler libname="audio_bt_aoc.so"/>
