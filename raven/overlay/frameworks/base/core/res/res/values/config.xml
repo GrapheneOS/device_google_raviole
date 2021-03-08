@@ -61,6 +61,12 @@
       <item>142</item>  <!-- sensorRadius -->
     </integer-array>
 
+    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">com.google.sensor.long_press</string>
+
+    <!-- Type of the quick pickup sensor. Empty if quick pickup is not supported. -->
+    <string name="config_quickPickupSensorType" translatable="false">com.google.sensor.quick_pickup</string>
+
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
