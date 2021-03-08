@@ -26,7 +26,7 @@ service insmod_sh_raven /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.raven
 on fs
     # Fingerprint
     chown system system /dev/goodix_fp
-    exec_background /vendor/bin/trusty_apploader /vendor/firmware/g6.app
+    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
 
 on property:mfgapi.touchpanel.permission=1
     chmod 0600 /sys/devices/virtual/sec/tsp/cmd
