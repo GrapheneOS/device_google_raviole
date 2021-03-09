@@ -26,4 +26,4 @@ service insmod_sh_oriole /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.orio
 on fs
     # Fingerprint
     chown system system /dev/goodix_fp
-    exec_background /vendor/bin/trusty_apploader /vendor/firmware/g6.app
+    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
