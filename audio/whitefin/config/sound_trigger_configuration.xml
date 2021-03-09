@@ -28,5 +28,6 @@
     <supported_model>
         <model name="CLIENT_HOTWORD" uuid="7038ddc8-30f2-11e6-b0ac-40a8f03d3f15" model_type="keyphrase" bargein="true"/>
         <model name="CLIENT_AMBIENT_MUSIC" uuid="9f6ad62a-1f0b-11e7-87c5-40a8f03d3f15" model_type="generic" bargein="false"/>
+        <model name="CLIENT_AMBIENT_MUSIC_BREAK" uuid="12caddb1-acdb-4dce-8cb0-2e95a2313aee" model_type="generic" bargein="false"/>
     </supported_model>
 </sound_trigger_hal_configuration>
