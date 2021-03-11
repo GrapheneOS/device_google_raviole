@@ -78,3 +78,6 @@ PRODUCT_COPY_FILES += \
 	device/google/gs101/tts/it-it/it-it-x-kda-r21.zvoice:product/tts/google/it-it/it-it-x-kda-r21.zvoice\
 	device/google/gs101/tts/es-es/es-es-x-ana-r22.zvoice:product/tts/google/es-es/es-es-x-ana-r22.zvoice\
 	device/google/gs101/tts/es-es/es-es-x-multi-r22.zvoice:product/tts/google/es-es/es-es-x-multi-r22.zvoice
+
+# Keyboard bottom padding in dp for portrait mode
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_b=10
