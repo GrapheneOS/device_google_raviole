@@ -19,7 +19,6 @@
 
     <path name="mfg-playback">
         <ctl name="PCM Playback Switch" value="1" />
-        <ctl name="PCM Playback Volume" value="1000" />
     </path>
 
     <path name="deep-buffer-playback speaker">
@@ -192,7 +191,6 @@
     </path>
 
     <path name="usb-playback-gain">
-        <ctl name="PCM Playback Volume" />
     </path>
 
     <path name="mfg-playback speaker">
