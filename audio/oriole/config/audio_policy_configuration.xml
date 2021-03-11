@@ -57,6 +57,10 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
+                <mixPort name="mmap_no_irq_out" role="source" flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_MMAP_NOIRQ">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
                 <mixPort name="incall playback" role="source"
                          flags="AUDIO_OUTPUT_FLAG_INCALL_MUSIC">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
@@ -150,11 +154,11 @@
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="Speaker Safe"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="Earpiece"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
                 <route type="mix" sink="hotword input"
@@ -162,21 +166,21 @@
                 <route type="mix" sink="incall capture" sources="Voice Call And Telephony Rx" />
                 <route type="mix" sink="voice call rx" sources="Voice Call And Telephony Rx" />
                 <route type="mix" sink="BT A2DP Out"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="BT A2DP Headphones"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="BT A2DP Speaker"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out"/>
                 <route type="mix" sink="Telephony Tx" sources="incall playback,voice call tx" />
             </routes>
         </module>
