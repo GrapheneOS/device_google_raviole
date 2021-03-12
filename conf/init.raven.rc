@@ -34,3 +34,10 @@ on fs
 on property:mfgapi.touchpanel.permission=1
     chmod 0600 /sys/devices/virtual/sec/tsp/cmd
     chown system system /sys/devices/virtual/sec/tsp/cmd
+
+# Toggle glove_mode according to touch_sensitivity_mode
+on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_completed=1
+    write /sys/devices/virtual/sec/tsp/cmd "glove_mode,0"
+
+on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
+    write /sys/devices/virtual/sec/tsp/cmd "glove_mode,1"

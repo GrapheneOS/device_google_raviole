@@ -27,3 +27,10 @@ on fs
     # Fingerprint
     chown system system /dev/goodix_fp
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
+
+# Toggle glove_mode according to touch_sensitivity_mode
+on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_completed=1
+    write /sys/class/spi_master/spi11/spi11.0/glove_mode 00
+
+on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
+    write /sys/class/spi_master/spi11/spi11.0/glove_mode 01
