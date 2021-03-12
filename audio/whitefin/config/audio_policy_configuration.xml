@@ -56,12 +56,12 @@
                          flags="AUDIO_OUTPUT_FLAG_INCALL_MUSIC">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000"
-                             channelMasks="AUDIO_CHANNEL_OUT_MONO" />
+                             channelMasks="AUDIO_CHANNEL_OUT_STEREO" />
                 </mixPort>
                 <mixPort name="voice call tx" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000"
-                             channelMasks="AUDIO_CHANNEL_OUT_MONO" />
+                             channelMasks="AUDIO_CHANNEL_OUT_STEREO" />
                 </mixPort>
                 <mixPort name="primary input" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
