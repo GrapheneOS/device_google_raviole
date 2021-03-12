@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
 
 # MIPI Coex Configs
 PRODUCT_COPY_FILES += \
-    device/google/raviole/radio/oriole_display_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_mipi_coex_table.csv
+    device/google/raviole/radio/oriole_display_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_primary_mipi_coex_table.csv
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -52,7 +52,10 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-	device/google/gs101/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf
+	device/google/raviole/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+	device/google/raviole/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+
+
 DEVICE_MANIFEST_FILE += \
 	device/google/gs101/nfc/manifest_se_gs101.xml
 

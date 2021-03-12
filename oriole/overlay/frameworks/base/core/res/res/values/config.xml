@@ -180,4 +180,11 @@
       <item>1769</item> <!-- sensorLocationY -->
       <item>113</item>  <!-- sensorRadius -->
     </integer-array>
+
+    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">com.google.sensor.long_press</string>
+
+    <!-- Type of the quick pickup sensor. Empty if quick pickup is not supported. -->
+    <string name="config_quickPickupSensorType" translatable="false">com.google.sensor.quick_pickup</string>
+
 </resources>

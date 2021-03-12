@@ -67,6 +67,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-	device/google/gs101/nfc/libnfc-hal-st-gs101.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf
+	device/google/raviole/nfc/libnfc-hal-st-disable.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+	device/google/raviole/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+
 DEVICE_MANIFEST_FILE += \
 	device/google/gs101/nfc/manifest_se_gs101.xml
