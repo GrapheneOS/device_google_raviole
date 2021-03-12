@@ -605,6 +605,9 @@
         <ctl name="Main AMP Enable Switch" value="1"/>
     </path>
 
+    <path name="voice-hac">
+        <path name="voice-handset"/>
+    </path>
     <path name="voice-hac-handset">
     </path>
 
@@ -634,25 +637,21 @@
     <!-- Tx device -->
     <path name="handset-mic">
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
-        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="-1"/>
-        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
     </path>
 
     <path name="voice-handset-mic">
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
-        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
-        <ctl name="MIC1" value="1"/>
-        <ctl name="MIC2" value="-1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="130"/>
     </path>
 
@@ -663,9 +662,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
-        <ctl name="MIC1" value="1"/>
-        <ctl name="MIC2" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
     </path>
 
@@ -676,9 +672,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
-        <ctl name="MIC1" value="1"/>
-        <ctl name="MIC2" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="130"/>
     </path>
 
@@ -690,9 +683,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
-        <ctl name="MIC1" value="1"/>
-        <ctl name="MIC2" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
     </path>
 
@@ -703,9 +693,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
-        <ctl name="MIC1" value="1"/>
-        <ctl name="MIC2" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="220"/>
     </path>
 
@@ -716,7 +703,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
     </path>
 
@@ -727,8 +713,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
-        <ctl name="MIC1" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
     </path>
 
@@ -739,9 +723,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC0" value="1"/>
-        <ctl name="MIC1" value="1"/>
-        <ctl name="MIC2" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
     </path>
 
