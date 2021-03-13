@@ -196,6 +196,10 @@
     <ctl name="Sidetone Biquad4" id="4" value="0"/>
     <ctl name="Sidetone Biquad4" id="5" value="0"/>
 
+    <ctl name="Incall Capture Stream0" value="Off"/>
+    <ctl name="Incall Capture Stream1" value="Off"/>
+    <ctl name="Incall Capture Stream2" value="Off"/>
+
     <!-- sidetone dynamic control -->
     <path name="sidetone-for handset">
         <!-- 1065353216 = 0x3f800000 = 1.0 -->
@@ -521,6 +525,35 @@
     <path name="hostless-ulC spk-vi">
         <ctl name="NoHost1 TX Mixer TDM_0_TX" value="1"/>
     </path>
+
+    <path name="telephony-rx-captureC">
+        <ctl name="Incall Capture Stream0" value="DL"/>
+    </path>
+
+    <path name="incall-capture1C uplink">
+        <ctl name="Incall Capture Stream1" value="UL"/>
+    </path>
+
+    <path name="incall-capture1C downlink">
+        <ctl name="Incall Capture Stream1" value="DL"/>
+    </path>
+
+    <path name="incall-capture1C call">
+        <ctl name="Incall Capture Stream1" value="UL_DL"/>
+    </path>
+
+    <path name="incall-capture2C uplink">
+        <ctl name="Incall Capture Stream2" value="UL"/>
+    </path>
+
+    <path name="incall-capture2C downlink">
+        <ctl name="Incall Capture Stream2" value="DL"/>
+    </path>
+
+    <path name="incall-capture2C call">
+        <ctl name="Incall Capture Stream2" value="UL_DL"/>
+    </path>
+
     <!-- codec setting -->>
     <!-- Rx device -->
     <path name="handset">
