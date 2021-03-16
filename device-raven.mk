@@ -19,7 +19,6 @@ TARGET_KERNEL_DIR := device/google/raviole-kernel
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-raven.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/raven/proprietary/device-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay
 
