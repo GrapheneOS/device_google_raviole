@@ -19,6 +19,7 @@ TARGET_KERNEL_DIR := device/google/raviole-kernel
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-whitefin.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/whitefin/device-vendor-whitefin.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/whitefin/overlay
 
