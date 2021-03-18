@@ -29,7 +29,7 @@ on fs
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
 
     # Face
-    exec_background /vendor/bin/trusty_apploader /vendor/firmware/faceauth.app
+    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/faceauth.app
 
 on property:mfgapi.touchpanel.permission=1
     chmod 0600 /sys/devices/virtual/sec/tsp/cmd
