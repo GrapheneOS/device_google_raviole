@@ -127,6 +127,15 @@
     <ctl name="BT_RX Mixer EP7" value="0"/>
     <ctl name="BT_RX Mixer NoHost1" value="0"/>
 
+    <ctl name="INCALL_RX Mixer EP1" value="0"/>
+    <ctl name="INCALL_RX Mixer EP2" value="0"/>
+    <ctl name="INCALL_RX Mixer EP3" value="0"/>
+    <ctl name="INCALL_RX Mixer EP4" value="0"/>
+    <ctl name="INCALL_RX Mixer EP5" value="0"/>
+    <ctl name="INCALL_RX Mixer EP6" value="0"/>
+    <ctl name="INCALL_RX Mixer EP7" value="0"/>
+    <ctl name="INCALL_RX Mixer NoHost1" value="0"/>
+
     <ctl name="SINK_IDS" id="0" value="-1"/>
     <ctl name="SINK_IDS" id="1" value="-1"/>
 
@@ -172,6 +181,14 @@
     <ctl name="NoHost1 TX Mixer USB_TX" value="0"/>
 
     <ctl name="EP4 TX Mixer I2S_2_TX" value="0"/>
+
+    <ctl name="EP1 TX Mixer INCALL_TX" value="0"/>
+    <ctl name="EP2 TX Mixer INCALL_TX" value="0"/>
+    <ctl name="EP3 TX Mixer INCALL_TX" value="0"/>
+    <ctl name="EP4 TX Mixer INCALL_TX" value="0"/>
+    <ctl name="EP5 TX Mixer INCALL_TX" value="0"/>
+    <ctl name="EP6 TX Mixer INCALL_TX" value="0"/>
+    <ctl name="NoHost1 TX Mixer INCALL_TX" value="0"/>
 
     <!-- USB setting -->
     <ctl name="USB Dev ID" value="1"/>
@@ -534,6 +551,11 @@
     </path>
 
     <path name="voice-callP hearing-aid">
+        <ctl name="INCALL_RX Mixer EP5" value="1"/>
+    </path>
+
+    <path name="voice-callP call-screen">
+        <ctl name="INCALL_RX Mixer EP5" value="1"/>
     </path>
 
     <path name="voice-callC">
@@ -556,6 +578,14 @@
     </path>
 
     <path name="voice-callC usb-tty-vco-mic">
+    </path>
+
+    <path name="voice-callC hearing-aid">
+        <ctl name="EP4 TX Mixer INCALL_TX" value="1"/>
+    </path>
+
+    <path name="voice-callC call-screen">
+        <ctl name="EP4 TX Mixer INCALL_TX" value="1"/>
     </path>
 
     <path name="hostless-ulC spk-vi">
