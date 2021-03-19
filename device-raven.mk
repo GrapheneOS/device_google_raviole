@@ -33,6 +33,7 @@ include device/google/raviole/audio/raven/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.support_kernel_idle_timer=true
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.enable_frame_rate_override=true
 
 # Init files
 PRODUCT_COPY_FILES += \
