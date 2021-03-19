@@ -93,3 +93,6 @@ PRODUCT_COPY_FILES += \
 
 # Display LBE
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
+
+# PowerStats HAL
+PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/raven
