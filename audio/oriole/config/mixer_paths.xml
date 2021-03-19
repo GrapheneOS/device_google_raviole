@@ -672,7 +672,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
+        <ctl name="MIC HW Gain At High Power Mode (cB)" value="220"/>
     </path>
 
     <path name="voice-handset-mic">
