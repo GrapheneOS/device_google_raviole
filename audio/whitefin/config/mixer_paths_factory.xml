@@ -71,6 +71,10 @@
         <ctl name="MIC HW Gain At High Power Mode (cB)" />
     </path>
 
+    <path name="usb-capture-gain">
+        <ctl name="Headset Capture Volume" />
+    </path>
+
     <path name="mic1-only">
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="-1" />
@@ -191,6 +195,7 @@
     </path>
 
     <path name="usb-playback-gain">
+        <ctl name="Headset Playback Volume" />
     </path>
 
     <path name="mfg-playback speaker">
