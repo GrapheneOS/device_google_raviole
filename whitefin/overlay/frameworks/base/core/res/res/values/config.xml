@@ -30,11 +30,6 @@
          Must be in the range specified by minimum and maximum. -->
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.29019607843</item>
 
-    <array name="config_screenBrightnessNits">
-        <item>2.0</item>
-        <item>500.0</item>
-    </array>
-
     <!-- Nonlinear coefficients for maximum panel brightness of 500 nits -->
     <string-array name="config_reduceBrightColorsCoefficientsNonlinear">
         <!-- a-coefficient --> <item>-0.4553233597</item>
@@ -48,9 +43,4 @@
         <!-- b-coefficient --> <item>-0.96</item>
         <!-- y-intercept --> <item>1.0</item>
     </string-array>
-
-    <integer-array name="config_screenBrightnessBacklight">
-        <item>1</item>
-        <item>255</item>
-    </integer-array>
 </resources>
