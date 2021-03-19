@@ -73,3 +73,6 @@ PRODUCT_COPY_FILES += \
 
 DEVICE_MANIFEST_FILE += \
 	device/google/gs101/nfc/manifest_se_gs101.xml
+
+# PowerStats HAL
+PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/slider
