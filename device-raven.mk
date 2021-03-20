@@ -26,6 +26,7 @@ $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/raven/dev
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay
 
 include device/google/gs101/device-shipping-common.mk
+include device/google/gs101/fingerprint/udfps.mk
 ifeq ($(filter factory_raven, $(TARGET_PRODUCT)),)
 include device/google/gs101/uwb/uwb.mk
 endif
