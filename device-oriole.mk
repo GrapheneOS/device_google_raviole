@@ -26,6 +26,7 @@ $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/oriole/de
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/oriole/overlay
 
 include device/google/gs101/device-shipping-common.mk
+include device/google/gs101/fingerprint/udfps.mk
 include device/google/raviole/audio/oriole/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 

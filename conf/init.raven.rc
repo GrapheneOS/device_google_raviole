@@ -31,6 +31,10 @@ on fs
     # Face
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/faceauth.app
 
+    # LHBM
+    # FIXME(b/183223359): Only grant write access to SystemUI.
+    chmod 0666 /sys/class/drm/card0/card0-DSI-1/panel/backlight/panel0-backlight/local_hbm_mode
+
 on property:mfgapi.touchpanel.permission=1
     chmod 0600 /sys/devices/virtual/sec/tsp/cmd
     chown system system /sys/devices/virtual/sec/tsp/cmd
