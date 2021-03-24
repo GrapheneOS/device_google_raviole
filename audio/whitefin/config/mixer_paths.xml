@@ -254,6 +254,10 @@
     <ctl name="Incall Capture Stream1" value="Off"/>
     <ctl name="Incall Capture Stream2" value="Off"/>
 
+    <!-- Decoder Reference Enable is controlled in aoc_control -->
+    <ctl name="Decoder Reference Enable" value="0"/>
+    <ctl name="LVM Enable" value="0"/>
+
     <!-- sidetone dynamic control -->
     <path name="sidetone-for handset">
         <!-- 1065353216 = 0x3f800000 = 1.0 -->
@@ -401,25 +405,31 @@
     <path name="raw-playbackP hearing-aid">
     </path>
 
+    <path name="compress-offload-playback">
+        <ctl name="PCM Playback Volume" value="1000" />
+        <ctl name="LVM Enable" value="1" />
+    </path>
+
     <path name="compress-offload-playbackP">
-        <ctl name="PCM Playback Volume" value="1000"/>
+        <path name="compress-offload-playback" />
         <ctl name="SINK_IDS" id="0" value="0"/>
         <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="TDM_0_RX Mixer EP7" value="1"/>
     </path>
 
     <path name="compress-offload-playbackP hac-handset">
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="compress-offload-playbackP bt">
-        <ctl name="PCM Playback Volume" value="1000"/>
+        <path name="compress-offload-playback" />
         <ctl name="SINK_IDS" id="0" value="2"/>
         <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="BT_RX Mixer EP7" value="1"/>
     </path>
 
     <path name="compress-offload-playbackP usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
+        <path name="compress-offload-playback" />
         <ctl name="SINK_IDS" id="0" value="4"/>
         <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP7" value="1"/>
@@ -435,6 +445,7 @@
     </path>
 
     <path name="compress-offload-playbackP hearing-aid">
+        <path name="compress-offload-playback" />
     </path>
 
     <path name="voip-playbackP">
