@@ -211,11 +211,11 @@
            rx-path="device_out_usb_others_headset_headphone" />
   <usecase type="playback" name="A2DP"
            rx-path="device_out_bt_a2dp" />
-  <usecase type="record" name="Voice note with main mic"
+  <usecase type="record" name="Voice note with main mic (Google Keep and 3rd party)"
            tx-path="device_in_handset_mic" />
-  <usecase type="record" name="SoloTester with dual mic"
+  <usecase type="record" name="SoloTester with dual mic (3rd party)"
            tx-path="device_in_handset_dual_mic" />
-  <usecase type="record" name="SoloTester with tri mic"
+  <usecase type="record" name="SoloTester with tri mic (3rd party)"
            tx-path="device_in_handset_tri_mic" />
   <usecase type="record" name="Meetings and lectures with rear mic"
            tx-path="device_in_handset_rear_mic" />
@@ -904,13 +904,13 @@
   </usecase-node>
 
   <usecase-node id="usecase_record_voice_note_main_mic" type="record"
-                name="Voice note with main mic" />
+                name="Voice note with main mic (Google Keep and 3rd party)" />
 
   <usecase-node id="usecase_record_solotester_dual_mic" type="record"
-                name="SoloTester with dual mic" />
+                name="SoloTester with dual mic (3rd party)" />
 
   <usecase-node id="usecase_record_solotester_tri_mic" type="record"
-                name="SoloTester with tri mic" />
+                name="SoloTester with tri mic (3rd party)" />
 
   <usecase-node id="usecase_record_meetings_lectures_rear_mic" type="record"
                 name="Meetings and lectures with rear mic" />
