@@ -103,6 +103,35 @@
             "Monitor":false
         },
         {
+            "Name":"critical-battery-cell",
+            "Type":"BCL_VOLTAGE",
+            "VirtualSensor":true,
+            "Formula":"COUNT_THRESHOLD",
+            "TriggerSensor": "smpl_gm",
+            "Combination":[
+                "battery",
+                "battery_cycle",
+                "smpl_gm"
+            ],
+            "Coefficient":[
+                "-10000",
+                "400",
+                "1400"
+            ],
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                3.00,
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":1,
+            "Monitor":true
+        },
+        {
             "Name":"FLASH_LED_REDUCE",
             "Type":"UNKNOWN",
             "VirtualSensor":true,
