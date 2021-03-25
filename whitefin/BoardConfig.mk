@@ -18,5 +18,7 @@ TARGET_BOOTLOADER_BOARD_NAME := whitefin
 TARGET_SCREEN_DENSITY := 440
 USES_DEVICE_GOOGLE_RAVIOLE := true
 
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
+
 include device/google/gs101/BoardConfig-common.mk
 -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
