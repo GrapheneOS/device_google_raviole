@@ -176,11 +176,11 @@
     <item name="gps.voltage">3700</item>
 
     <!-- Idle Receive current for wifi radio in mA.-->
-    <item name="wifi.controller.idle">79</item>
+    <item name="wifi.controller.idle">38</item>
     <!-- Rx current for wifi radio in mA.-->
-    <item name="wifi.controller.rx">118</item>
+    <item name="wifi.controller.rx">98</item>
     <!-- Tx current for wifi radio in mA-->
-    <item name="wifi.controller.tx">331</item>
+    <item name="wifi.controller.tx">470</item>
     <!-- Operating volatage for wifi radio in mV.-->
     <item name="wifi.controller.voltage">3700</item>
 </device>

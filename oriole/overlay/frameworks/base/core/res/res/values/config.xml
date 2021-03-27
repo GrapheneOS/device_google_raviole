@@ -165,6 +165,11 @@
     <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
     <string name="config_dozeUdfpsLongPressSensorType" translatable="false">com.google.sensor.long_press</string>
 
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">gb7n6</string>
+    <!-- MMS user agent profile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/GB7N6.xml</string>
+
     <!-- Type of the quick pickup sensor. Empty if quick pickup is not supported. -->
     <string name="config_quickPickupSensorType" translatable="false">com.google.sensor.quick_pickup</string>
 
