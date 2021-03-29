@@ -21,5 +21,7 @@ USES_DEVICE_GOOGLE_RAVIOLE := true
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_FILTER += \
     $(TARGET_KERNEL_DIR)/drv2624.ko \
 
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
+
 include device/google/gs101/BoardConfig-common.mk
 -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
