@@ -74,22 +74,22 @@ PRODUCT_PRODUCT_PROPERTIES +=\
 
 # Voice packs for Text-To-Speech
 PRODUCT_COPY_FILES += \
-	device/google/gs101/tts/ja-jp/ja-jp-x-htm-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-htm-r22.zvoice\
-	device/google/gs101/tts/ja-jp/ja-jp-x-jaa-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jaa-r22.zvoice\
-	device/google/gs101/tts/ja-jp/ja-jp-x-jab-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jab-r22.zvoice\
-	device/google/gs101/tts/ja-jp/ja-jp-x-jac-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jac-r22.zvoice\
-	device/google/gs101/tts/ja-jp/ja-jp-x-jad-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jad-r22.zvoice\
-	device/google/gs101/tts/ja-jp/ja-jp-x-mfk-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-mfk-r22.zvoice\
-	device/google/gs101/tts/fr-fr/fr-fr-x-multi-r23.zvoice:product/tts/google/fr-fr/fr-fr-x-multi-r23.zvoice\
-	device/google/gs101/tts/de-de/de-de-x-multi-r23.zvoice:product/tts/google/de-de/de-de-x-multi-r23.zvoice\
-	device/google/gs101/tts/it-it/it-it-x-amb-r21.zvoice:product/tts/google/it-it/it-it-x-amb-r21.zvoice\
-	device/google/gs101/tts/it-it/it-it-x-ita-r21.zvoice:product/tts/google/it-it/it-it-x-ita-r21.zvoice\
-	device/google/gs101/tts/it-it/it-it-x-itb-r21.zvoice:product/tts/google/it-it/it-it-x-itb-r21.zvoice\
-	device/google/gs101/tts/it-it/it-it-x-itc-r21.zvoice:product/tts/google/it-it/it-it-x-itc-r21.zvoice\
-	device/google/gs101/tts/it-it/it-it-x-itd-r21.zvoice:product/tts/google/it-it/it-it-x-itd-r21.zvoice\
-	device/google/gs101/tts/it-it/it-it-x-kda-r21.zvoice:product/tts/google/it-it/it-it-x-kda-r21.zvoice\
-	device/google/gs101/tts/es-es/es-es-x-ana-r22.zvoice:product/tts/google/es-es/es-es-x-ana-r22.zvoice\
-	device/google/gs101/tts/es-es/es-es-x-multi-r22.zvoice:product/tts/google/es-es/es-es-x-multi-r22.zvoice
+	device/google/raviole/tts/ja-jp/ja-jp-x-htm-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-htm-r22.zvoice\
+	device/google/raviole/tts/ja-jp/ja-jp-x-jaa-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jaa-r22.zvoice\
+	device/google/raviole/tts/ja-jp/ja-jp-x-jab-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jab-r22.zvoice\
+	device/google/raviole/tts/ja-jp/ja-jp-x-jac-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jac-r22.zvoice\
+	device/google/raviole/tts/ja-jp/ja-jp-x-jad-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-jad-r22.zvoice\
+	device/google/raviole/tts/ja-jp/ja-jp-x-mfk-r22.zvoice:product/tts/google/ja-jp/ja-jp-x-mfk-r22.zvoice\
+	device/google/raviole/tts/fr-fr/fr-fr-x-multi-r23.zvoice:product/tts/google/fr-fr/fr-fr-x-multi-r23.zvoice\
+	device/google/raviole/tts/de-de/de-de-x-multi-r23.zvoice:product/tts/google/de-de/de-de-x-multi-r23.zvoice\
+	device/google/raviole/tts/it-it/it-it-x-amb-r21.zvoice:product/tts/google/it-it/it-it-x-amb-r21.zvoice\
+	device/google/raviole/tts/it-it/it-it-x-ita-r21.zvoice:product/tts/google/it-it/it-it-x-ita-r21.zvoice\
+	device/google/raviole/tts/it-it/it-it-x-itb-r21.zvoice:product/tts/google/it-it/it-it-x-itb-r21.zvoice\
+	device/google/raviole/tts/it-it/it-it-x-itc-r21.zvoice:product/tts/google/it-it/it-it-x-itc-r21.zvoice\
+	device/google/raviole/tts/it-it/it-it-x-itd-r21.zvoice:product/tts/google/it-it/it-it-x-itd-r21.zvoice\
+	device/google/raviole/tts/it-it/it-it-x-kda-r21.zvoice:product/tts/google/it-it/it-it-x-kda-r21.zvoice\
+	device/google/raviole/tts/es-es/es-es-x-ana-r22.zvoice:product/tts/google/es-es/es-es-x-ana-r22.zvoice\
+	device/google/raviole/tts/es-es/es-es-x-multi-r22.zvoice:product/tts/google/es-es/es-es-x-multi-r22.zvoice
 
 # Display LBE
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
