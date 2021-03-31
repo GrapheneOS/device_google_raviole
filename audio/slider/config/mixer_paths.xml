@@ -26,6 +26,9 @@
 <!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
 <mixer>
     <!-- Initial default value of ALSA command -->
+    <!-- PCM timeout -->
+    <ctl name="PCM Stream Wait Time in MSec" value="500"/>
+
     <!-- TDM 0 setting -->
     <ctl name="TDM_0_RX Chan" value="Four"/>
     <ctl name="TDM_0_RX Format" value="S32_LE"/>
@@ -91,6 +94,7 @@
     <ctl name="TDM_0_RX Mixer EP6" value="0"/>
     <ctl name="TDM_0_RX Mixer EP7" value="0"/>
     <ctl name="TDM_0_RX Mixer EP8" value="0"/>
+    <ctl name="TDM_0_RX Mixer VOIP" value="0"/>
 
     <ctl name="TDM_1_RX Mixer EP1" value="0"/>
     <ctl name="TDM_1_RX Mixer EP2" value="0"/>
@@ -104,6 +108,7 @@
     <ctl name="USB_RX Mixer EP6" value="0"/>
     <ctl name="USB_RX Mixer EP7" value="0"/>
     <ctl name="USB_RX Mixer NoHost1" value="0"/>
+    <ctl name="USB_RX Mixer VOIP" value="0"/>
 
     <ctl name="BT_RX Mixer EP1" value="0"/>
     <ctl name="BT_RX Mixer EP2" value="0"/>
@@ -113,6 +118,7 @@
     <ctl name="BT_RX Mixer EP6" value="0"/>
     <ctl name="BT_RX Mixer EP7" value="0"/>
     <ctl name="BT_RX Mixer NoHost1" value="0"/>
+    <ctl name="BT_RX Mixer VOIP" value="0"/>
 
     <ctl name="INCALL_RX Mixer EP1" value="0"/>
     <ctl name="INCALL_RX Mixer EP2" value="0"/>
@@ -127,8 +133,15 @@
     <ctl name="EP2 TX Mixer TDM_0_TX" value="0"/>
     <ctl name="EP4 TX Mixer TDM_0_TX" value="0"/>
     <ctl name="EP4 TX Mixer I2S_2_TX" value="0"/>
+
     <ctl name="EP1 TX Mixer INTERNAL_MIC_TX" value="0"/>
+    <ctl name="EP2 TX Mixer INTERNAL_MIC_TX" value="0"/>
+    <ctl name="EP3 TX Mixer INTERNAL_MIC_TX" value="0"/>
     <ctl name="EP4 TX Mixer INTERNAL_MIC_TX" value="0"/>
+    <ctl name="EP5 TX Mixer INTERNAL_MIC_TX" value="0"/>
+    <ctl name="EP6 TX Mixer INTERNAL_MIC_TX" value="0"/>
+    <ctl name="NoHost1 TX Mixer INTERNAL_MIC_TX" value="0"/>
+    <ctl name="VOIP TX Mixer INTERNAL_MIC_TX" value="0"/>
 
     <ctl name="EP1 TX Mixer BT_TX" value="0"/>
     <ctl name="EP2 TX Mixer BT_TX" value="0"/>
@@ -137,6 +150,7 @@
     <ctl name="EP5 TX Mixer BT_TX" value="0"/>
     <ctl name="EP6 TX Mixer BT_TX" value="0"/>
     <ctl name="NoHost1 TX Mixer BT_TX" value="0"/>
+    <ctl name="VOIP TX Mixer BT_TX" value="0"/>
 
     <ctl name="EP1 TX Mixer USB_TX" value="0"/>
     <ctl name="EP2 TX Mixer USB_TX" value="0"/>
@@ -145,6 +159,7 @@
     <ctl name="EP5 TX Mixer USB_TX" value="0"/>
     <ctl name="EP6 TX Mixer USB_TX" value="0"/>
     <ctl name="NoHost1 TX Mixer USB_TX" value="0"/>
+    <ctl name="VOIP TX Mixer USB_TX" value="0"/>
 
     <ctl name="EP1 TX Mixer INCALL_TX" value="0"/>
     <ctl name="EP2 TX Mixer INCALL_TX" value="0"/>
@@ -284,15 +299,6 @@
         <ctl name="USB_RX Mixer EP6" value="1"/>
     </path>
 
-    <path name="deep-buffer-playbackP usb-tty-full">
-    </path>
-
-    <path name="deep-buffer-playbackP usb-tty-hco">
-    </path>
-
-    <path name="deep-buffer-playbackP usb-tty-vco">
-    </path>
-
     <path name="deep-buffer-playbackP hearing-aid">
     </path>
 
@@ -320,15 +326,6 @@
         <ctl name="USB_RX Mixer EP2" value="1"/>
     </path>
 
-    <path name="low-latency-playbackP usb-tty-full">
-    </path>
-
-    <path name="low-latency-playbackP usb-tty-hco">
-    </path>
-
-    <path name="low-latency-playbackP usb-tty-vco">
-    </path>
-
     <path name="low-latency-playbackP hearing-aid">
     </path>
 
@@ -354,15 +351,6 @@
         <ctl name="SINK_IDS" id="0" value="4"/>
         <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP4" value="1"/>
-    </path>
-
-    <path name="raw-playbackP usb-tty-full">
-    </path>
-
-    <path name="raw-playbackP usb-tty-hco">
-    </path>
-
-    <path name="raw-playbackP usb-tty-vco">
     </path>
 
     <path name="raw-playbackP hearing-aid">
@@ -434,38 +422,23 @@
         <ctl name="USB_RX Mixer EP7" value="1"/>
     </path>
 
-    <path name="compress-offload-playbackP usb-tty-full">
-    </path>
-
-    <path name="compress-offload-playbackP usb-tty-hco">
-    </path>
-
-    <path name="compress-offload-playbackP usb-tty-vco">
-    </path>
-
     <path name="compress-offload-playbackP hearing-aid">
         <path name="compress-offload-playback" />
     </path>
 
     <path name="voip-playbackP">
+        <ctl name="TDM_0_RX Mixer VOIP" value="1"/>
     </path>
 
     <path name="voip-playbackP hac-handset">
     </path>
 
     <path name="voip-playbackP bt">
+        <ctl name="BT_RX Mixer VOIP" value="1"/>
     </path>
 
     <path name="voip-playbackP usb-headphone">
-    </path>
-
-    <path name="voip-playbackP usb-tty-full">
-    </path>
-
-    <path name="voip-playbackP usb-tty-hco">
-    </path>
-
-    <path name="voip-playbackP usb-tty-vco">
+        <ctl name="USB_RX Mixer VOIP" value="1"/>
     </path>
 
     <path name="voip-playbackP hearing-aid">
@@ -512,31 +485,16 @@
         <ctl name="EP1 TX Mixer BT_TX" value="1"/>
     </path>
 
-    <path name="audio-recordC usb-tty-full-mic">
-    </path>
-
-    <path name="audio-recordC usb-tty-hco-mic">
-    </path>
-
-    <path name="audio-recordC usb-tty-vco-mic">
-    </path>
-
     <path name="voip-recordC">
+        <ctl name="VOIP TX Mixer INTERNAL_MIC_TX" value="1"/>
     </path>
 
     <path name="voip-recordC usb-headset-mic">
+        <ctl name="VOIP TX Mixer USB_TX" value="1"/>
     </path>
 
     <path name="voip-recordC bt-mic">
-    </path>
-
-    <path name="voip-recordC usb-tty-full-mic">
-    </path>
-
-    <path name="voip-recordC usb-tty-hco-mic">
-    </path>
-
-    <path name="voip-recordC usb-tty-vco-mic">
+        <ctl name="VOIP TX Mixer BT_TX" value="1"/>
     </path>
 
     <!-- voice-call dynamic route -->
@@ -550,15 +508,6 @@
 
     <path name="voice-callP usb-headphone">
         <ctl name="USB_RX Mixer EP5" value="1"/>
-    </path>
-
-    <path name="voice-callP usb-tty-full">
-    </path>
-
-    <path name="voice-callP usb-tty-hco">
-    </path>
-
-    <path name="voice-callP usb-tty-vco">
     </path>
 
     <path name="voice-callP hearing-aid">
