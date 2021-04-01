@@ -59,5 +59,30 @@
         <item>0</item> <!-- 3: HIGH -->
         <item>0</item> <!-- 4: SUN -->
     </integer-array>
+
+    <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
+         Note that while rounded.xml includes the entire path (including the horizontal and vertical
+         corner edges), this pulls out just the curve.
+     -->
+    <string name="config_rounded_mask" translatable="false">M 71,0 C 33,0 22,-1 10,10 -1,22 0,33 0,71</string>
+
+    <bool name="config_roundedCornerMultipleRadius">true</bool>
+
+    <!-- Configure 13px of extra protection around the front-facing camera -->
+    <string translatable="false" name="config_frontBuiltInDisplayCutoutProtection">
+        M 494,65
+        a 46,46 0 1 0 92,0
+        a 46,46 0 1 0 -92,0
+        Z
+    </string>
+
+    <!-- Camera 1 is the front camera on barbet -->
+    <string translatable="false" name="config_protectedCameraId">1</string>
+
+    <!-- Comma-separated list of packages to exclude from camera protection. In our case,
+    ignore the gaze detection package -->
+    <string translatable="false" name="config_cameraProtectionExcludedPackages">com.google.android.as</string>
+
+    <bool name="config_enableDisplayCutoutProtection">true</bool>
 </resources>
 

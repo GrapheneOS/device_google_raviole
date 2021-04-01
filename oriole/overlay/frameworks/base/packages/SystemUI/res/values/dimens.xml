@@ -16,32 +16,28 @@
 */
 -->
 <resources>
-    <!-- for 20dp of padding at 3.5px/dp at default density -->
-    <dimen name="rounded_corner_content_padding">5px</dimen>
+    <!-- Don't need the left side padding due to being inset from the cutout -->
+    <dimen name="status_bar_padding_start">0dp</dimen>
+
+   <!-- for 20dp of padding at 3.5px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">50px</dimen>
+
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">1px</dimen>
 
     <!-- Padding for the system icons on the keyguard (when no multi user switch is showing).
     The icons always have a 4dp padding in the container so we only need 56 extra px of padding
     for the corners -->
     <dimen name="system_icons_super_container_avatarless_margin_end">11px</dimen>
 
-    <!-- A path similar to frameworks/base/core/res/res/values/config.xml
-        config_mainBuiltInDisplayCutout that describes a path larger than the exact path of a display
-        cutout. If present as well as config_enableDisplayCutoutProtection is set to true, then
-        SystemUI will draw this "protection path" instead of the display cutout path that is normally
-        used for anti-aliasing.
+    <!-- Multi user switch has some intrinsic padding to it -->
+    <dimen name="multi_user_switch_keyguard_margin">40px</dimen>
 
-        This path will only be drawn when the front-facing camera turns on, otherwise the main
-        DisplayCutout path will be rendered
-    -->
-    <string translatable="false" name="config_frontBuiltInDisplayCutoutProtection">
-        M 494,66
-        a 46,46 0 1 0 92,0 46,46 0 1 0 -92,0
-        Z
-    </string>
+    <dimen name="keyguard_carrier_text_margin">0px</dimen>
 
-    <!-- Camera 1 is the front camera -->
-    <string translatable="false" name="config_protectedCameraId">1</string>
+    <dimen name="config_rounded_mask_size">71px</dimen>
+    <dimen name="config_rounded_mask_size_top">71px</dimen>
+    <dimen name="config_rounded_mask_size_bottom">70px</dimen>
 
-    <bool name="config_enableDisplayCutoutProtection">true</bool>
 </resources>
 
