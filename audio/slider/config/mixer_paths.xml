@@ -232,6 +232,11 @@
     <ctl name="Incall Capture Stream1" value="Off"/>
     <ctl name="Incall Capture Stream2" value="Off"/>
 
+    <!-- These two controls control the muting function of mics and sinks during the voice call. -->
+    <!-- They would be enabled by HAL. -->
+    <ctl name="Incall Sink Mute" value="0"/>
+    <ctl name="Incall Mic Mute" value="0"/>
+
     <!-- Decoder Reference Enable is controlled in aoc_control -->
     <ctl name="Decoder Reference Enable" value="0"/>
     <ctl name="LVM Enable" value="0"/>
