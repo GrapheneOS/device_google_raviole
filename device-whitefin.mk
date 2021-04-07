@@ -54,3 +54,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # NFC
 PRODUCT_COPY_FILES += \
 	device/google/gs101/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf
+
+# PowerStats HAL
+PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
