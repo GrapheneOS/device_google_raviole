@@ -16,14 +16,46 @@
 
 #define LOG_TAG "android.hardware.power.stats-service.pixel"
 
-#include <PowerStatsAidl.h>
+#include <dataproviders/DisplayStateResidencyDataProvider.h>
+#include <dataproviders/PowerStatsEnergyConsumer.h>
 #include <Gs101CommonDataProviders.h>
+#include <PowerStatsAidl.h>
 
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 #include <android/binder_manager.h>
 #include <android/binder_process.h>
 #include <log/log.h>
+
+using aidl::android::hardware::power::stats::DisplayStateResidencyDataProvider;
+using aidl::android::hardware::power::stats::EnergyConsumerType;
+using aidl::android::hardware::power::stats::PowerStatsEnergyConsumer;
+
+void addDisplay(std::shared_ptr<PowerStats> p) {
+    // Add display residency stats
+    std::vector<std::string> states = {
+        "Off",
+        "LP: 1080x2340@30",
+        "On: 1080x2340@60",
+        "On: 1080x2340@90",
+        "HBM: 1080x2340@60",
+        "HBM: 1080x2340@90"};
+
+    p->addStateResidencyDataProvider(std::make_unique<DisplayStateResidencyDataProvider>("Display",
+            "/sys/class/backlight/panel0-backlight/state",
+            states));
+
+    // Add display energy consumer
+    /*
+     * TODO(b/167216667): Add correct display power model here. Must read from display rail
+     * and include proper coefficients for display states.
+     */
+    p->addEnergyConsumer(PowerStatsEnergyConsumer::createMeterAndEntityConsumer(p,
+            EnergyConsumerType::DISPLAY, "display", {"PPVAR_VSYS_PWR_DISP"}, "Display",
+            {{"LP: 1440x3040@30", 1},
+             {"On: 1440x3040@60", 2},
+             {"On: 1440x3040@90", 3}}));
+}
 
 int main() {
     LOG(INFO) << "Pixel PowerStats HAL AIDL Service is starting.";
@@ -34,6 +66,7 @@ int main() {
     std::shared_ptr<PowerStats> p = ndk::SharedRefBase::make<PowerStats>();
 
     addGs101CommonDataProviders(p);
+    addDisplay(p);
 
     const std::string instance = std::string() + PowerStats::descriptor + "/default";
     binder_status_t status = AServiceManager_addService(p->asBinder().get(), instance.c_str());

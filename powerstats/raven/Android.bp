@@ -19,6 +19,17 @@ soong_namespace {
     ]
 }
 
+package {
+    // See: http://go/android-license-faq
+    // A large-scale-change added 'default_applicable_licenses' to import
+    // all of the 'license_kinds' from "//device/google/raviole:device_google_raviole_license"
+    // to get the below license kinds:
+    //   SPDX-license-identifier-Apache-2.0
+    default_applicable_licenses: [
+        "//device/google/raviole:device_google_raviole_license",
+    ],
+}
+
 cc_binary {
     name: "android.hardware.power.stats-service.pixel",
     defaults: ["powerstats_pixel_binary_defaults"],
