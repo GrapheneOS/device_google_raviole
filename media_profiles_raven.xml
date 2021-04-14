@@ -532,7 +532,7 @@
 
     </CamcorderProfiles>
 
-ˋ    <CamcorderProfiles cameraId="4">
+    <CamcorderProfiles cameraId="4">
 
         <EncoderProfile quality="2160p" fileFormat="mp4" duration="60">
             <Video codec="h264"
