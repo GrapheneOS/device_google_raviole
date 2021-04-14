@@ -199,6 +199,10 @@
 
     <ctl name="EP4 TX Mixer I2S_2_TX" value="0"/>
 
+    <!-- AoC Mic setting -->
+    <ctl name="MIC DC Blocker" value="1" />
+    <ctl name="MIC HW Gain At High Power Mode (cB)" value="0" />
+
     <!-- USB setting -->
     <ctl name="USB Dev ID" value="1"/>
     <ctl name="USB Playback EP ID" value="1"/>
@@ -261,6 +265,11 @@
     <ctl name="Incall Capture Stream0" value="Off"/>
     <ctl name="Incall Capture Stream1" value="Off"/>
     <ctl name="Incall Capture Stream2" value="Off"/>
+
+    <!-- These two controls control the muting function of mics and sinks during the voice call. -->
+    <!-- They would be enabled by HAL. -->
+    <ctl name="Incall Sink Mute" value="0"/>
+    <ctl name="Incall Mic Mute" value="0"/>
 
     <!-- Decoder Reference Enable is controlled in aoc_control -->
     <ctl name="Decoder Reference Enable" value="0"/>
@@ -651,7 +660,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="220"/>
     </path>
@@ -661,7 +669,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="130"/>
     </path>
@@ -671,7 +678,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
     </path>
@@ -681,7 +687,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="130"/>
     </path>
@@ -692,7 +697,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
     </path>
@@ -702,7 +706,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="220"/>
     </path>
@@ -712,7 +715,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="-1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
     </path>
@@ -722,7 +724,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
     </path>
@@ -732,7 +733,6 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
-        <ctl name="MIC Clock Rate" value="3072000"/>
         <ctl name="MIC DC Blocker" value="1"/>
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
     </path>
