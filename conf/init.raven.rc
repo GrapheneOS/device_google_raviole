@@ -26,3 +26,7 @@ on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_complet
 
 on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
     write /sys/devices/virtual/sec/tsp/cmd "glove_mode,1"
+
+# Bluetooth
+on post-fs-data
+    chown bluetooth system /proc/bluetooth/timesync
