@@ -11,6 +11,9 @@ on init
     chown system system /d/regmap/6-0036/registers
     chown system system /sys/bus/nvmem/devices/5-00500/nvmem
 
+    # Power Stats HAL
+    chown system system /sys/devices/platform/10d30000.spi/spi_master/spi10/spi10.0/uwb/power_stats
+
 on early-boot
     # Wait for insmod_sh to finish all common modules
     wait_for_prop vendor.common.modules.ready 1
