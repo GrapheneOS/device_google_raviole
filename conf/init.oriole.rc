@@ -35,6 +35,9 @@ on fs
     # FIXME(b/183223359): Only grant write access to SystemUI.
     chmod 0666 /sys/class/drm/card0/card0-DSI-1/panel/backlight/panel0-backlight/local_hbm_mode
 
+on property:ro.revision=PROTO1.0
+    setprop persist.fingerprint.ghbm true
+
 # Toggle glove_mode according to touch_sensitivity_mode
 on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_completed=1
     write /sys/class/spi_master/spi11/spi11.0/glove_mode 00
