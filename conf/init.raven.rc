@@ -11,6 +11,9 @@ on init
     chown system system /d/regmap/6-0036/registers
     chown system system /sys/bus/nvmem/devices/5-00500/nvmem
 
+    # Power Stats HAL
+    chown system system /sys/devices/platform/10d30000.spi/spi_master/spi10/spi10.0/uwb/power_stats
+
 on early-boot
     # Wait for insmod_sh to finish all common modules
     wait_for_prop vendor.common.modules.ready 1
@@ -34,6 +37,9 @@ on fs
     # LHBM
     # FIXME(b/183223359): Only grant write access to SystemUI.
     chmod 0666 /sys/class/drm/card0/card0-DSI-1/panel/backlight/panel0-backlight/local_hbm_mode
+
+on property:ro.revision=PROTO1.0
+    setprop persist.fingerprint.ghbm true
 
 on property:vendor.mfgapi.touchpanel.permission=1
     chmod 0600 /sys/devices/virtual/sec/tsp/cmd
