@@ -93,3 +93,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/raven
+
+# userdebug specific
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+    PRODUCT_COPY_FILES += \
+        device/google/gs101/init.hardware.wlc.rc.userdebug:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_PLATFORM).wlc.rc
+endif
