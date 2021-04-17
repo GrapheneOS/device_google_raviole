@@ -38,6 +38,9 @@ on fs
     # FIXME(b/183223359): Only grant write access to SystemUI.
     chmod 0666 /sys/class/drm/card0/card0-DSI-1/panel/backlight/panel0-backlight/local_hbm_mode
 
+    # Start the twoshay touch service
+    start twoshay
+
 on property:ro.revision=PROTO1.0
     setprop persist.fingerprint.ghbm true
 
