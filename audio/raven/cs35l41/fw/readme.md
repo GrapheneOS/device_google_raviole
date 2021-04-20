@@ -1,13 +1,13 @@
-# R4 Protect Tune - Top And Bottom Speakers
+# R4 Protect Tune - Top And Bottom Speakers Build 21.4.0
 
 ## Tune Details
 
-- **File name**:
+- **File name**: r4_21.4.0
   - _Device_: CS35L41 revB2
   - _Firmware Version_
-    - _Protect_: Playback 6.45.0
-    - _Calibration_: Playback 6.39.0
-    - _Diagnostics_: Playback 6.39.0
+    - _Protect_: Playback 6.47.0
+    - _Calibration_: Playback 6.47.0
+    - _Diagnostics_: Playback 6.47.0
   - _Signal Chain_:
     - _Protect_: Protect Lite
     - _Calibration_: Calibration
@@ -15,6 +15,30 @@
 - **Amplifier Gain**: 17.5dB
 
 ### Changelog
+
+#### 21.2.4.0
+
+Retune using R4 EVT samples.
+Firmware moved to 6.47.0 for protect, calibration, and diagnostics signal chains.
+
+#### 21.2.3_ENG
+
+Based on 21.2.2_ENG with HPF cutoff frequencies set to 150Hz for both top and bottom protect tunes
+
+- Top speaker protect tune uprev 21.02.2eng → 21.02.3eng
+- Bottom speaker protect tune uprev 21.02.0 → 21.02.1
+- All other files same as 21.2.2_ENG
+
+#### 21.2.2_ENG
+
+- Engineering build with Tmax of top protect tune fix in place. This is intended to resolve the overshoot issues seen in
+  21.2.0 but withthout the de-margin of Tmax that was done in 21.2.1
+- All other files same as 21.2.0
+
+#### 21.2.1
+
+- Updated Top thermal protect tune after reports of exceeding Tmax
+- All other files same as 21.2.0
 
 #### 21.2.0
 
@@ -26,35 +50,51 @@
 
 - readme.md
 
-**Protect, Calibration, and Diag bins with R Trace**
+**Protect, Calibration, and Diag bins with R Trace**  
  _For use in actual phone_
 
-- Top\r4Top_protect_21.02.0_pb6.45.0_17.5dB_withRTrace.bin
-- Top\r4Top_cal_21.2.0_pb6.39.0_17.5dB.bin
-- Top\r4Top_calAndDiag_21.2.0_pb6.39.0_17.5dB.bin
-- Bottom\r4Bottom_protect_21.02.0_pb6.45.0_17.5dB_withRTrace.bin
-- Bottom\r4Bottom_cal_21.2.0_pb6.39.0_17.5dB.bin
-- Bottom\r4Bottom_calAndDiag_21.2.0_pb6.39.0_17.5dB.bin
+- Top Speaker
+  - Top\r4Top_calAndDiag_21.4.0_pb6.47.0_17.5dB_withRTrace.bin
+  - Top\r4Top_cal_21.4.0_pb6.47.0_17.5dB_withRTrace.bin
+  - Top\21.4.0_100hpf\r4Top_protect_21.4.0_pb6.47.0_17.5dB_100hpf_withRTrace.bin
+  - Top\21.4.0_120hpf\r4Top_protect_21.4.0_pb6.47.0_17.5dB_120hpf_withRTrace.bin
+- Bottom Speaker
+  - Bottom\r4Bottom_calAndDiag_21.4.0_pb6.47.0_17.5dB_withRTrace.bin
+  - Bottom\r4Bottom_cal_21.4.0_pb6.47.0_17.5dB_withRTrace.bin
+  - Bottom\21.4.0_100hpf\r4Bottom_protect_21.4.0_pb6.47.0_17.5dB_100hpf_withRTrace.bin
+  - Bottom\21.4.0_120hpf\r4Bottom_protect_21.4.0_pb6.47.0_17.5dB_120hpf_withRTrace.bin
 
-**Protect & Calibration files without R trace**
+**Protect & Calibration files without R trace**  
  _For use on Lochnagar 2 development platform_
 
-- Top\r4Top_21.02.0_pb6.45.0_17.5dB_noRTrace.json
-- Bottom\r4Bottom_21.02.0_pb6.45.0_17.5dB_noRTrace.json
+- Top Speaker
+  - Top\21.4.0_100hpf\r4Top_21.4.0_pb6.47.0_17.5dB_100hpf_noRTrace.json
+  - Top\21.4.0_120hpf\r4Top_21.4.0_pb6.47.0_17.5dB_120hpf_noRTrace.json
+- Bottom Speaker
+  - Bottom\21.4.0_100hpf\r4Bottom_21.4.0_pb6.47.0_17.5dB_100hpf_noRTrace.json
+  - Bottom\21.4.0_120hpf\r4Bottom_21.4.0_pb6.47.0_17.5dB_120hpf_noRTrace.json
 
 _JSON files contains both protect and calibration deploy groups_
 
 **Labsuite Files**
 
-- Top\r4Top_protect_21.02.0_pb6.45.0_17.5dB_withRTrace.exported_tuning
-- Bottom\r4Bottom_protect_21.02.0_pb6.45.0_17.5dB_withRTrace.exported_tuning
+- Top Speaker
+  - 21.4.0_100hpf\r4Top_21.4.0_pb6.47.0_17.5dB_100hpf_noRTrace.exported_tuning
+  - 21.4.0_100hpf\r4Top_21.4.0_pb6.47.0_17.5dB_100hpf_withRTrace.exported_tuning
+  - 21.4.0_120hpf\r4Top_21.4.0_pb6.47.0_17.5dB_120hpf_noRTrace.exported_tuning
+  - 21.4.0_120hpf\r4Top_21.4.0_pb6.47.0_17.5dB_120hpf_withRTrace.exported_tuning
+- Bottom Speaker
+  - 21.4.0_100hpf\r4Bottom_21.4.0_pb6.47.0_17.5dB_100hpf_noRTrace.exported_tuning
+  - 21.4.0_100hpf\r4Bottom_21.4.0_pb6.47.0_17.5dB_100hpf_withRTrace.exported_tuning
+  - 21.4.0_120hpf\r4Bottom_21.4.0_pb6.47.0_17.5dB_120hpf_noRTrace.exported_tuning
+  - 21.4.0_120hpf\r4Bottom_21.4.0_pb6.47.0_17.5dB_120hpf_withRTrace.exported_tuning
 
-**Firmware Files**
+**Firmware Files**  
 _Each firmware wmfw is in a folder respective for which type of bin file it is for_
 
-- Firmware\Cal\halo_cspl_RAM_revB2_29.41.0.wmfw
-- Firmware\Diag\halo_cspl_RAM_diag_revB2_29.41.0.wmfw
-- Firmware\Protect\halo_cspl_RAM_revB2_29.47.0.wmfw
+- Firmware\Cal\halo_cspl_RAM_revB2_29.49.0.wmfw
+- Firmware\Diag\halo_cspl_RAM_diag_revB2_29.49.0.wmfw
+- Firmware\Protect\halo_cspl_RAM_revB2_29.49.0.wmfw
 
 ---
 
@@ -69,7 +109,7 @@ _Each firmware wmfw is in a folder respective for which type of bin file it is f
 | **Maximum Coil Temperature (Tmax)** | 130 [C]          |
 | **Coil co-efficiency (Tk)**         | 0.00393          |
 | **DC Resistance**                   | 6 [Ohms]         |
-| **Resonance Frequency**             | 810 [Hz] +/-7.5% |
+| **Resonance Frequency**             | 820 [Hz] +/-7.5% |
 
 ### Bottom Speaker
 
@@ -79,5 +119,5 @@ _Each firmware wmfw is in a folder respective for which type of bin file it is f
 | **Xmax (0-Peak)**                   | 0.55 [mm]             |
 | **Maximum Coil Temperature (Tmax)** | 110 [C]               |
 | **Coil co-efficiency (Tk)**         | 0.00393               |
-| **DC Resistance**                   | 6.15+/-0.5[Ohm]       |
-| **Resonance Frequency**             | 630 [Hz] +/- 10% [Hz] |
+| **DC Resistance**                   | 6.1[Ohm]              |
+| **Resonance Frequency**             | 720 [Hz] +/- 10% [Hz] |
