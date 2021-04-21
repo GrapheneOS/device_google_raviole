@@ -44,3 +44,6 @@ on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_complet
 
 on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
     write /sys/class/spi_master/spi11/spi11.0/glove_mode 01
+
+on late-init && property:ro.boot.hardware.revision=PROTO1.0
+    setprop vendor.thermal.config "thermal_info_config_WHI_A.json"
