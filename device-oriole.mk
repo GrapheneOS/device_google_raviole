@@ -44,7 +44,8 @@ PRODUCT_COPY_FILES += \
 
 # Thermal Config
 PRODUCT_COPY_FILES += \
-	device/google/raviole/thermal_info_config_oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+	device/google/raviole/thermal_info_config_oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+	device/google/raviole/thermal_info_config_oriole_WHI_A.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_WHI_A.json
 
 # MIPI Coex Configs
 PRODUCT_COPY_FILES += \
