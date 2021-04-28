@@ -200,5 +200,6 @@
         <module libname="audio_spk_35l41.so"/>
         <module libname="audio_fortemedia_aoc.so"/>
         <module libname="liboffloadeffect.so"/>
+        <module libname="audio_amcs_ext.so"/>
     </external_module>
 </audio_platform_configuration>
