@@ -16,11 +16,13 @@
     <ctl name="MIC1" value="0" />
     <ctl name="MIC2" value="0" />
     <ctl name="MIC3" value="0" />
+    <ctl name="AoC Speaker Mixer ASP Mode" value="ASP_ON" />
 
     <path name="mfg-playback">
     </path>
 
     <path name="deep-buffer-playback speaker">
+        <ctl name="AoC Speaker Mixer ASP Mode" value="ASP_BYPASS" />
         <ctl name="TDM_0_RX Mixer EP6" value="1" />
         <path name="mfg-playback" />
     </path>
@@ -198,6 +200,7 @@
     </path>
 
     <path name="mfg-playback speaker">
+        <ctl name="AoC Speaker Mixer ASP Mode" value="ASP_BYPASS" />
         <ctl name="TDM_0_RX Mixer EP3" value="1" />
         <ctl name="ASPRX1 Slot Position" value="0" />
         <ctl name="R ASPRX1 Slot Position" value="1" />
