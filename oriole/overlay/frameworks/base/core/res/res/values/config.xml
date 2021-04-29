@@ -37,6 +37,13 @@
          Must be in the range specified by minimum and maximum. -->
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.29019607843</item>
 
+    <!-- The default refresh rate. Pixel 6 manages this using the peak refresh rate setting, so set
+         this value to 0 so it has no effect. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+
+    <!-- The default peak refresh rate. -->
+    <integer name="config_defaultPeakRefreshRate">90</integer>
+
     <!-- Nonlinear coefficients for maximum panel brightness of 500 nits -->
     <string-array name="config_reduceBrightColorsCoefficientsNonlinear">
         <!-- a-coefficient --> <item>-0.4553233597</item>
@@ -179,8 +186,5 @@
 
     <!-- Type of the quick pickup sensor. Empty if quick pickup is not supported. -->
     <string name="config_quickPickupSensorType" translatable="false">com.google.sensor.quick_pickup</string>
-
-    <!-- The default peak refresh rate. -->
-    <integer name="config_defaultPeakRefreshRate">90</integer>
 
 </resources>
