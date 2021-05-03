@@ -90,7 +90,9 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/tts/es-es/es-es-x-multi-r23.zvoice:product/tts/google/es-es/es-es-x-multi-r23.zvoice
 
 # PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/oriole
+PRODUCT_SOONG_NAMESPACES += \
+    device/google/raviole/powerstats/oriole \
+    device/google/raviole
 
 # Keyboard bottom padding in dp for portrait mode
 PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_b=10
@@ -112,3 +114,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
+
+# SKU specific RROs
+PRODUCT_PACKAGES += \
+    SettingsOverlayGR1YH
