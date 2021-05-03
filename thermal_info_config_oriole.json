@@ -16,6 +16,36 @@
             "Multiplier":0.001
         },
         {
+            "Name":"rf1_therm",
+            "Type":"UNKNOWN",
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":0.001
+        },
+        {
+            "Name":"rf2_therm",
+            "Type":"UNKNOWN",
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":0.001
+        },
+        {
             "Name":"neutral_therm",
             "Type":"UNKNOWN",
             "HotThreshold":[
@@ -243,8 +273,8 @@
                 0.0,
                 0.0,
                 0.0,
-                0.0,
                 1.9,
+                0.0,
                 0.0
             ],
             "VrThreshold":"NAN",
