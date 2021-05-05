@@ -1,8 +1,6 @@
 # Oriole specific init.rc
 import /vendor/etc/init/hw/init.gs101.rc
-
-on init && property:ro.build.flavor=factory_oriole-userdebug
-    import /vendor/etc/init/hw/init.factory.rc
+import /vendor/etc/init/hw/init.raviole.rc
 
 on init
     # logbuffer
@@ -10,33 +8,6 @@ on init
     # register/nvmem dump
     chown system system /d/regmap/5-0036/registers
     chown system system /sys/bus/nvmem/devices/4-00500/nvmem
-
-on early-boot
-    # Wait for insmod_sh to finish all common modules
-    wait_for_prop vendor.common.modules.ready 1
-    start insmod_sh_oriole
-
-service insmod_sh_oriole /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.oriole.cfg
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-on fs
-    # Fingerprint
-    chown system system /dev/goodix_fp
-    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
-
-    # Start the twoshay touch service
-    start twoshay
-
-    # LHBM
-    # FIXME(b/183223359): Only grant write access to SystemUI.
-    chmod 0666 /sys/class/drm/card0/card0-DSI-1/panel/backlight/panel0-backlight/local_hbm_mode
-
-on property:ro.revision=PROTO1.0
-    setprop persist.fingerprint.ghbm true
 
 # Toggle glove_mode according to touch_sensitivity_mode
 on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_completed=1
