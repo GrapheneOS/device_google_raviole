@@ -1216,7 +1216,7 @@
                    bitRate="22000000"
                    width="1920"
                    height="1080"
-                   frameRate="30" />
+                   frameRate="60" />
 
             <Audio codec="aac"
                    bitRate="96000"
