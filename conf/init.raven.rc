@@ -1,8 +1,6 @@
 # Raven specific init.rc
 import /vendor/etc/init/hw/init.gs101.rc
-
-on init && property:ro.build.flavor=factory_raven-userdebug
-    import /vendor/etc/init/hw/init.factory.rc
+import /vendor/etc/init/hw/init.raviole.rc
 
 on init
     # logbuffer
@@ -14,35 +12,9 @@ on init
     # Power Stats HAL
     chown system system /sys/devices/platform/10d30000.spi/spi_master/spi10/spi10.0/uwb/power_stats
 
-on early-boot
-    # Wait for insmod_sh to finish all common modules
-    wait_for_prop vendor.common.modules.ready 1
-    start insmod_sh_raven
-
-service insmod_sh_raven /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.raven.cfg
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
 on fs
-    # Fingerprint
-    chown system system /dev/goodix_fp
-    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
-
     # Face
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/faceauth.app
-
-    # LHBM
-    # FIXME(b/183223359): Only grant write access to SystemUI.
-    chmod 0666 /sys/class/drm/card0/card0-DSI-1/panel/backlight/panel0-backlight/local_hbm_mode
-
-    # Start the twoshay touch service
-    start twoshay
-
-on property:ro.revision=PROTO1.0
-    setprop persist.fingerprint.ghbm true
 
 on property:vendor.mfgapi.touchpanel.permission=1
     chmod 0600 /sys/devices/virtual/sec/tsp/cmd

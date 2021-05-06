@@ -563,6 +563,7 @@
     </path>
 
     <path name="audio-recordC bt-mic">
+        <ctl name="Audio Capture Mic Source" value="BT_MIC"/>
         <ctl name="EP1 TX Mixer BT_TX" value="1"/>
     </path>
 
