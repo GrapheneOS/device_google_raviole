@@ -104,6 +104,11 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_IN_MONO"/>
                 </mixPort>
+                <mixPort name="mmap_no_irq_in" role="sink" flags="AUDIO_INPUT_FLAG_MMAP_NOIRQ">
+                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
+                             samplingRates="48000"
+                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO"/>
+                </mixPort>
             </mixPorts>
             <devicePorts>
                 <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
@@ -196,6 +201,8 @@
                 <route type="mix" sink="voice call rx" sources="Voice Call And Telephony Rx" />
                 <route type="mix" sink="voip_tx"
                        sources="Built-In Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
+                <route type="mix" sink="mmap_no_irq_in"
+                       sources="Built-In Mic,USB Device In,USB Headset In"/>
             </routes>
         </module>
         <!-- Bluetooth Audio HAL -->
