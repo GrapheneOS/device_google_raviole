@@ -1,6 +1,6 @@
 # Raven/Oriole specific init.rc
 
-on init && property:ro.build.flavor=factory_${ro.hardware}-userdebug
+on init && property:ro.vendor.factory=1
     import /vendor/etc/init/hw/init.factory.rc
 
 on early-boot
