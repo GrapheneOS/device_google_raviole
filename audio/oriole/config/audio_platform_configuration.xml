@@ -115,7 +115,7 @@
         <!-- for output with AUDIO_OUTPUT_FLAG_PRIMARY|AUDIO_OUTPUT_FLAG_FAST, 4 * 10ms buffer -->
         <usecase id="UC_LOW_LATENCY_PLAYBACK" dev1="1" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
         <!-- for output with AUDIO_OUTPUT_FLAG_MMAP_NOIRQ, 80 periods * 48 frames/period(=1ms w/ 48k sample rate) * 4 bytes/frame = 15360 bytes -->
-	<usecase id="UC_MMAP_PLAYBACK" dev1="0" dyn_path="true" dsp_vol="false" mmap="true" period="1" period_num="80"/>
+        <usecase id="UC_MMAP_PLAYBACK" dev1="0" dyn_path="true" dsp_vol="false" mmap="true" period="1" period_num="80"/>
         <!-- for output with AUDIO_OUTPUT_FLAG_DEEP_BUFFER, 4 * 20ms buffer -->
         <usecase id="UC_DEEP_BUFFER_PLAYBACK" dev1="5" dyn_path="true" dsp_vol="false" mmap="false" period="20" period_num="4"/>
         <!-- dev1: voice-call downlink dev2: voice-clal uplink -->
@@ -131,6 +131,8 @@
         <usecase id="UC_HOSTLESS_UL" dev1="15"/>
         <!-- for VOIP input, 4 * 10ms buffer -->
         <usecase id="UC_VOIP_RECORD" dev1="17" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
+        <!-- for input wit AUDIO_INPUT_FLAG_MMAP_NOIRQ 480 periods * 1ms buffer,32-bit,2 ch, buffer size 92160 bytes -->
+        <usecase id="UC_MMAP_RECORD" dev1="9" dyn_path="true" dsp_vol="false" mmap="true" period="1" period_num="240"/>
     </usecase_attr>
 
     <dsp_latency>
