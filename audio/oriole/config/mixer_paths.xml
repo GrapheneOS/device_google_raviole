@@ -611,6 +611,15 @@
         <ctl name="Incall Capture Stream2" value="UL_DL"/>
     </path>
 
+    <path name="low-latency-recordC">
+        <ctl name="EP3 TX Mixer INTERNAL_MIC_TX" value="1"/>
+    </path>
+
+    <path name="low-latency-recordC usb-headset-mic">
+        <ctl name="Audio Capture Mic Source" value="USB_MIC"/>
+        <ctl name="EP3 TX Mixer USB_TX" value="1"/>
+    </path>
+
     <path name="mmap-recordC">
         <ctl name="EP2 TX Mixer INTERNAL_MIC_TX" value="1"/>
     </path>
