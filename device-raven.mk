@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/raviole/thermal_info_config_raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
+# Bluetooth Tx power caps for raven
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
+
 # Camera
 PRODUCT_COPY_FILES += \
 	device/google/raviole/media_profiles_raven.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
