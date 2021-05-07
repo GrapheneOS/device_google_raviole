@@ -9,7 +9,6 @@
         <library name="loudness_enhancer" path="libldnhncr.so"/>
         <library name="proxy" path="libeffectproxy.so"/>
         <library name="offload_effect" path="liboffloadeffect.so"/>
-        <library name="audio_pre_process" path="libdsp_aecns.so"/>
         <library name="haptic_generator" path="libhapticgenerator.so"/>
     </libraries>
     <effects>
@@ -48,8 +47,8 @@
         </effectProxy>
         <effect name="downmix" library="downmix" uuid="93f04452-e4fe-41cc-91f9-e475b6d1d69f"/>
         <effect name="loudness_enhancer" library="loudness_enhancer" uuid="fa415329-2034-4bea-b5dc-5b381c8d1e2c"/>
-        <effect name="aec" library="audio_pre_process" uuid="28c28780-ec8b-48b6-8590-8c84557d797d"/>
-        <effect name="ns" library="audio_pre_process" uuid="62ff2836-d050-43c3-9c2d-94a73dad2c64"/>
+        <effect name="aec" library="offload_effect" uuid="28c28780-ec8b-48b6-8590-8c84557d797d"/>
+        <effect name="ns" library="offload_effect" uuid="62ff2836-d050-43c3-9c2d-94a73dad2c64"/>
         <effect name="haptic_generator" library="haptic_generator" uuid="97c4acd1-8b82-4f2f-832e-c2fe5d7a9931"/>
     </effects>
     <postprocess>
