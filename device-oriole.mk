@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/thermal_info_config_oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
 	device/google/raviole/thermal_info_config_oriole_WHI_A.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_WHI_A.json
 
+# Bluetooth Tx power caps for oriole
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth_power_limits_oriole.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
+
 # MIPI Coex Configs
 PRODUCT_COPY_FILES += \
     device/google/raviole/radio/oriole_display_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_primary_mipi_coex_table.csv \
