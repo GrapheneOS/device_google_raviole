@@ -76,6 +76,8 @@
     <ctl name="DSP RX2 Source" value="ASPRX1"/>
     <ctl name="R DSP RX1 Source" value="ASPRX1"/>
     <ctl name="R DSP RX2 Source" value="ASPRX1"/>
+    <ctl name="Boost Peak Current Limit" value="3.50A"/>
+    <ctl name="R Boost Peak Current Limit" value="3.50A"/>
 
     <!-- Cirrus ASP TX source -->
     <ctl name="ASP TX1 Source" value="VMON" />
@@ -189,8 +191,6 @@
     <ctl name="NoHost1 TX Mixer USB_TX" value="0"/>
     <ctl name="VOIP TX Mixer USB_TX" value="0"/>
 
-    <ctl name="EP4 TX Mixer I2S_2_TX" value="0"/>
-
     <ctl name="EP1 TX Mixer INCALL_TX" value="0"/>
     <ctl name="EP2 TX Mixer INCALL_TX" value="0"/>
     <ctl name="EP3 TX Mixer INCALL_TX" value="0"/>
@@ -198,6 +198,8 @@
     <ctl name="EP5 TX Mixer INCALL_TX" value="0"/>
     <ctl name="EP6 TX Mixer INCALL_TX" value="0"/>
     <ctl name="NoHost1 TX Mixer INCALL_TX" value="0"/>
+
+    <ctl name="EP4 TX Mixer I2S_2_TX" value="0"/>
 
     <!-- AoC Mic setting -->
     <ctl name="MIC DC Blocker" value="1" />
@@ -665,6 +667,7 @@
     </path>
 
     <path name="voice-handset">
+        <ctl name="Boost Peak Current Limit" value="3.50A"/>
         <ctl name="PCM Source" value="ASP"/>
         <ctl name="AMP PCM Gain" value="6"/>
         <ctl name="Main AMP Enable Switch" value="1"/>
@@ -678,16 +681,22 @@
     </path>
 
     <path name="speaker">
+        <ctl name="Boost Peak Current Limit" value="1.70A"/>
+        <ctl name="R Boost Peak Current Limit" value="1.90A"/>
         <ctl name="Main AMP Enable Switch" value="1"/>
         <ctl name="R Main AMP Enable Switch" value="1"/>
     </path>
 
     <path name="voice-speaker">
+        <ctl name="R Boost Peak Current Limit" value="3.50A"/>
+        <ctl name="ASPTX1 Slot Position" value="1"/>
+        <ctl name="R ASPTX1 Slot Position" value="0"/>
         <ctl name="R DSP RX2 Source" value="ASPRX2"/>
         <ctl name="R Main AMP Enable Switch" value="1"/>
     </path>
 
     <path name="speaker-safe">
+        <ctl name="R Boost Peak Current Limit" value="3.50A"/>
         <ctl name="R Main AMP Enable Switch" value="1"/>
     </path>
 
