@@ -116,6 +116,19 @@
         <param name="frequency1" type="uint32"/>
       </struct>
     </module>
+    <module id="11" name="Stationary Noise Suppression">
+      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="48000" id="1" name="fs_" type="uint32"/>
+      <param default="2" id="2" name="numCh_" type="uint32"/>
+      <param default="3" id="3" name="chMask_" type="uint32"/>
+      <param default="1" id="16" name="strength level" type="uint32"/>
+      <param id="17" name="POWER_TIME_SMOOTH" type="float"/>
+      <param id="18" name="RMS_TIME_SMOOTH" type="float"/>
+      <param id="19" name="LOWER_BAND_THRESHOLD" size="129" type="float"/>
+      <param id="20" name="UPPER_BAND_THRESHOLD" size="3" type="float"/>
+      <param id="21" name="ATTACK_TIME" type="float"/>
+      <param id="22" name="RELEASE_TIME" type="float"/>
+    </module>
     <module id="14" name="Linear Gain">
       <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
@@ -185,6 +198,7 @@
       <param default="12" id="70" name="SSC_SOFT_DECISION_MIN_FREQ" type="int32"/>
       <param default="450" id="71" name="SSC_SOFT_DECISION_MAX_FREQ" type="int32"/>
       <param default="5" id="72" name="SSC_KEEP_SAVED_PROB_SMOOTH_SIZE" type="int32"/>
+      <param default="1000" id="73" name="GAIN_BOOSTING_COST" type="int32"/>
     </module>
     <module id="18" name="Multi Channel IIR 1">
       <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
@@ -200,16 +214,39 @@
         <param default="4" name="type" size="60" type="int32"/>
       </struct>
     </module>
+    <module id="10000" name="Eraser">
+      <param id="275" name="eraser_pre_gain" type="uint32"/>
+      <param id="277" name="eraser_post_gain" type="uint32"/>
+      <param id="279" name="non_eraser_gain" type="uint32"/>
+    </module>
+    <module id="10001" name="Cleaner">
+      <param id="299" name="cleaner_post_gain" type="uint32"/>
+    </module>
+    <module id="10002" name="CHRE">
+      <param id="297" name="chre_gain" type="uint32"/>
+    </module>
   </modules>
   <signalflows>
     <signalflow id="1" name="Spatial Audio">
-      <moduleRef id="18"/>
-      <moduleRef id="17"/>
-      <moduleRef id="14"/>
-      <moduleRef id="6"/>
-      <moduleRef id="7"/>
-      <moduleRef id="5"/>
-      <moduleRef id="8"/>
+      <block id="128">
+        <moduleRef id="18"/>
+        <moduleRef id="17"/>
+      </block>
+      <block id="134">
+        <moduleRef id="14"/>
+        <moduleRef id="11"/>
+        <moduleRef id="6"/>
+        <moduleRef id="7"/>
+        <moduleRef id="5"/>
+        <moduleRef id="8"/>
+      </block>
+    </signalflow>
+    <signalflow id="1000" name="Smart Feature">
+      <block id="0">
+        <moduleRef id="10000"/>
+        <moduleRef id="10001"/>
+        <moduleRef id="10002"/>
+      </block>
     </signalflow>
   </signalflows>
 </template>
