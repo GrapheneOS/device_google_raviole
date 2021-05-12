@@ -34,7 +34,7 @@
         <!--intf id="BE_HW_RX_INTF_3" name="BT_RX"/-->
         <intf id="BE_VIRTUAL_VOICE_RX_TUNING" block_id="19"/>
         <intf id="BE_VIRTUAL_VOICE_TX_TUNING" block_id="19"/>
-        <intf id="BE_HW_TX_INTF_3" name="Camcorder" block_id="128"/>
+        <intf id="BE_HW_TX_INTF_0" block_id="134,128"/>
     </hw_intf>
 
     <product_lists>
@@ -173,12 +173,12 @@
         <cfg id="IN_USB_TTY_HCO_MIC_BE_CFG" be_path="usb-headset-mic" codec_path="usb-headset-mic"/>
         <cfg id="IN_HANDSET_MIC_BE_CFG" intf_id="BE_HW_TX_INTF_0" mux="HW_MUX_GP_0" tuning_id="10" codec_path="handset-mic" be_path="NULL"/>
         <cfg id="IN_SPK_VI_BE_CFG" codec_path="NULL" be_path="spk-vi"/>
-        <cfg id="IN_CAMCORDER_LANDSCAPE_BE_CFG" intf_name="Camcorder" tuning_id="71"/>
-        <cfg id="IN_CAMCORDER_INVERT_LANDSCAPE_BE_CFG" intf_name="Camcorder" tuning_id="71"/>
-        <cfg id="IN_CAMCORDER_PORTRAIT_BE_CFG" intf_name="Camcorder" tuning_id="71"/>
-        <cfg id="IN_CAMCORDER_SELFIE_LANDSCAPE_BE_CFG" intf_name="Camcorder" tuning_id="71"/>
-        <cfg id="IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE_BE_CFG" intf_name="Camcorder" tuning_id="71"/>
-        <cfg id="IN_CAMCORDER_SELFIE_PORTRAIT_BE_CFG" intf_name="Camcorder" tuning_id="71"/>
+        <cfg id="IN_CAMCORDER_LANDSCAPE_BE_CFG" tuning_id="71"/>
+        <cfg id="IN_CAMCORDER_INVERT_LANDSCAPE_BE_CFG" tuning_id="71"/>
+        <cfg id="IN_CAMCORDER_PORTRAIT_BE_CFG" tuning_id="71"/>
+        <cfg id="IN_CAMCORDER_SELFIE_LANDSCAPE_BE_CFG" tuning_id="71"/>
+        <cfg id="IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE_BE_CFG" tuning_id="71"/>
+        <cfg id="IN_CAMCORDER_SELFIE_PORTRAIT_BE_CFG" tuning_id="71"/>
     </cfg_attr>
 
     <xlate_id>
@@ -205,5 +205,6 @@
         <module libname="audio_fortemedia_aoc.so"/>
         <module libname="liboffloadeffect.so"/>
         <module libname="audio_amcs_ext.so"/>
+        <module libname="audio_bluenote_aoc.so"/>
     </external_module>
 </audio_platform_configuration>
