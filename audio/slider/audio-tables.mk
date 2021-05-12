@@ -44,9 +44,7 @@ PRODUCT_COPY_FILES += $(foreach spk_firmware, \
 
 # Audio tuning
 PRODUCT_COPY_FILES += \
-    device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/bluenote/playback.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/playback.gatf \
     device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/bluenote/recording.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/recording.gatf \
-    device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/bluenote/voice.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/voice.gatf \
     device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/fortemedia/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \
     device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/fortemedia/HANDSFREE.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSFREE.dat \
     device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/fortemedia/HANDSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSET.dat \
