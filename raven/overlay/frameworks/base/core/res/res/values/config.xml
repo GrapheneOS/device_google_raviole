@@ -33,20 +33,22 @@
 
     <!-- Display cutout configuration -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
-        M 680,71
-        a 42,42 0 1 0 84,0 42,42 0 1 0 -84,0
+        M 677,72
+        a 42,42 0 1 0 84,0 
+        a 42,42 0 1 0 -84,0
         Z
         @left
     </string>
 
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-        M 664,13
-        h 116
-        v 116
-        h -116
+        M 655,0
+        h 126
+        v 130
+        h -126
         Z
         @left
     </string>
+
 
     <!-- Radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">25px</dimen>
