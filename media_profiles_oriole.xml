@@ -1029,13 +1029,13 @@
         minBitRate="64000" maxBitRate="100000000"
         minFrameWidth="128" maxFrameWidth="3840"
         minFrameHeight="96" maxFrameHeight="2160"
-        minFrameRate="15" maxFrameRate="60" />
+        minFrameRate="15" maxFrameRate="30" />
 
     <VideoEncoderCap name="h264" enabled="true"
         minBitRate="64000" maxBitRate="100000000"
         minFrameWidth="128" maxFrameWidth="3840"
         minFrameHeight="96" maxFrameHeight="2160"
-        minFrameRate="15" maxFrameRate="60" />
+        minFrameRate="15" maxFrameRate="30" />
 
     <VideoEncoderCap name="h263" enabled="true"
         minBitRate="64000" maxBitRate="1000000"
