@@ -127,3 +127,7 @@ PRODUCT_PACKAGES += \
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayGR1YH
+
+# Fingerprint antispoof property
+PRODUCT_PRODUCT_PROPERTIES +=\
+    persist.vendor.fingerprint.disable.fake.override=none
