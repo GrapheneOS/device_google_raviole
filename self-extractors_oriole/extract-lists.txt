@@ -1,0 +1,19 @@
+  google_devices)
+    TO_EXTRACT="\
+            IMAGES/vendor.img \
+            IMAGES/vendor_dlkm.img \
+            RADIO/bootloader.img \
+            RADIO/radio.img \
+            system_ext/etc/permissions/com.shannon.imsservice.xml \
+            system_ext/etc/permissions/oemrilhook.xml \
+            system_ext/framework/oemrilhook.jar \
+            system_ext/lib64/libmediaadaptor.so \
+            system_ext/lib/libmediaadaptor.so \
+            system_ext/app/ShannonDataService/ShannonDataService.apk \
+            system_ext/app/ShannonNetworkService/ShannonNetworkService.apk \
+            system_ext/app/ShannonRcs/ShannonRcs.apk \
+            system_ext/priv-app/ShannonIms/ShannonIms.apk \
+            system_ext/priv-app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk \
+            "
+    ;;
+

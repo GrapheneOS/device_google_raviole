@@ -1,0 +1,6 @@
+require board=slider|whitefin|oriole|raven
+require version-bootloader=slider-1.0-7351067
+
+
+
+require version-baseband=g5123x-76938-210114-B-7081606|g5123b-84563-210511-B-7353093
