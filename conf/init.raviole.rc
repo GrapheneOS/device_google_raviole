@@ -8,6 +8,24 @@ on early-boot
     wait_for_prop vendor.common.modules.ready 1
     start insmod_sh_raviole
 
+# Disables fingerprint antispoof by default
+on boot && property:ro.build.type=userdebug && \
+           property:persist.vendor.fingerprint.disable.fake.override=none
+    setprop vendor.fingerprint.disable.fake 100
+
+# Overrides fingerprint antispoof if following persist sysprops are set
+on boot && property:ro.build.type=userdebug && \
+           property:persist.vendor.fingerprint.disable.fake.override=0
+    setprop vendor.fingerprint.disable.fake ${persist.vendor.fingerprint.disable.fake.override}
+
+on boot && property:ro.build.type=userdebug && \
+           property:persist.vendor.fingerprint.disable.fake.override=1
+    setprop vendor.fingerprint.disable.fake ${persist.vendor.fingerprint.disable.fake.override}
+
+on boot && property:ro.build.type=userdebug && \
+           property:persist.vendor.fingerprint.disable.fake.override=100
+    setprop vendor.fingerprint.disable.fake ${persist.vendor.fingerprint.disable.fake.override}
+
 service insmod_sh_raviole /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.${ro.hardware}.cfg
     class main
     user root

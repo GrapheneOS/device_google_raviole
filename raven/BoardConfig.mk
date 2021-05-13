@@ -13,11 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
-TARGET_BOOTLOADER_BOARD_NAME := raven
-TARGET_SCREEN_DENSITY := 560
-USES_DEVICE_GOOGLE_RAVIOLE := true
 
-include device/google/gs101/BoardConfig-common.mk
--include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
--include vendor/google_devices/raven/proprietary/BoardConfigVendor.mk
+ifdef PHONE_CAR_BOARD_CONFIG
+  include $(PHONE_CAR_BOARD_CONFIG)
+else
+  TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
+  TARGET_BOOTLOADER_BOARD_NAME := raven
+  TARGET_SCREEN_DENSITY := 560
+  USES_DEVICE_GOOGLE_RAVIOLE := true
+
+  include device/google/gs101/BoardConfig-common.mk
+  -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
+  -include vendor/google_devices/raven/proprietary/BoardConfigVendor.mk
+endif
