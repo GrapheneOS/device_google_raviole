@@ -98,6 +98,7 @@
   <feature value="1" name="Telephony" />
   <feature value="2" name="Playback" />
   <feature value="3" name="Recording" />
+  <feature value="4" name="SmartFeature" />
 
   <!--
     Category
@@ -111,6 +112,7 @@
   <category type="record" name="Camcorder" />
   <category type="record" name="VR" />
   <category type="record" name="Unprocessed" />
+  <category type="hotword" name="Default" />
 
   <!--
     Usecase
@@ -259,10 +261,12 @@
            tx-path="device_in_unprocessed_usb_4_pin_headset_mic" />
   <usecase type="record" name="BT SCO"
            tx-path="device_in_bt_sco_mic" />
+  <usecase type="hotword" name="Default" tx-path="device_in_hotword" />
 
   <!--
     Tx/Rx paths (14 bits)
   -->
+  <path value="0" id="device_in_hotword" mixer-ref="handset_mic" />
   <path value="1" id="device_in_voice_handset_mic" mixer-ref="voice_mic" />
   <path value="2" id="device_out_voice_handset" mixer-ref="voice_handset" />
   <path value="3" id="device_in_voice_hac_handset_mic" mixer-ref="voice_mic" />
@@ -556,6 +560,7 @@
     <feature-ref node="feature_telephony" />
     <feature-ref node="feature_playback" />
     <feature-ref node="feature_record" />
+    <feature-ref node="feature_hotword" />
   </tuning-tree>
 
   <!--
@@ -577,6 +582,10 @@
     <category-ref node="category_cam" />
     <category-ref node="category_vr" />
     <category-ref node="category_unprocessed" />
+  </feature-node>
+
+  <feature-node id="feature_hotword" type="hotword" name="SmartFeature">
+    <category-ref node="category_hotword_default" />
   </feature-node>
 
   <!--
@@ -670,6 +679,10 @@
     <usecase-ref node="usecase_record_unprocessed_handset_quad_mic" />
     <usecase-ref node="usecase_record_unprocessed_usb_blackbird_others_headset_mic" />
     <usecase-ref node="usecase_record_unprocessed_usb_dongle_4_pin_headset" />
+  </category-node>
+
+  <category-node id="category_hotword_default" type="hotword" name="Default">
+    <usecase-ref node="usecase_hotword_default" />
   </category-node>
 
   <!--
@@ -969,6 +982,7 @@
                 name="USB-C headset mic (BlackBird + Others)" />
   <usecase-node id="usecase_record_unprocessed_usb_dongle_4_pin_headset" type="record"
                 name="USB-C Dongle with 4 pin headset" />
+  <usecase-node id="usecase_hotword_default" type="hotword" name="Default" />
 
   <!--
     Carrier Nodes.
