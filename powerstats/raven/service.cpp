@@ -110,7 +110,7 @@ int main() {
 
     addGs101CommonDataProviders(p);
     addDisplay(p);
-    addNFC(p, "/sys/devices/platform/10960000.hsi2c/i2c-4/4-0008/power_stats");
+    addNFC(p, "/sys/devices/platform/10960000.hsi2c/i2c-4/i2c-st21nfc/power_stats");
     addUwb(p);
 
     const std::string instance = std::string() + PowerStats::descriptor + "/default";
