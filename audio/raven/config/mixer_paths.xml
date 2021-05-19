@@ -35,6 +35,14 @@
     <ctl name="TDM_0_TX Chan" value="Four"/>
     <ctl name="TDM_0_TX Format" value="S32_LE"/>
 
+    <!-- Haptic setting -->
+    <ctl name="HAPTIC_RX Format" value="S32_LE"/>
+    <ctl name="HAPTIC_RX SlotFmt" value="S32_LE"/>
+    <ctl name="HAPTIC_RX Chan" value="Four"/>
+    <ctl name="HAPTIC_RX nSlot" value="Four"/>
+    <ctl name="RX Slots" id="0" value="2"/>
+    <ctl name="RX Slots" id="1" value="3"/>
+
     <!-- Cirrus Booster Amp TDM slot assignment-->
     <!-- RX slot -->
     <ctl name="ASPRX1 Slot Position" value="0"/>
