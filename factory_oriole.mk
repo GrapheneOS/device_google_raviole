@@ -24,12 +24,11 @@ PRODUCT_MODEL := Factory build on Oriole
 PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
 
+DEVICE_PACKAGE_OVERLAYS += device/google/raviole/factory_oriole/overlay
+
 # default BDADDR for EVB only
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
-
-# Fingerprint
-include device/google/gs101/fingerprint/udfps_factory.mk
 
 # Factory binary of camera
 PRODUCT_PACKAGES += fatp_gn1_hat_tool
