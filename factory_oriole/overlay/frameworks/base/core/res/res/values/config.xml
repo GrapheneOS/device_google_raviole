@@ -18,7 +18,6 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
      when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
      where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
@@ -27,15 +26,11 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-    <!-- Minimum screen brightness setting allowed by power manager.
-         The user is forbidden from setting the brightness below this level.  -->
-    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0</item>
+    <!-- The properties of a UDFPS sensor in pixels -->
+    <integer-array name="config_udfps_sensor_props">
+      <item>540</item>  <!-- sensorLocationX -->
+      <item>1769</item> <!-- sensorLocationY -->
+      <item>113</item>  <!-- sensorRadius -->
+    </integer-array>
 
-    <!-- Maximum screen brightness allowed by the power manager.
-         The user is forbidden from setting the brightness above this level. -->
-    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
-
-    <!-- Default screen brightness setting
-         Must be in the range specified by minimum and maximum. -->
-    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.29019607843</item>
 </resources>
