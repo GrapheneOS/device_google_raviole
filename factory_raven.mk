@@ -24,12 +24,11 @@ PRODUCT_MODEL := Factory build on Raven
 PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
 
+DEVICE_PACKAGE_OVERLAYS += device/google/raviole/factory_raven/overlay
+
 # default BDADDR for EVB only
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
-
-# Fingerprint
-include device/google/gs101/fingerprint/udfps_factory.mk
 
 # Factory binaries of camera
 PRODUCT_PACKAGES += fatp_gn1_hat_tool fatp_imx586_hat_tool
