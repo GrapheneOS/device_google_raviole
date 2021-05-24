@@ -112,6 +112,7 @@
                              samplingRates="48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO"/>
                 </mixPort>
+                <mixPort name="hifi_playback" role="source" />
             </mixPorts>
             <devicePorts>
                 <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
@@ -186,9 +187,9 @@
                 <route type="mix" sink="BT A2DP Speaker"
                        sources="primary output,deep buffer,compressed_offload,voip_rx"/>
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out,voip_rx,hifi_playback"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out,voip_rx,hifi_playback"/>
                 <route type="mix" sink="BT SCO"
                        sources="primary output,deep buffer,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Headset"
