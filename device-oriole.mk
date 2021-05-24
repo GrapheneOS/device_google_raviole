@@ -22,6 +22,7 @@ $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device
 $(call inherit-product-if-exists, vendor/google_devices/oriole/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/oriole/device-vendor-oriole.mk)
 $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/oriole/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersOriole.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/oriole/overlay
 
