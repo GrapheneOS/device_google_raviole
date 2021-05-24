@@ -538,6 +538,20 @@
         <ctl name="TDM_0_RX Mixer EP8" value="1"/>
     </path>
 
+    <path name="hifi-playbackP">
+    </path>
+
+    <path name="hifi-playbackP usb-headphone">
+        <ctl name="PCM Playback Volume" value="1000"/>
+    </path>
+
+    <path name="hifi-recordC">
+    </path>
+
+    <path name="hifi-recordC usb-headphone">
+        <ctl name="PCM Playback Volume" value="1000"/>
+    </path>
+
     <!-- audio capture dynamic route -->
     <path name="audio-recordC">
         <ctl name="EP1 TX Mixer INTERNAL_MIC_TX" value="1"/>
