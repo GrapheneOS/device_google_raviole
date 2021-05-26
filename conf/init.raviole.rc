@@ -8,9 +8,8 @@ on early-boot
     wait_for_prop vendor.common.modules.ready 1
     start insmod_sh_raviole
 
-# Disables fingerprint antispoof on PROTO1.0 devices
+# Disables fingerprint antispoof by default
 on boot && property:ro.build.type=userdebug && \
-           property:ro.revision=PROTO1.0 && \
            property:persist.vendor.fingerprint.disable.fake.override=none
     setprop vendor.fingerprint.disable.fake 100
 
