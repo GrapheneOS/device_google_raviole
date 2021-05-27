@@ -129,3 +129,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
+
+# Keyboard side padding in dp for portrait mode
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_r=11
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
