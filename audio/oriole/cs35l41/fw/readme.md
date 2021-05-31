@@ -16,6 +16,16 @@
 
 ### Changelog
 
+#### 20210513_120hpf - PB6.47.0
+
+- Recharacterized and retuned with EVT Bucks
+  - **Top**: 5 samples (3 new ones + 2 from 20210323)
+  - **Bottom**: Same 3 samples as 20210323
+- Updated ReDC fallback per customer request.
+  - **Top**: 5.471 Ohms
+  - **Bottom**: 6.383 Ohms
+- Cal and Cal+Diag bin versions remain unchanged from 20210323 as these parameters have not been modified.
+
 #### 20210329_120hpf - PB6.47.0
 
 - Top speaker incorrectly had hpf as 150hz. Corrected fcutoff parameter on top speaker protect tunes.
@@ -33,6 +43,9 @@
     - **xmax**: 0.45mm
     - **tmax**: 130C
     - **hpf**: 120Hz
+- Updates to firmware from 6.45.0 to 6.47.0
+  - Implemented a timeout feature that allows a maximum delay between the start of the BCLK and the start of the LRCLK. If the timeout is exceeded, an error notification is sent to the driver and the command is ignored. This addresses a host-side timing issue for these signals that could lead to a no-audio situation.
+  - Fixed an issue where repeated pause/resume commands could cause pops on the output.
 
 #### 20210319 - PB6.45.0
 
@@ -62,35 +75,35 @@
 
 - readme.md
 
-**Protect, Calibration, and Diag bins with R Trace**
+**Protect, Calibration, and Diag bins with R Trace**  
 _For use in actual phone_
 
 - Bottom\o6Bottom_calAndDiag_20210323_pb6.47.0_17.5dB_withRtrace.bin
 - Bottom\o6Bottom_cal_20210323_pb6.47.0_17.5dB_withRtrace.bin
-- Bottom\o6Bottom_protect_120hpf_20210323_pb6.47.0_17.5dB_withRtrace.bin
+- Bottom\o6Bottom_protect_20210513_120hpf_pb6.47.0_17.5dB_withRtrace.bin
 - Top\o6Top_calAndDiag_20210323_pb6.47.0_17.5dB_withRTrace.bin
 - Top\o6Top_cal_20210323_pb6.47.0_17.5dB_withRTrace.bin
-- Top\o6Top_protect_120hpf_20210323_pb6.47.0_17.5dB_withRTrace.bin
+- Top\o6Top_protect_20210513_120hpf_pb6.47.0_17.5dB_withRTrace.bin
 
-**Protect & Calibration files without R trace**
-_For use on Lochnagar 2 development platform_
+**Protect & Calibration files without R trace**  
+_For use on Lochnagar 2 development platform_  
 _JSON files contains both protect and calibration deploy groups_
 
-- Bottom\o6Bottom_protect_120hpf_20210323_pb6.47.0_17.5dB_noRTrace.json
-- Top\o6Top_protect_120hpf_20210323_pb6.47.0_17.5dB_noRTrace.json
+- Bottom\o6Bottom_protect_20210513_120hpf_pb6.47.0_17.5dB_noRTrace.json
+- Top\o6Top_protect_20210513_120hpf_pb6.47.0_17.5dB_noRTrace.json
 
 **Labsuite Files**
 
-- Bottom\o6Bottom_protect_120hpf_20210323_pb6.47.0_17.5dB_noRtrace.exported_tuning
-- Bottom\o6Bottom_protect_120hpf_20210323_pb6.47.0_17.5dB_withRtrace.exported_tuning
-- Bottom\o6Bottom_protect_120hpf_20210323_pb6.47.0_17.5dB_noRtrace.parameters
-- Bottom\o6Bottom_protect_120hpf_20210323_pb6.47.0_17.5dB_withRtrace.parameters
-- Top\o6Top_protect_120hpf_20210323_pb6.47.0_17.5dB_noRtrace.exported_tuning
-- Top\o6Top_protect_120hpf_20210323_pb6.47.0_17.5dB_withRtrace.exported_tuning
-- Top\o6Top_protect_120hpf_20210323_pb6.47.0_17.5dB_noRtrace.parameters
-- Top\o6Top_protect_120hpf_20210323_pb6.47.0_17.5dB_withRtrace.parameters
+- Bottom\o6Bottom_protect_20210513_120hpf_pb6.47.0_17.5dB_noRtrace.exported_tuning
+- Bottom\o6Bottom_protect_20210513_120hpf_pb6.47.0_17.5dB_noRtrace.parameters
+- Bottom\o6Bottom_protect_20210513_120hpf_pb6.47.0_17.5dB_withRtrace.exported_tuning
+- Bottom\o6Bottom_protect_20210513_120hpf_pb6.47.0_17.5dB_withRtrace.parameters
+- Top\o6Top_protect_20210513_120hpf_pb6.47.0_17.5dB_noRtrace.exported_tuning
+- Top\o6Top_protect_20210513_120hpf_pb6.47.0_17.5dB_noRtrace.parameters
+- Top\o6Top_protect_20210513_120hpf_pb6.47.0_17.5dB_withRtrace.exported_tuning
+- Top\o6Top_protect_20210513_120hpf_pb6.47.0_17.5dB_withRtrace.parameters
 
-**Firmware Files**
+**Firmware Files**  
 _Each firmware wmfw is in a folder respective for which type of bin file it is for_
 
 - Firmware\Cal\halo_cspl_RAM_revB2_29.49.0.wmfw
@@ -99,8 +112,8 @@ _Each firmware wmfw is in a folder respective for which type of bin file it is f
 
 **Tune Reports**
 
-- CustomerTuneReports\o6Bottom_20210323_6.47_CustomerTuneReport.pdf
-- CustomerTuneReports\o6Top_20210323_6.47_CustomerTuneReport.pdf
+- CustomerTuneReports\o6Bottom_20210519_120_hpf_6.47_CustomerTuneReport.pdf
+- CustomerTuneReports\o6Top_20210519_120hpf_6.47_CustomerTuneReport.pdf
 
 ---
 
@@ -118,6 +131,7 @@ _Each firmware wmfw is in a folder respective for which type of bin file it is f
 | **Resonance Frequency**             | 780 [Hz] +/-10 % |
 | **RTrace**                          | 0.3 [Ohms]       |
 | **ReDC Max Delta**                  | 0.6 [Ohms]       |
+| **ReDC Fallback Value**             | 5.471 [Ohms]     |
 
 ### Bottom Speaker
 
@@ -131,3 +145,4 @@ _Each firmware wmfw is in a folder respective for which type of bin file it is f
 | **Resonance Frequency**             | 890 [Hz] +/-80 [Hz] |
 | **RTrace**                          | 0.3 [Ohms]          |
 | **ReDC Max Delta**                  | 0.69 [Ohms]         |
+| **ReDC Fallback Value**             | 6.383 [Ohms]        |
