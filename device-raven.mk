@@ -22,6 +22,7 @@ $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device
 $(call inherit-product-if-exists, vendor/google_devices/raven/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/raven/device-vendor-raven.mk)
 $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/raven/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersRaven.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay
 
