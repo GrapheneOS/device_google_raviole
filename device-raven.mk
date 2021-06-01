@@ -22,6 +22,7 @@ $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device
 $(call inherit-product-if-exists, vendor/google_devices/raven/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/raven/device-vendor-raven.mk)
 $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/raven/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersRaven.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay
 
@@ -109,7 +110,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 
 # PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/raven
+PRODUCT_SOONG_NAMESPACES += \
+    device/google/raviole/powerstats/raven \
+    device/google/raviole
+
 
 # userdebug specific
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
@@ -137,3 +141,7 @@ PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gms.dck.eligible_wcc=3
+
+# SKU specific RROs
+PRODUCT_PACKAGES += \
+    SettingsOverlayGF5KQ
