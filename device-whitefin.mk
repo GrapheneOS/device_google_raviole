@@ -57,3 +57,6 @@ PRODUCT_COPY_FILES += \
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
+
+# Trusty liboemcrypto.so
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts

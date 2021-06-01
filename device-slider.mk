@@ -76,3 +76,6 @@ DEVICE_MANIFEST_FILE += \
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/slider
+
+# Trusty liboemcrypto.so
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
