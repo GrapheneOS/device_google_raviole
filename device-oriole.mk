@@ -142,3 +142,6 @@ PRODUCT_PRODUCT_PROPERTIES +=\
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gms.dck.eligible_wcc=2
+
+# Trusty liboemcrypto.so
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
