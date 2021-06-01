@@ -145,3 +145,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayGF5KQ
+
+# Trusty liboemcrypto.so
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
