@@ -222,6 +222,7 @@
         <ctl name="USB Playback SR" value="48000" />
         <ctl name="USB Playback CH" value="2" />
         <ctl name="USB Playback BW" value="16" />
+        <ctl name="USB Config To AoC" value="1" />
         <ctl name="USB_RX Mixer EP3" value="1" />
     </path>
 
@@ -278,6 +279,7 @@
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="0" />
         <ctl name="TDM_0_TX Format" value="S32_LE" />
         <ctl name="TDM_0_TX Chan" value="One" />
+        <ctl name="USB Config To AoC" value="1" />
         <ctl name="EP1 TX Mixer TDM_0_TX" value="1" />
     </path>
 
