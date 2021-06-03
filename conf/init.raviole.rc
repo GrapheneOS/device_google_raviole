@@ -34,7 +34,7 @@ service insmod_sh_raviole /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.${r
     disabled
     oneshot
 
-on fs
+on post-fs-data
     # Fingerprint
     chown system system /dev/goodix_fp
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
