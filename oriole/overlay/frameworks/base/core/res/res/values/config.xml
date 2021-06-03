@@ -172,4 +172,18 @@
     <!-- Type of the quick pickup sensor. Empty if quick pickup is not supported. -->
     <string name="config_quickPickupSensorType" translatable="false">com.google.sensor.quick_pickup</string>
 
+    <!-- Not allow to switch to higher refresh rate when display brightness setting is
+         equal or less than this value -->
+    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
+        <item>7</item> <!-- 33% UI brightness -->
+        <item>9</item> <!-- 40% UI brightness -->
+    </integer-array>
+    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
+        <item>-1</item>
+        <item>20</item>
+    </integer-array>
+
+    <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
+    <integer name="config_defaultRefreshRateInZone">90</integer>
+
 </resources>
