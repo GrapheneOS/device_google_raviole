@@ -137,6 +137,7 @@
         <usecase id="UC_MMAP_RECORD" dev1="9" dyn_path="true" dsp_vol="false" mmap="true" period="1" period_num="240"/>
         <!-- for hifi -->
         <usecase id="UC_HIFI_PLAYBACK" dev1="25"/>
+        <usecase id="UC_HIFI_RECORD" dev1="26"/>
     </usecase_attr>
 
     <dsp_latency>
