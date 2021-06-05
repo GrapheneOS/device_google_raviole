@@ -762,28 +762,28 @@
             "Name":"thermal-cpufreq-0",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote",
-            "State2Power":["684", "568", "479", "359", "322", "265", "228", "171", "117", "86", "41"],
+            "State2Power":["428", "368", "320", "244", "220", "184", "156", "116", "80", "56", "24"],
             "PowerRail":"S4M_VDD_CPUCL0"
         },
         {
             "Name":"thermal-cpufreq-1",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote",
-            "State2Power":["926", "744", "590", "466", "365", "308", "232", "190", "156", "129", "93", "62"],
+            "State2Power":["904", "740", "594", "476", "374", "314", "236", "192", "156", "126", "90", "58"],
             "PowerRail":"S3M_VDD_CPUCL1"
         },
         {
             "Name":"thermal-cpufreq-2",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote",
-            "State2Power":["3326", "3300", "3215", "2986", "2563", "2215", "2036", "1702", "1341", "1191", "964", "791", "658", "519", "420", "344", "176"],
+            "State2Power":["4406", "3874", "3500", "3052", "2704", "2334", "2176", "1864", "1492", "1362", "1116", "908", "756", "594", "478", "388", "178"],
             "PowerRail":"S2M_VDD_CPUCL2"
         },
         {
             "Name":"thermal-gpufreq-0",
             "Type":"GPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote",
-            "State2Power":["3950", "3368", "2933", "2278", "2075", "1807", "1508", "1305", "1100", "916", "737", "565"],
+            "State2Power":["4599", "3727", "3259", "2378", "2044", "1813", "1449", "1223", "1007", "804", "633", "452"],
             "PowerRail":"S2S_VDD_G3D"
         },
         {
