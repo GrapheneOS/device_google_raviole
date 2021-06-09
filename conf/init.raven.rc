@@ -30,3 +30,9 @@ on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_complet
 # Bluetooth
 on post-fs-data
     chown bluetooth system /proc/bluetooth/timesync
+
+# For Japan sku, always enforce camera shutter sound
+# Since this property is read by the audio server in system service,
+# it should be written by the system init.
+on property:ro.boot.hardware.sku=GF5KQ
+    setprop audio.camerasound.force true
