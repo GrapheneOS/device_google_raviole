@@ -190,7 +190,7 @@
         <!-- Bluetooth Audio HAL -->
         <xi:include href="bluetooth_audio_policy_configuration_7_0.xml"/>
         <!-- Usb Audio HAL -->
-        <module name="usb" halVersion="2.0">
+        <module name="usbv2" halVersion="2.0">
             <mixPorts>
                 <mixPort name="usb_accessory output" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
