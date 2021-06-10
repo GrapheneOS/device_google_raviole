@@ -279,6 +279,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":0.001,
+            "SendPowerHint":true,
             "Monitor":true,
             "PollingDelay":300000,
             "PassiveDelay":7000,
