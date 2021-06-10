@@ -195,11 +195,8 @@
     </voip_db_mapping>
 
     <device_handle>
-        <hadnler libname="audio_bt_aoc.so"/>
-    </device_handle>
-
-    <device_handle>
-        <hadnler libname="audio_usb_aoc.so" argu="MaxSamplingRate=96000"/>
+        <handler libname="audio_bt_aoc.so"/>
+        <handler libname="audio_usb_aoc.so" argu="MaxSamplingRate=96000"/>
     </device_handle>
 
     <external_module>
