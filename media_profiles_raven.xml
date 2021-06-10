@@ -256,9 +256,9 @@
 
         <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="60">
             <Video codec="h264"
-                   bitRate="72000000"
-                   width="1920"
-                   height="1080"
+                   bitRate="42000000"
+                   width="1280"
+                   height="720"
                    frameRate="240" />
 
             <!-- audio setting is ignored -->
@@ -273,6 +273,20 @@
                    bitRate="72000000"
                    width="1920"
                    height="1080"
+                   frameRate="240" />
+
+            <!-- audio setting is ignored -->
+            <Audio codec="aac"
+                   bitRate="96000"
+                   sampleRate="48000"
+                   channels="1" />
+        </EncoderProfile>
+
+        <EncoderProfile quality="highspeed720p" fileFormat="mp4" duration="60">
+            <Video codec="h264"
+                   bitRate="42000000"
+                   width="1280"
+                   height="720"
                    frameRate="240" />
 
             <!-- audio setting is ignored -->
