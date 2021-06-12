@@ -361,14 +361,34 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                "NAN",
                 90,
-                "NAN",
+                93,
+                96,
                 "NAN"
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":false
+            "Monitor":true,
+            "PollingDelay":300000,
+            "PassiveDelay":5000,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "thermal-cpufreq-2",
+                    "LimitInfo": [0, 0, 0, 7, 7, 10, 10]
+                },
+                {
+                    "CdevRequest": "thermal-cpufreq-0",
+                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
+                },
+                {
+                    "CdevRequest": "thermal-cpufreq-1",
+                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
+                },
+                {
+                    "CdevRequest": "thermal-gpufreq-0",
+                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
+                }
+            ]
         },
         {
             "Name":"vdroop1",
@@ -474,7 +494,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                13.2,
+                12,
                 "NAN",
                 "NAN"
             ],
@@ -490,7 +510,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                12,
+                9,
                 "NAN",
                 "NAN"
             ],
@@ -522,7 +542,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                10.5,
+                8.5,
                 "NAN",
                 "NAN"
             ],
@@ -538,7 +558,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                13.2,
+                9,
                 "NAN",
                 "NAN"
             ],

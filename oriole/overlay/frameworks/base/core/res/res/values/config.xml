@@ -176,14 +176,27 @@
          equal or less than this value -->
     <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
         <item>7</item> <!-- 33% UI brightness -->
-        <item>9</item> <!-- 40% UI brightness -->
+        <item>11</item> <!-- 45% UI brightness -->
     </integer-array>
     <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
         <item>-1</item>
-        <item>20</item>
+        <item>30</item>
     </integer-array>
 
     <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
     <integer name="config_defaultRefreshRateInZone">90</integer>
+
+    <!-- Switch to fixed refresh rate when display brightness setting is
+         equal or more than this value -->
+    <integer-array name="config_highDisplayBrightnessThresholdsOfFixedRefreshRate">
+        <item>158</item> <!--100% UI normal brightness -->
+    </integer-array>
+
+    <integer-array name="config_highAmbientBrightnessThresholdsOfFixedRefreshRate">
+        <item>50000</item>
+    </integer-array>
+
+    <!-- default refresh rate in the high zone defined by birghtness and ambient thresholds -->
+    <integer name="config_fixedRefreshRateInHighZone">60</integer>
 
 </resources>
