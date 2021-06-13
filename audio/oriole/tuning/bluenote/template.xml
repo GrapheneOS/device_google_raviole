@@ -8,7 +8,7 @@
       <param id="0" max="3" name="opMode_" type="uint32"/>
     </module>
     <module id="5" name="Auto Gain Control">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="1" id="2" name="numCh_" type="uint32"/>
       <param default="1" id="3" name="chMask_" type="uint32"/>
@@ -22,7 +22,7 @@
       <param id="23" name="rmsTav" type="uint32"/>
     </module>
     <module id="6" name="Surround Record">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="3" id="2" name="numCh_" type="uint32"/>
       <param default="7" id="3" name="chMask_" type="uint32"/>
@@ -45,7 +45,7 @@
       <param default="2" id="29" name="ch2_assignFrom" type="int32"/>
     </module>
     <module id="7" name="Multi Channel IIR 2">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="3" id="2" name="numCh_" type="uint32"/>
       <param default="1" id="3" name="chMask_" type="uint32"/>
@@ -59,7 +59,7 @@
       </struct>
     </module>
     <module id="8" name="Multi Band DRC">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="2" id="2" name="numCh_" type="uint32"/>
       <param default="3" id="3" name="chMask_" type="uint32"/>
@@ -108,8 +108,8 @@
       <struct id="18">
         <param max="30" min="-30" name="limiter_gain_dB" type="float"/>
         <param max="0" min="-30" name="limiter_threadhold_dB" type="float"/>
-        <param max="100" min="0" name="limiter_attackTime_ms" type="uint32"/>
-        <param max="100" min="0" name="limiter_releaseTime_ms" type="uint32"/>
+        <param max="100" min="0" name="limiter_attackTime_ms" type="float"/>
+        <param max="100" min="0" name="limiter_releaseTime_ms" type="float"/>
       </struct>
       <struct id="19">
         <param name="frequency0" type="uint32"/>
@@ -117,7 +117,7 @@
       </struct>
     </module>
     <module id="11" name="Stationary Noise Suppression">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="2" id="2" name="numCh_" type="uint32"/>
       <param default="3" id="3" name="chMask_" type="uint32"/>
@@ -130,14 +130,14 @@
       <param id="22" name="RELEASE_TIME" type="float"/>
     </module>
     <module id="14" name="Linear Gain">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="1" id="2" name="numCh_" type="uint32"/>
       <param default="1" id="3" name="chMask_" type="uint32"/>
       <param id="16" name="Simple_gain" type="float"/>
     </module>
     <module id="17" name="Wind Noise Reduction">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="2" id="2" name="numCh_" type="uint32"/>
       <param default="3" id="3" name="chMask_" type="uint32"/>
@@ -201,7 +201,7 @@
       <param default="1000" id="73" name="GAIN_BOOSTING_COST" type="int32"/>
     </module>
     <module id="18" name="Multi Channel IIR 1">
-      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
       <param default="48000" id="1" name="fs_" type="uint32"/>
       <param default="2" id="2" name="numCh_" type="uint32"/>
       <param default="3" id="3" name="chMask_" type="uint32"/>
