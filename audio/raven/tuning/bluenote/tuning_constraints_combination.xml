@@ -352,7 +352,8 @@
   <path value="83" id="device_in_unprocessed_usb_headset_mic" mixer-ref="usb_headset_mic" />
   <path value="84" id="device_in_unprocessed_usb_4_pin_headset_mic" mixer-ref="usb_headset_mic" />
   <path value="85" id="device_in_bt_sco_mic" mixer-ref="bt_mic" />
-
+ 
+ 
   <!--
     Mixer
   -->
