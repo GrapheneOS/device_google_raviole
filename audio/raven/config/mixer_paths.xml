@@ -348,15 +348,6 @@
         <ctl name="USB_RX Mixer EP6" value="1"/>
     </path>
 
-    <path name="deep-buffer-playbackP usb-tty-full">
-    </path>
-
-    <path name="deep-buffer-playbackP usb-tty-hco">
-    </path>
-
-    <path name="deep-buffer-playbackP usb-tty-vco">
-    </path>
-
     <path name="deep-buffer-playbackP hearing-aid">
     </path>
 
@@ -384,15 +375,6 @@
         <ctl name="USB_RX Mixer EP2" value="1"/>
     </path>
 
-    <path name="low-latency-playbackP usb-tty-full">
-    </path>
-
-    <path name="low-latency-playbackP usb-tty-hco">
-    </path>
-
-    <path name="low-latency-playbackP usb-tty-vco">
-    </path>
-
     <path name="low-latency-playbackP hearing-aid">
     </path>
 
@@ -411,15 +393,6 @@
         <ctl name="SINK_IDS" id="0" value="4"/>
         <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP4" value="1"/>
-    </path>
-
-    <path name="raw-playbackP usb-tty-full">
-    </path>
-
-    <path name="raw-playbackP usb-tty-hco">
-    </path>
-
-    <path name="raw-playbackP usb-tty-vco">
     </path>
 
     <path name="raw-playbackP hearing-aid">
