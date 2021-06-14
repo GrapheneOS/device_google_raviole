@@ -17,8 +17,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # AOSP packages required by the blobs
 PRODUCT_PACKAGES := \
-    ShannonDataService \
-    ShannonNetworkService \
     ShannonQualifiedNetworksService \
     ShannonIms \
     ShannonRcs \
@@ -28,7 +26,7 @@ PRODUCT_PACKAGES += \
 
 #  blob(s) necessary for oriole hardware
 PRODUCT_COPY_FILES := \
-    vendor/google_devices/oriole/proprietary/com.shannon.imsservice.xml:system_ext/etc/permissions/com.shannon.imsservice.xml \
-    vendor/google_devices/oriole/proprietary/oemrilhook.xml:system_ext/etc/permissions/oemrilhook.xml \
-    vendor/google_devices/oriole/proprietary/oemrilhook.jar:system_ext/framework/oemrilhook.jar \
+    vendor/google_devices/oriole/proprietary/com.shannon.imsservice.xml:system_ext/etc/permissions/com.shannon.imsservice.xml:samsung \
+    vendor/google_devices/oriole/proprietary/oemrilhook.xml:system_ext/etc/permissions/oemrilhook.xml:samsung \
+    vendor/google_devices/oriole/proprietary/oemrilhook.jar:system_ext/framework/oemrilhook.jar:samsung \
 
