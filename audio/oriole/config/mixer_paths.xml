@@ -212,6 +212,7 @@
     <!-- AoC Mic setting -->
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC HW Gain At High Power Mode (cB)" value="0" />
+    <ctl name="MIC Record Soft Gain (dB)" value="0"/>
 
     <!-- USB setting -->
     <ctl name="USB Dev ID" value="1"/>
@@ -697,7 +698,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="220"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="22"/>
     </path>
 
     <path name="voice-handset-mic">
@@ -715,7 +716,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="0"/>
     </path>
 
     <path name="voice-speaker-mic">
@@ -734,7 +735,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="0"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="0"/>
     </path>
 
     <path name="voice-recog-mic">
@@ -743,7 +744,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="220"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="22"/>
     </path>
 
     <path name="unprocessed-mic">
@@ -752,7 +753,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="5"/>
     </path>
 
     <path name="unprocessed-dual-mic">
@@ -761,7 +762,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="5"/>
     </path>
 
     <path name="unprocessed-triple-mic">
@@ -770,7 +771,7 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
-        <ctl name="MIC HW Gain At High Power Mode (cB)" value="50"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="5"/>
     </path>
 
     <path name="bt-mic">
