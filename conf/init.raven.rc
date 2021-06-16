@@ -5,8 +5,7 @@ import /vendor/etc/init/hw/init.raviole.rc
 on init
     # logbuffer
     chown system system /dev/logbuffer_5-0057
-    # register/nvmem dump
-    chown system system /d/regmap/6-0036/registers
+    # nvmem dump
     chown system system /sys/bus/nvmem/devices/5-00500/nvmem
 
     # Power Stats HAL
