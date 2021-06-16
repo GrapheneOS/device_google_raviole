@@ -72,6 +72,22 @@
         <ctl name="MIC HW Gain At High Power Mode (cB)" />
     </path>
 
+    <path name="mic1-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
+    </path>
+
+    <path name="mic2-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
+    </path>
+
+    <path name="mic3-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
+    </path>
+
+    <path name="mic4-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
+    </path>
+
     <path name="usb-capture-gain">
         <ctl name="Headset Capture Volume" />
     </path>
