@@ -18,9 +18,6 @@ TARGET_BOOTLOADER_BOARD_NAME := slider
 TARGET_SCREEN_DENSITY := 560
 USES_DEVICE_GOOGLE_RAVIOLE := true
 
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_FILTER += \
-    $(TARGET_KERNEL_DIR)/drv2624.ko \
-
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 include device/google/gs101/BoardConfig-common.mk
