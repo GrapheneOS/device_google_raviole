@@ -50,6 +50,7 @@
         <effect name="aec" library="offload_effect" uuid="28c28780-ec8b-48b6-8590-8c84557d797d"/>
         <effect name="ns" library="offload_effect" uuid="62ff2836-d050-43c3-9c2d-94a73dad2c64"/>
         <effect name="haptic_generator" library="haptic_generator" uuid="97c4acd1-8b82-4f2f-832e-c2fe5d7a9931"/>
+        <effect name="dynamics_processing" library="dynamics_processing" uuid="e0e6539b-1781-7261-676f-6d7573696340"/>
     </effects>
     <postprocess>
     </postprocess>
