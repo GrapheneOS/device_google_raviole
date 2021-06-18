@@ -153,4 +153,8 @@
     <!-- MMS user agent profile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/G8V0U.xml</string>
 
+    <!-- How long it takes for the HW to start illuminating after the illumination is requested.
+      It takes 3 frames to enable the Local High-Brightness Mode (LHBM), which at 120 Hz screen
+      refresh rate equates to a 25 ms delay. -->
+    <integer name="config_udfps_illumination_transition_ms">25</integer>
 </resources>
