@@ -22,6 +22,7 @@
                 <item>Built-In Mic</item>
                 <item>Telephony Tx</item>
                 <item>Voice Call And Telephony Rx</item>
+                <item>Echo Ref In</item>
             </attachedDevices>
             <defaultOutputDevice>Speaker</defaultOutputDevice>
             <mixPorts>
@@ -114,6 +115,11 @@
                 </mixPort>
                 <mixPort name="hifi_playback" role="source" />
                 <mixPort name="hifi_input" role="sink" />
+                <mixPort name="echo_ref_input" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
+                             samplingRates="48000"
+                             channelMasks="AUDIO_CHANNEL_IN_STEREO"/>
+                </mixPort>
             </mixPorts>
             <devicePorts>
                 <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
@@ -172,6 +178,8 @@
                 <!-- AUDIO_DEVICE_IN_VOICE_CALL and AUDIO_DEVICE_IN_TELEPHONY_RX are in the same value -->
                 <devicePort tagName="Voice Call And Telephony Rx" type="AUDIO_DEVICE_IN_VOICE_CALL" role="source">
                 </devicePort>
+                <devicePort tagName="Echo Ref In" type="AUDIO_DEVICE_IN_ECHO_REFERENCE" role="source">
+                </devicePort>
             </devicePorts>
             <!-- route declaration, i.e. list all available sources for a given sink -->
             <routes>
@@ -211,6 +219,7 @@
                 <route type="mix" sink="mmap_no_irq_in"
                        sources="Built-In Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
+                <route type="mix" sink="echo_ref_input" sources="Echo Ref In"/>
             </routes>
         </module>
         <!-- Bluetooth Audio HAL -->
