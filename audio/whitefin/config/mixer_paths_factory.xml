@@ -9,6 +9,7 @@
     <ctl name="SINK_IDS" id="1" value="-1" />
     <ctl name="MIC HW Gain At Lower Power Mode (cB)" value="-160" />
     <ctl name="MIC HW Gain At High Power Mode (cB)" value="0" />
+    <ctl name="MIC Record Soft Gain (dB)" value="0" />
 
     <ctl name="EP1 TX Mixer TDM_0_TX" value="0" />
     <ctl name="DEFAULT_MIC_ID" value="0" />
@@ -70,6 +71,22 @@
     <path name="mic4-gain">
         <ctl name="MIC HW Gain At Lower Power Mode (cB)" />
         <ctl name="MIC HW Gain At High Power Mode (cB)" />
+    </path>
+
+    <path name="mic1-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
+    </path>
+
+    <path name="mic2-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
+    </path>
+
+    <path name="mic3-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
+    </path>
+
+    <path name="mic4-sw-gain">
+        <ctl name="MIC Record Soft Gain (dB)" />
     </path>
 
     <path name="usb-capture-gain">
