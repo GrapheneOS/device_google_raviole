@@ -138,19 +138,19 @@
             "Multiplier":0.001
         },
         {
-            "Name":"VIRTUAL-NEUTRAL-DISP",
+            "Name":"VIRTUAL-NEUTRAL-QI",
             "Type":"UNKNOWN",
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
             "Combination":[
                 "neutral_therm",
-                "disp_therm"
+                "qi_therm"
             ],
             "Coefficient":[
-                "0.55",
-                "0.45"
+                "0.6",
+                "0.4"
             ],
-            "Offset":1000,
+            "Offset":-3000,
             "HotThreshold":[
                 "NAN",
                 "NAN",
@@ -216,19 +216,19 @@
             "Multiplier":0.001
         },
         {
-            "Name":"VIRTUAL-QI-BATT",
+            "Name":"VIRTUAL-QI-DISP",
             "Type":"UNKNOWN",
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
             "Combination":[
                 "qi_therm",
-                "battery"
+                "disp_therm"
             ],
             "Coefficient":[
-                "0.5",
-                "0.5"
+                "0.25",
+                "0.75"
             ],
-            "Offset":-4000,
+            "Offset":1000,
             "HotThreshold":[
                 "NAN",
                 "NAN",
@@ -248,10 +248,10 @@
             "TriggerSensor":"quiet_therm",
             "Formula":"MAXIMUM",
             "Combination":[
-                "VIRTUAL-NEUTRAL-DISP",
+                "VIRTUAL-NEUTRAL-QI",
                 "VIRTUAL-USB2-BATT",
                 "VIRTUAL-GNSS-BATT",
-                "VIRTUAL-QI-BATT"
+                "VIRTUAL-QI-DISP"
             ],
             "Coefficient":[
                 "1.0",
@@ -261,12 +261,12 @@
             ],
             "HotThreshold":[
                 "NAN",
-                "39.0",
-                "43.0",
-                "45.0",
-                "47.0",
+                "39",
+                "43",
+                "45",
+                "46.5",
                 "52.0",
-                "56.0"
+                "55.0"
             ],
             "HotHysteresis":[
                 0.0,
@@ -341,6 +341,10 @@
                 },
                 {
                     "CdevRequest": "dc_icl",
+                    "LimitInfo": [0, 1, 2, 3, 3, 3, 3]
+                },
+                {
+                    "CdevRequest": "wlc_fcc",
                     "LimitInfo": [0, 1, 2, 4, 4, 4, 4]
                 }
             ]
@@ -352,10 +356,10 @@
             "TriggerSensor":"quiet_therm",
             "Formula":"MAXIMUM",
             "Combination":[
-                "VIRTUAL-NEUTRAL-DISP",
+                "VIRTUAL-NEUTRAL-QI",
                 "VIRTUAL-USB2-BATT",
                 "VIRTUAL-GNSS-BATT",
-                "VIRTUAL-QI-BATT"
+                "VIRTUAL-QI-DISP"
             ],
             "Coefficient":[
                 "1.0",
@@ -543,26 +547,6 @@
                 {
                     "CdevRequest": "thermal-cpufreq-2",
                     "LimitInfo": [0, 0, 0, 7, 7, 10, 10]
-                },
-                {
-                    "CdevRequest": "thermal-cpufreq-0",
-                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
-                },
-                {
-                    "CdevRequest": "thermal-cpufreq-1",
-                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
-                },
-                {
-                    "CdevRequest": "thermal-gpufreq-0",
-                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
-                },
-                {
-                    "CdevRequest": "fcc",
-                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
-                },
-                {
-                    "CdevRequest": "dc_icl",
-                    "LimitInfo": [0, 0, 0, 0, 0, 0, 0]
                 }
             ]
         },
@@ -793,6 +777,10 @@
         },
         {
             "Name":"dc_icl",
+            "Type":"BATTERY"
+        },
+        {
+            "Name":"wlc_fcc",
             "Type":"BATTERY"
         }
     ]
