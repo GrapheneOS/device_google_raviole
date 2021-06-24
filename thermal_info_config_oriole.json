@@ -134,7 +134,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":0.001,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000
         },
         {
