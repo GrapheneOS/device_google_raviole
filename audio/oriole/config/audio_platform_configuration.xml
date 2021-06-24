@@ -81,6 +81,46 @@
                 <mic_info mic_device_id="builtin_mic_3"
                     channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
             </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_INVERT_LANDSCAPE_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_PORTRAIT_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_SELFIE_LANDSCAPE_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_SELFIE_PORTRAIT_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
             <backend_cfg in_cfg="IN_HANDSET_MIC_BE_CFG">
                 <mic_info mic_device_id="builtin_mic_1"
                     channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
@@ -106,6 +146,28 @@
                     channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
                 <mic_info mic_device_id="builtin_mic_3"
                     channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_VOICE_RECOGN_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_UNPROCESSED_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_UNPROCESSED_DUAL_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_UNPROCESSED_TRIPLE_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
             </backend_cfg>
     </input_backend_cfg_mic_mapping>
 
