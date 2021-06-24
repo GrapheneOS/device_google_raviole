@@ -39,10 +39,6 @@ on post-fs-data
     chown system system /dev/goodix_fp
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
 
-    # LHBM
-    # FIXME(b/183223359): Only grant write access to SystemUI.
-    chmod 0666 /sys/class/drm/card0/card0-DSI-1/panel/backlight/panel0-backlight/local_hbm_mode
-
     # Start the twoshay touch service
     start twoshay
 
