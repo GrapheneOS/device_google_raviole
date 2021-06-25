@@ -92,22 +92,19 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Voice packs for Text-To-Speech
 PRODUCT_COPY_FILES += \
-	device/google/raviole/tts/ja-jp/ja-jp-x-htm-r24.zvoice:product/tts/google/ja-jp/ja-jp-x-htm-r24.zvoice\
-	device/google/raviole/tts/ja-jp/ja-jp-x-jaa-r24.zvoice:product/tts/google/ja-jp/ja-jp-x-jaa-r24.zvoice\
-	device/google/raviole/tts/ja-jp/ja-jp-x-jab-r24.zvoice:product/tts/google/ja-jp/ja-jp-x-jab-r24.zvoice\
-	device/google/raviole/tts/ja-jp/ja-jp-x-jac-r24.zvoice:product/tts/google/ja-jp/ja-jp-x-jac-r24.zvoice\
-	device/google/raviole/tts/ja-jp/ja-jp-x-jad-r24.zvoice:product/tts/google/ja-jp/ja-jp-x-jad-r24.zvoice\
-	device/google/raviole/tts/ja-jp/ja-jp-x-mfk-r24.zvoice:product/tts/google/ja-jp/ja-jp-x-mfk-r24.zvoice\
-	device/google/raviole/tts/fr-fr/fr-fr-x-multi-r24.zvoice:product/tts/google/fr-fr/fr-fr-x-multi-r24.zvoice\
-	device/google/raviole/tts/de-de/de-de-x-multi-r24.zvoice:product/tts/google/de-de/de-de-x-multi-r24.zvoice\
-	device/google/raviole/tts/it-it/it-it-x-amb-r22.zvoice:product/tts/google/it-it/it-it-x-amb-r22.zvoice\
-	device/google/raviole/tts/it-it/it-it-x-ita-r22.zvoice:product/tts/google/it-it/it-it-x-ita-r22.zvoice\
-	device/google/raviole/tts/it-it/it-it-x-itb-r22.zvoice:product/tts/google/it-it/it-it-x-itb-r22.zvoice\
-	device/google/raviole/tts/it-it/it-it-x-itc-r22.zvoice:product/tts/google/it-it/it-it-x-itc-r22.zvoice\
-	device/google/raviole/tts/it-it/it-it-x-itd-r22.zvoice:product/tts/google/it-it/it-it-x-itd-r22.zvoice\
-	device/google/raviole/tts/it-it/it-it-x-kda-r22.zvoice:product/tts/google/it-it/it-it-x-kda-r22.zvoice\
-	device/google/raviole/tts/es-es/es-es-x-ana-r23.zvoice:product/tts/google/es-es/es-es-x-ana-r23.zvoice\
-	device/google/raviole/tts/es-es/es-es-x-multi-r23.zvoice:product/tts/google/es-es/es-es-x-multi-r23.zvoice
+	device/google/raviole/tts/ja-jp/ja-jp-x-multi-darwinn-wavernn-r27.zvoice:product/tts/google/ja-jp/ja-jp-x-multi-darwinn-wavernn-r27.zvoice\
+	device/google/raviole/tts/ja-jp/ja-jp-x-multi-r27.zvoice:product/tts/google/ja-jp/ja-jp-x-multi-r27.zvoice\
+	device/google/raviole/tts/ja-jp/ja-jp-x-multi-wavernn-r27.zvoice:product/tts/google/ja-jp/ja-jp-x-multi-wavernn-r27.zvoice\
+	device/google/raviole/tts/fr-fr/fr-fr-x-multi-darwinn-wavernn-r27.zvoice:product/tts/google/fr-fr/fr-fr-x-multi-darwinn-wavernn-r27.zvoice\
+	device/google/raviole/tts/fr-fr/fr-fr-x-multi-r27.zvoice:product/tts/google/fr-fr/fr-fr-x-multi-r27.zvoice\
+	device/google/raviole/tts/fr-fr/fr-fr-x-multi-wavernn-r27.zvoice:product/tts/google/fr-fr/fr-fr-x-multi-wavernn-r27.zvoice\
+	device/google/raviole/tts/de-de/de-de-x-multi-darwinn-wavernn-r27.zvoice:product/tts/google/de-de/de-de-x-multi-darwinn-wavernn-r27.zvoice\
+	device/google/raviole/tts/de-de/de-de-x-multi-r27.zvoice:product/tts/google/de-de/de-de-x-multi-r27.zvoice\
+	device/google/raviole/tts/de-de/de-de-x-multi-wavernn-r27.zvoice:product/tts/google/de-de/de-de-x-multi-wavernn-r27.zvoice\
+	device/google/raviole/tts/it-it/it-it-x-multi-r24.zvoice:product/tts/google/it-it/it-it-x-multi-r24.zvoice\
+	device/google/raviole/tts/es-es/es-es-x-multi-darwinn-wavernn-r27.zvoice:product/tts/google/es-es/es-es-x-multi-darwinn-wavernn-r27.zvoice\
+	device/google/raviole/tts/es-es/es-es-x-multi-r27.zvoice:product/tts/google/es-es/es-es-x-multi-r27.zvoice\
+	device/google/raviole/tts/es-es/es-es-x-multi-wavernn-r27.zvoice:product/tts/google/es-es/es-es-x-multi-wavernn-r27.zvoice
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
