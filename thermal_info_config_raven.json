@@ -95,7 +95,7 @@
             "Type":"UNKNOWN",
             "HotThreshold":[
                 "NAN",
-                "34.2",
+                "32.2",
                 "NAN",
                 "NAN",
                 "NAN",
@@ -104,7 +104,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":0.001,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000
         },
         {
@@ -273,7 +273,7 @@
                 1.9,
                 1.9,
                 1.9,
-                1.9,
+                1.4,
                 1.9,
                 1.9
             ],
