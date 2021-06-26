@@ -81,6 +81,46 @@
                 <mic_info mic_device_id="builtin_mic_3"
                     channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
             </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_INVERT_LANDSCAPE_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_PORTRAIT_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_SELFIE_LANDSCAPE_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_CAMCORDER_SELFIE_PORTRAIT_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+            </backend_cfg>
             <backend_cfg in_cfg="IN_HANDSET_MIC_BE_CFG">
                 <mic_info mic_device_id="builtin_mic_1"
                     channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
@@ -107,6 +147,28 @@
                 <mic_info mic_device_id="builtin_mic_3"
                     channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
             </backend_cfg>
+            <backend_cfg in_cfg="IN_VOICE_RECOGN_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_UNPROCESSED_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_UNPROCESSED_DUAL_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+            </backend_cfg>
+            <backend_cfg in_cfg="IN_UNPROCESSED_TRIPLE_MIC_BE_CFG">
+                <mic_info mic_device_id="builtin_mic_1"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                <mic_info mic_device_id="builtin_mic_2"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED"/>
+                <mic_info mic_device_id="builtin_mic_3"
+                    channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT"/>
+            </backend_cfg>
     </input_backend_cfg_mic_mapping>
 
     <usecase_attr>
@@ -127,7 +189,7 @@
         <!-- for VOIP output, 4 * 10ms buffer -->
         <usecase id="UC_VOIP_PLAYBACK" dev1="16" dyn_path="true" dsp_vol="true" mmap="false" period="10" period_num="4"/>
         <!-- for input -->
-        <usecase id="UC_AUDIO_RECORD" dev1="8" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
+        <usecase id="UC_AUDIO_RECORD" dev1="8" dyn_path="true" dsp_vol="false" mmap="false" period="20" period_num="4"/>
         <usecase id="UC_HOSTLESS_UL" dev1="15"/>
         <!-- for VOIP input, 4 * 10ms buffer -->
         <usecase id="UC_VOIP_RECORD" dev1="17" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
@@ -142,20 +204,28 @@
 
     <dsp_latency>
         <usecase id="UC_LOW_LATENCY_PLAYBACK" type="playback">
-            <be_cfg be_id="OUT_SPEAKER_BE_CFG" latency="8000"/>
+            <be_cfg be_id="OUT_SPEAKER_BE_CFG" latency="20000"/>
+            <be_cfg be_id="OUT_USB_HEADSET_BE_CFG" latency="10000"/>
+	    <be_cfg be_id="OUT_A2DP_BE_CFG" latency="100000"/>
         </usecase>
 
         <usecase id="UC_DEEP_BUFFER_PLAYBACK" type="playback">
-            <be_cfg be_id="OUT_SPEAKER_BE_CFG" latency="25000"/>
+            <be_cfg be_id="OUT_SPEAKER_BE_CFG" latency="70000"/>
+	    <be_cfg be_id="OUT_USB_HEADSET_BE_CFG" latency="70000"/>
+	    <be_cfg be_id="OUT_A2DP_BE_CFG" latency="280000"/>
         </usecase>
 
         <usecase id="UC_AUDIO_RECORD" type="capture">
-            <be_cfg be_id="IN_CAMCORDER_LANDSCAPE_BE_CFG" latency="40000"/>
-            <be_cfg be_id="IN_CAMCORDER_INVERT_LANDSCAPE_BE_CFG" latency="40000"/>
-            <be_cfg be_id="IN_CAMCORDER_PORTRAIT_BE_CFG" latency="40000"/>
-            <be_cfg be_id="IN_CAMCORDER_SELFIE_LANDSCAPE_BE_CFG" latency="40000"/>
-            <be_cfg be_id="IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE_BE_CFG" latency="40000"/>
-            <be_cfg be_id="IN_CAMCORDER_SELFIE_PORTRAIT_BE_CFG" latency="40000"/>
+            <be_cfg be_id="IN_CAMCORDER_LANDSCAPE_BE_CFG" latency="160000"/>
+            <be_cfg be_id="IN_CAMCORDER_INVERT_LANDSCAPE_BE_CFG" latency="160000"/>
+            <be_cfg be_id="IN_CAMCORDER_PORTRAIT_BE_CFG" latency="160000"/>
+            <be_cfg be_id="IN_CAMCORDER_SELFIE_LANDSCAPE_BE_CFG" latency="160000"/>
+            <be_cfg be_id="IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE_BE_CFG" latency="160000"/>
+	    <be_cfg be_id="IN_CAMCORDER_SELFIE_PORTRAIT_BE_CFG" latency="160000"/>
+	    <be_cfg be_id="IN_BTSCO_MIC_BE_CFG" latency="40000"/>
+	    <be_cfg be_id="IN_BTSCO_MIC_NREC_BE_CFG" latency="40000"/>
+	    <be_cfg be_id="IN_BTSCO_MIC_WB_BE_CFG" latency="40000"/>
+	    <be_cfg be_id="IN_BTSCO_MIC_WB_NREC_BE_CFG" latency="40000"/>
         </usecase>
     </dsp_latency>
 
