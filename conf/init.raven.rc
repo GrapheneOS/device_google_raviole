@@ -26,6 +26,14 @@ on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_complet
 on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
     write /sys/devices/virtual/sec/tsp/cmd "glove_mode,1"
 
+# Display
+on property:graphics.display.kernel_idle_timer.enabled=true
+    # Enable aggressive idle mode switching
+    write /sys/devices/platform/exynos-drm/primary-panel/panel_idle "1"
+
+on property:graphics.display.kernel_idle_timer.enabled=false
+    write /sys/devices/platform/exynos-drm/primary-panel/panel_idle "0"
+
 # Bluetooth
 on post-fs-data
     chown bluetooth system /proc/bluetooth/timesync
