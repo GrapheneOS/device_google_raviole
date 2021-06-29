@@ -63,3 +63,8 @@ PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
+
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+	android.hardware.bluetooth@1.1-service.bcmbtlinux \
+	bt_vendor.conf
