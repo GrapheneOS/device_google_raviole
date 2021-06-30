@@ -48,10 +48,12 @@ PRODUCT_COPY_FILES += \
     device/google/raviole/media_profiles_slider.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 # Bluetooth
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.a2dp_aac.vbr_supported=true
+
+# Bluetooth default BDADDR for EVB only
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bluetooth.a2dp_offload.supported=true \
-    persist.bluetooth.a2dp_offload.disabled=false \
-    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+    ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -61,10 +63,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/google/gs101/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
     device/google/gs101/nfc/libse-gto-hal2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal2.conf
-
-# default BDADDR for EVB only
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
 
 # NFC
 PRODUCT_COPY_FILES += \
