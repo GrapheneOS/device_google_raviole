@@ -56,6 +56,10 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/thermal_info_config_oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
 	device/google/raviole/thermal_info_config_oriole_WHI_A.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_WHI_A.json
 
+# Bluetooth
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.a2dp_aac.vbr_supported=true
+
 # Bluetooth Tx power caps for oriole
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_oriole.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
