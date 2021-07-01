@@ -17,7 +17,10 @@
 -->
 <resources>
     <!-- for 20dp of padding at 3.5px/dp at default density -->
-    <dimen name="rounded_corner_content_padding">5px</dimen>
+    <dimen name="rounded_corner_content_padding">50px</dimen>
+
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">1px</dimen>
 
     <!-- Padding for the system icons on the keyguard (when no multi user switch is showing).
     The icons always have a 4dp padding in the container so we only need 56 extra px of padding
@@ -43,7 +46,6 @@
     <string translatable="false" name="config_protectedCameraId">1</string>
 
     <bool name="config_enableDisplayCutoutProtection">true</bool>
-
 
     <!-- Location on the screen of the center of the physical power button. -->
     <dimen name="physical_power_button_center_screen_location_y">940px</dimen>
