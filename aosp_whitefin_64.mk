@@ -16,4 +16,4 @@
 $(call inherit-product, device/google/raviole/aosp_whitefin.mk)
 
 PRODUCT_NAME := aosp_whitefin_64
-PRODUCT_MODEL := AOSP on Whitefin (64-bit only)
+PRODUCT_MODEL := AOSP on Whitefin 64-bit only
