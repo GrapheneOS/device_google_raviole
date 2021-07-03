@@ -16,4 +16,4 @@
 $(call inherit-product, device/google/raviole/aosp_oriole.mk)
 
 PRODUCT_NAME := aosp_oriole_64
-PRODUCT_MODEL := AOSP on Oriole (64-bit only)
+PRODUCT_MODEL := AOSP on Oriole 64-bit only
