@@ -16,4 +16,4 @@
 $(call inherit-product, device/google/raviole/aosp_raven.mk)
 
 PRODUCT_NAME := aosp_raven_64
-PRODUCT_MODEL := AOSP on Raven (64-bit only)
+PRODUCT_MODEL := AOSP on Raven 64-bit only
