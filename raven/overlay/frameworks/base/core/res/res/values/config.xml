@@ -190,4 +190,7 @@
 
     <!-- Height of the status bar header bar when on Keyguard (match status_bar_portrait) -->
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_portrait</dimen>
+  
+    <!-- If face auth sends the user directly to home/last open app, or stays on keyguard by default-->
+    <bool name="config_faceAuthDismissesKeyguard">false</bool>
 </resources>
