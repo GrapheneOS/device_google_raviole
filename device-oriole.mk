@@ -154,3 +154,7 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
+
+# Enable camera exif model/make reporting
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.vendor.camera.exif_reveal_make_model=true
