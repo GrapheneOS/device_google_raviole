@@ -110,8 +110,8 @@
     </input_backend_cfg_mic_mapping>
 
     <usecase_attr>
-        <!-- for output with AUDIO_OUTPUT_FLAG_RAW, 4 * 10ms buffer -->
-        <usecase id="UC_RAW_PLAYBACK" dev1="3" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
+        <!-- for output with AUDIO_OUTPUT_FLAG_RAW, 40 * 1ms buffer with 32-bit -->
+        <usecase id="UC_RAW_PLAYBACK" dev1="23" dyn_path="true" dsp_vol="false" mmap="true" period="1" period_num="40"/>
         <!-- for output with AUDIO_OUTPUT_FLAG_PRIMARY|AUDIO_OUTPUT_FLAG_FAST, 4 * 10ms buffer -->
         <usecase id="UC_LOW_LATENCY_PLAYBACK" dev1="1" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="4"/>
         <!-- for output with AUDIO_OUTPUT_FLAG_MMAP_NOIRQ, 80 periods * 48 frames/period(=1ms w/ 48k sample rate) * 4 bytes/frame = 15360 bytes -->
