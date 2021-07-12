@@ -123,6 +123,7 @@
     <ctl name="USB_RX Mixer EP7" value="0"/>
     <ctl name="USB_RX Mixer NoHost1" value="0"/>
     <ctl name="USB_RX Mixer VOIP" value="0"/>
+    <ctl name="USB_RX Mixer HIFI" value="0"/>
 
     <ctl name="BT_RX Mixer EP1" value="0"/>
     <ctl name="BT_RX Mixer EP2" value="0"/>
@@ -543,13 +544,13 @@
 
     <path name="hifi-playbackP usb-headphone">
         <ctl name="PCM Playback Volume" value="1000"/>
+        <ctl name="USB_RX Mixer HIFI" value="1"/>
     </path>
 
     <path name="hifi-recordC">
     </path>
 
-    <path name="hifi-recordC usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
+    <path name="hifi-recordC usb-headset-mic">
     </path>
 
     <!-- audio capture dynamic route -->
