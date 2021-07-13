@@ -190,21 +190,21 @@
                 <route type="mix" sink="Earpiece"
                        sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out,voip_rx"/>
                 <route type="mix" sink="BT A2DP Out"
-                       sources="primary output,deep buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT A2DP Headphones"
-                       sources="primary output,deep buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT A2DP Speaker"
-                       sources="primary output,deep buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,compressed_offload,voip_rx"/>
                 <route type="mix" sink="USB Device Out"
                        sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out,voip_rx,hifi_playback"/>
                 <route type="mix" sink="USB Headset Out"
                        sources="primary output,deep buffer,haptic,raw,compressed_offload,mmap_no_irq_out,voip_rx,hifi_playback"/>
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,deep buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,deep buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,deep buffer,compressed_offload,voip_rx"/>
+                       sources="primary output,deep buffer,haptic,compressed_offload,voip_rx"/>
                 <route type="mix" sink="Telephony Tx" sources="incall playback,voice call tx" />
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
