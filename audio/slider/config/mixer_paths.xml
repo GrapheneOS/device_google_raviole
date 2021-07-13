@@ -95,6 +95,7 @@
     <ctl name="TDM_0_RX Mixer EP7" value="0"/>
     <ctl name="TDM_0_RX Mixer EP8" value="0"/>
     <ctl name="TDM_0_RX Mixer VOIP" value="0"/>
+    <ctl name="TDM_0_RX Mixer RAW" value="0"/>
 
     <ctl name="TDM_1_RX Mixer EP1" value="0"/>
     <ctl name="TDM_1_RX Mixer EP2" value="0"/>
@@ -109,6 +110,8 @@
     <ctl name="USB_RX Mixer EP7" value="0"/>
     <ctl name="USB_RX Mixer NoHost1" value="0"/>
     <ctl name="USB_RX Mixer VOIP" value="0"/>
+    <ctl name="USB_RX Mixer HIFI" value="0"/>
+    <ctl name="USB_RX Mixer RAW" value="0"/>
 
     <ctl name="BT_RX Mixer EP1" value="0"/>
     <ctl name="BT_RX Mixer EP2" value="0"/>
@@ -338,7 +341,7 @@
         <ctl name="PCM Playback Volume" value="250"/>
         <ctl name="SINK_IDS" id="0" value="0"/>
         <ctl name="SINK_IDS" id="1" value="-1"/>
-        <ctl name="TDM_0_RX Mixer EP4" value="1"/>
+        <ctl name="TDM_0_RX Mixer RAW" value="1"/>
     </path>
 
     <path name="raw-playbackP hac-handset">
@@ -348,7 +351,7 @@
         <ctl name="PCM Playback Volume" value="1000"/>
         <ctl name="SINK_IDS" id="0" value="4"/>
         <ctl name="SINK_IDS" id="1" value="-1"/>
-        <ctl name="USB_RX Mixer EP4" value="1"/>
+        <ctl name="USB_RX Mixer RAW" value="1"/>
     </path>
 
     <path name="raw-playbackP hearing-aid">
@@ -467,13 +470,13 @@
 
     <path name="hifi-playbackP usb-headphone">
         <ctl name="PCM Playback Volume" value="1000"/>
+        <ctl name="USB_RX Mixer HIFI" value="1"/>
     </path>
 
     <path name="hifi-recordC">
     </path>
 
-    <path name="hifi-recordC usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
+    <path name="hifi-recordC usb-headset-mic">
     </path>
 
     <!-- audio capture dynamic route -->
