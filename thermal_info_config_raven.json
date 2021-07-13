@@ -817,7 +817,7 @@
             "Name":"S5M_VDD_INT"
         },
         {
-            "Name":"S5M_VDD_MIF"
+            "Name":"S1M_VDD_MIF"
         },
         {
             "Name":"S2S_VDD_G3D",
