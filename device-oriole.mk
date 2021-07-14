@@ -158,3 +158,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Enable camera exif model/make reporting
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
+
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+	android.hardware.bluetooth@1.1-service.bcmbtlinux \
+	bt_vendor.conf
