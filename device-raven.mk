@@ -70,6 +70,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
 
+# Bluetooth SAR test tool
+PRODUCT_PACKAGES_DEBUG += \
+    sar_test
+
 # Camera
 PRODUCT_COPY_FILES += \
 	device/google/raviole/media_profiles_raven.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
