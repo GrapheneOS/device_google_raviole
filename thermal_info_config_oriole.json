@@ -336,20 +336,25 @@
                     "LimitInfo": [0, 2, 3, 4, 4, 4, 4],
                     "BindedPowerRail": "POWER_FOR_CHARGING_THROTTLING",
                     "PowerThreshold": [500, 500, 500, 500, 0, 0, 0],
-                    "CdevFloorWithPowerLink": [0, 0, 0, 2, 4 ,4 ,4],
+                    "CdevFloorWithPowerLink": [0, 0, 1, 2, 4 ,4 ,4],
                     "ReleaseLogic": "RELEASE_TO_FLOOR",
                     "ThrottlingWithPowerLink":true
                 },
                 {
                     "CdevRequest": "dc_icl",
-                    "LimitInfo": [0, 1, 2, 3, 3, 3, 3]
+                    "LimitInfo": [0, 1, 2, 4, 4, 4, 4],
+                    "BindedPowerRail": "POWER_FOR_CHARGING_THROTTLING",
+                    "PowerThreshold": [500, 500, 500, 500, 0, 0, 0],
+                    "CdevFloorWithPowerLink": [0, 1, 2, 3, 4, 4, 4],
+                    "ReleaseLogic": "RELEASE_TO_FLOOR",
+                    "ThrottlingWithPowerLink":true
                 },
                 {
                     "CdevRequest": "wlc_fcc",
-                    "LimitInfo": [0, 1, 1, 4, 4, 4, 4],
+                    "LimitInfo": [0, 2, 2, 5, 5, 5, 5],
                     "BindedPowerRail": "POWER_FOR_CHARGING_THROTTLING",
                     "PowerThreshold": [500, 500, 500, 500, 0, 0, 0],
-                    "CdevFloorWithPowerLink": [0, 0, 0, 1, 4 ,4 ,4],
+                    "CdevFloorWithPowerLink": [0, 1, 1, 2, 5, 5, 5],
                     "ReleaseLogic": "RELEASE_TO_FLOOR",
                     "ThrottlingWithPowerLink":true
                 }
