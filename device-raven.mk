@@ -168,3 +168,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
 	android.hardware.bluetooth@1.1-service.bcmbtlinux \
 	bt_vendor.conf
+
+# Override default distortion output gain according to UX experiments
+PRODUCT_PRODUCT_PROPERTIES += \
+    vendor.audio.hapticgenerator.distortion.output.gain=0.5
