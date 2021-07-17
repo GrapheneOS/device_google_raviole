@@ -64,6 +64,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_oriole.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
 
+# Bluetooth SAR test tool
+PRODUCT_PACKAGES_DEBUG += \
+    sar_test
+
 # MIPI Coex Configs
 PRODUCT_COPY_FILES += \
     device/google/raviole/radio/oriole_display_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/display_primary_mipi_coex_table.csv \
