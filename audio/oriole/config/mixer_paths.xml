@@ -217,16 +217,19 @@
     <ctl name="MIC HW Gain At High Power Mode (cB)" value="0" />
     <ctl name="MIC Record Soft Gain (dB)" value="0"/>
 
-    <!-- USB setting -->
-    <ctl name="USB Dev ID" value="1"/>
-    <ctl name="USB Playback EP ID" value="1"/>
-    <ctl name="USB Playback SR" value="48000"/>
-    <ctl name="USB Playback CH" value="2"/>
-    <ctl name="USB Playback BW" value="24"/>
-    <ctl name="USB Capture EP ID" value="1"/>
-    <ctl name="USB Capture SR" value="48000"/>
-    <ctl name="USB Capture CH" value="1"/>
-    <ctl name="USB Capture BW" value="16"/>
+    <!-- USB setting v2 -->
+    <ctl name="USB Bus ID v2" value="2"/>
+    <ctl name="USB Dev ID v2" value="2"/>
+    <ctl name="USB Playback EP ID v2" value="1"/>
+    <ctl name="USB Playback FORMAT v2" value="0"/>
+    <ctl name="USB Playback SR v2" value="48000"/>
+    <ctl name="USB Playback CH v2" value="2"/>
+    <ctl name="USB Playback BW v2" value="24"/>
+    <ctl name="USB Capture EP ID v2" value="1"/>
+    <ctl name="USB Capture FORMAT v2" value="0"/>
+    <ctl name="USB Capture SR v2" value="48000"/>
+    <ctl name="USB Capture CH v2" value="1"/>
+    <ctl name="USB Capture BW v2" value="16"/>
 
     <ctl name="AoC Modem Downlink ASRC Mode" value="ASP_ON"/>
     <ctl name="Voice Call Mic Source" value="Builtin_MIC"/>
