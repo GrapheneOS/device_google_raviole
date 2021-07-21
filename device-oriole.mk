@@ -162,3 +162,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Enable camera exif model/make reporting
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
+
+# Override default distortion output gain according to UX experiments
+PRODUCT_PRODUCT_PROPERTIES += \
+    vendor.audio.hapticgenerator.distortion.output.gain=0.5
