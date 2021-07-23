@@ -225,4 +225,7 @@
     <!-- The duration (in milliseconds) that should be applied to waveform vibrations that ends in
          non-zero amplitudes, to bring the vibrator amplitude down to zero using this timing. -->
     <integer name="config_vibrationWaveformRampDownDuration">50</integer>
+
+    <!-- the number of the max cached processes in the system. -->
+    <integer name="config_customizedMaxCachedProcesses">64</integer>
 </resources>
