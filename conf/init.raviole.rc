@@ -37,7 +37,6 @@ service insmod_sh_raviole /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.${r
 on post-fs-data
     # Fingerprint
     chown system system /dev/goodix_fp
-    chown system system /dev/block/platform/14700000.ufs/by-name/mfg_data
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
 
     # Start the twoshay touch service
