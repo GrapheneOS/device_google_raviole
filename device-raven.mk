@@ -68,7 +68,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Bluetooth Tx power caps for raven
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv
+    $(LOCAL_PATH)/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
 
 # Bluetooth SAR test tool
 PRODUCT_PACKAGES_DEBUG += \
