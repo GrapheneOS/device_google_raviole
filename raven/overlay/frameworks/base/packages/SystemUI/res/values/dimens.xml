@@ -22,10 +22,16 @@
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">1px</dimen>
 
+    <!-- Height of the status bar header bar when on Keyguard (match status_bar_portrait) -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_portrait</dimen>
+
     <!-- Padding for the system icons on the keyguard (when no multi user switch is showing).
-    The icons always have a 4dp padding in the container so we only need 56 extra px of padding
+    The icons always have a 4dp padding in the container so we only need 26 extra px of padding
     for the corners -->
-    <dimen name="system_icons_super_container_avatarless_margin_end">11px</dimen>
+    <dimen name="system_icons_super_container_avatarless_margin_end">26px</dimen>
+
+    <!-- Margin on the right side of the system icon group on Keyguard. -->
+    <dimen name="system_icons_keyguard_padding_end">10dp</dimen>
 
     <!-- A path similar to frameworks/base/core/res/res/values/config.xml
         config_mainBuiltInDisplayCutout that describes a path larger than the exact path of a display
