@@ -20,6 +20,7 @@
                 <item>Speaker Safe</item>
                 <item>Earpiece</item>
                 <item>Built-In Mic</item>
+                <item>Built-In Back Mic</item>
                 <item>Telephony Tx</item>
                 <item>Voice Call And Telephony Rx</item>
                 <item>Echo Ref In</item>
@@ -207,17 +208,17 @@
                        sources="primary output,deep buffer,haptic,compressed_offload,voip_rx"/>
                 <route type="mix" sink="Telephony Tx" sources="incall playback,voice call tx" />
                 <route type="mix" sink="primary input"
-                       sources="Built-In Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
+                       sources="Built-In Mic,Built-In Back Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
                 <route type="mix" sink="hotword input"
-                       sources="Built-In Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
+                       sources="Built-In Mic,Built-In Back Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
                 <route type="mix" sink="incall capture" sources="Voice Call And Telephony Rx" />
                 <route type="mix" sink="voice call rx" sources="Voice Call And Telephony Rx" />
                 <route type="mix" sink="voip_tx"
-                       sources="Built-In Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
+                       sources="Built-In Mic,Built-In Back Mic,USB Device In,USB Headset In,BT SCO Headset Mic"/>
                 <route type="mix" sink="fast input"
-                       sources="Built-In Mic,USB Device In,USB Headset In"/>
+                       sources="Built-In Mic,Built-In Back Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="mmap_no_irq_in"
-                       sources="Built-In Mic,USB Device In,USB Headset In"/>
+                       sources="Built-In Mic,Built-In Back Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
                 <route type="mix" sink="echo_ref_input" sources="Echo Ref In"/>
             </routes>
