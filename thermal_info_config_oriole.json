@@ -696,6 +696,22 @@
             ]
         },
         {
+            "Name":"batoilo",
+            "Type":"BCL_CURRENT",
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                5000,
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":1,
+            "Monitor":true
+        },
+        {
             "Name":"vdroop1",
             "Type":"BCL_VOLTAGE",
             "HotThreshold":[
@@ -751,13 +767,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                7,
+                7000,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"ocp_cpu2",
@@ -767,13 +783,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                12,
+                12000,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"ocp_tpu",
@@ -783,13 +799,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                10.5,
+                10500,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"ocp_gpu",
@@ -799,13 +815,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                12,
+                12000,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"soft_ocp_cpu2",
@@ -815,13 +831,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                9,
+                9000,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"soft_ocp_cpu1",
@@ -831,13 +847,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                7.00,
+                7000,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"soft_ocp_tpu",
@@ -847,13 +863,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                8.5,
+                8500,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"soft_ocp_gpu",
@@ -863,13 +879,13 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                9,
+                9000,
                 "NAN",
                 "NAN"
             ],
             "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":false
+            "Multiplier":1,
+            "Monitor":true
         },
         {
             "Name":"TPU",
