@@ -59,5 +59,8 @@
     <!-- Location on the screen of the center of the physical volume up/down buttons. -->
     <dimen name="physical_volume_up_button_center_screen_location_y">1320px</dimen>
     <dimen name="physical_volume_down_button_center_screen_location_y">1520px</dimen>
+
+    <!-- Padding for the lock icon on the keyguard. In pixels - should not scale with display size. -->
+    <dimen name="lock_icon_padding">68px</dimen>
 </resources>
 
