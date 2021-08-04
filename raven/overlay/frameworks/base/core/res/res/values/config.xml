@@ -43,7 +43,7 @@
 
 
     <!-- Radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">38px</dimen>
+    <dimen name="rounded_corner_radius">50px</dimen>
 
     <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
     <dimen name="rounded_corner_radius_adjustment">5px</dimen>
@@ -200,9 +200,6 @@
     <!-- Height of area above QQS where battery/time go (equal to status bar) -->
     <dimen name="quick_qs_offset_height">145px</dimen>
 
-    <!-- Height of the status bar header bar when on Keyguard (match status_bar_portrait) -->
-    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_portrait</dimen>
-  
     <!-- If face auth sends the user directly to home/last open app, or stays on keyguard by default-->
     <bool name="config_faceAuthDismissesKeyguard">false</bool>
 
