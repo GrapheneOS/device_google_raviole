@@ -69,7 +69,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Bluetooth Tx power caps for raven
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
+    $(LOCAL_PATH)/bluetooth_power_limits_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv
 
 # Bluetooth SAR test tool
 PRODUCT_PACKAGES_DEBUG += \
@@ -169,7 +170,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
 # Enable camera exif model/make reporting
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
 
 # Override default distortion output gain according to UX experiments
