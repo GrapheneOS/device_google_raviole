@@ -98,10 +98,6 @@
     <ctl name="ASP TX4 Source" value="Zero" />
     <ctl name="R ASP TX4 Source" value="Zero" />
 
-    <!-- default EP volume -->
-    <ctl name="PCM Playback Switch" value="1"/>
-    <ctl name="PCM Playback Volume" value="10"/>
-
     <!-- audio RX route initial/default value -->
     <ctl name="TDM_0_RX Mixer EP1" value="0"/>
     <ctl name="TDM_0_RX Mixer EP2" value="0"/>
@@ -216,7 +212,7 @@
     <!-- AoC Mic setting -->
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC HW Gain At High Power Mode (cB)" value="0" />
-    <ctl name="MIC Record Soft Gain (dB)" value="0"/>
+    <ctl name="MIC Record Soft Gain (dB)" value="-40"/>
 
     <!-- USB setting v2 -->
     <ctl name="USB Bus ID v2" value="2"/>
@@ -333,9 +329,6 @@
 
     <!-- audio playback dynamic route -->
     <path name="deep-buffer-playbackP">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="0"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="TDM_0_RX Mixer EP6" value="1"/>
     </path>
 
@@ -343,16 +336,10 @@
     </path>
 
     <path name="deep-buffer-playbackP bt">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="2"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="BT_RX Mixer EP6" value="1"/>
     </path>
 
     <path name="deep-buffer-playbackP usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="4"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP6" value="1"/>
     </path>
 
@@ -360,9 +347,6 @@
     </path>
 
     <path name="low-latency-playbackP">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="0"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="TDM_0_RX Mixer EP2" value="1"/>
     </path>
 
@@ -370,16 +354,10 @@
     </path>
 
     <path name="low-latency-playbackP bt">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="2"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="BT_RX Mixer EP2" value="1"/>
     </path>
 
     <path name="low-latency-playbackP usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="4"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP2" value="1"/>
     </path>
 
@@ -387,9 +365,6 @@
     </path>
 
     <path name="raw-playbackP">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="0"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="TDM_0_RX Mixer RAW" value="1"/>
     </path>
 
@@ -397,9 +372,6 @@
     </path>
 
     <path name="raw-playbackP usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="4"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer RAW" value="1"/>
     </path>
 
@@ -407,9 +379,6 @@
     </path>
 
     <path name="mmap-playbackP">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="0"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="TDM_0_RX Mixer EP1" value="1"/>
     </path>
 
@@ -417,9 +386,6 @@
     </path>
 
     <path name="mmap-playbackP usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="4"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP1" value="1"/>
     </path>
 
@@ -436,14 +402,11 @@
     </path>
 
     <path name="compress-offload-playback">
-        <ctl name="PCM Playback Volume" value="1000" />
         <ctl name="LVM Enable" value="1" />
     </path>
 
     <path name="compress-offload-playbackP">
         <path name="compress-offload-playback" />
-        <ctl name="SINK_IDS" id="0" value="0"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="TDM_0_RX Mixer EP7" value="1"/>
     </path>
 
@@ -453,15 +416,11 @@
 
     <path name="compress-offload-playbackP bt">
         <path name="compress-offload-playback" />
-        <ctl name="SINK_IDS" id="0" value="2"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="BT_RX Mixer EP7" value="1"/>
     </path>
 
     <path name="compress-offload-playbackP usb-headphone">
         <path name="compress-offload-playback" />
-        <ctl name="SINK_IDS" id="0" value="4"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP7" value="1"/>
     </path>
 
@@ -488,9 +447,6 @@
     </path>
 
     <path name="haptic-audioP">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="0"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="TDM_0_RX Mixer EP3" value="1"/>
         <ctl name="TDM_0_RX Mixer EP8" value="1"/>
     </path>
@@ -499,17 +455,11 @@
     </path>
 
     <path name="haptic-audioP bt">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="2"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="BT_RX Mixer EP3" value="1"/>
         <ctl name="TDM_0_RX Mixer EP8" value="1"/>
     </path>
 
     <path name="haptic-audioP usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
-        <ctl name="SINK_IDS" id="0" value="4"/>
-        <ctl name="SINK_IDS" id="1" value="-1"/>
         <ctl name="USB_RX Mixer EP3" value="1"/>
         <ctl name="TDM_0_RX Mixer EP8" value="1"/>
     </path>
@@ -518,7 +468,6 @@
     </path>
 
     <path name="hifi-playbackP usb-headphone">
-        <ctl name="PCM Playback Volume" value="1000"/>
         <ctl name="USB_RX Mixer HIFI" value="1"/>
     </path>
 
@@ -534,12 +483,10 @@
     </path>
 
     <path name="audio-recordC usb-headset-mic">
-        <ctl name="Audio Capture Mic Source" value="USB_MIC"/>
         <ctl name="EP1 TX Mixer USB_TX" value="1"/>
     </path>
 
     <path name="audio-recordC bt-mic">
-        <ctl name="Audio Capture Mic Source" value="BT_MIC"/>
         <ctl name="EP1 TX Mixer BT_TX" value="1"/>
     </path>
 
@@ -634,7 +581,6 @@
     </path>
 
     <path name="low-latency-recordC usb-headset-mic">
-        <ctl name="Audio Capture Mic Source" value="USB_MIC"/>
         <ctl name="EP3 TX Mixer USB_TX" value="1"/>
     </path>
 
@@ -643,7 +589,6 @@
     </path>
 
     <path name="mmap-recordC usb-headset-mic">
-        <ctl name="Audio Capture Mic Source" value="USB_MIC"/>
         <ctl name="EP2 TX Mixer USB_TX" value="1"/>
     </path>
 
@@ -689,22 +634,17 @@
         <ctl name="R Main AMP Enable Switch" value="1"/>
     </path>
 
-    <path name="usb-tty-full">
-    </path>
-
-    <path name="usb-tty-hco">
-    </path>
-
-    <path name="usb-tty-vco">
-    </path>
-
     <!-- Tx device -->
     <path name="handset-mic">
+        <ctl name="Mic Spatial Module Enable" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
+    </path>
+
+    <path name="handset-mic-post">
         <ctl name="MIC Record Soft Gain (dB)" value="22"/>
     </path>
 
@@ -717,12 +657,20 @@
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="130"/>
     </path>
 
+    <path name="voice-handset-mic-post">
+        <ctl name="MIC Record Soft Gain (dB)" value="0"/>
+    </path>
+
     <path name="speaker-mic">
+        <ctl name="Mic Spatial Module Enable" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
+    </path>
+
+    <path name="speaker-mic-post">
         <ctl name="MIC Record Soft Gain (dB)" value="0"/>
     </path>
 
@@ -735,6 +683,10 @@
         <ctl name="MIC HW Gain At High Power Mode (cB)" value="130"/>
     </path>
 
+    <path name="voice-speaker-mic-post">
+        <ctl name="MIC Record Soft Gain (dB)" value="0"/>
+    </path>
+
     <path name="camcorder-mic">
         <ctl name="Mic Spatial Module Enable" value="1"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
@@ -742,6 +694,9 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
+    </path>
+
+    <path name="camcorder-mic-post">
         <ctl name="MIC Record Soft Gain (dB)" value="0"/>
     </path>
 
@@ -751,24 +706,33 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
+    </path>
+
+    <path name="voice-recog-mic-post">
         <ctl name="MIC Record Soft Gain (dB)" value="22"/>
     </path>
 
     <path name="unprocessed-mic">
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
-        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="-1"/>
-        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
+    </path>
+
+    <path name="unprocessed-mic-post">
         <ctl name="MIC Record Soft Gain (dB)" value="5"/>
     </path>
 
     <path name="unprocessed-dual-mic">
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
-        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
+    </path>
+
+    <path name="unprocessed-dual-mic-post">
         <ctl name="MIC Record Soft Gain (dB)" value="5"/>
     </path>
 
@@ -778,29 +742,36 @@
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
         <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
         <ctl name="MIC DC Blocker" value="1"/>
+    </path>
+
+    <path name="unprocessed-triple-mic-post">
         <ctl name="MIC Record Soft Gain (dB)" value="5"/>
     </path>
 
     <path name="bt-mic">
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
+        <ctl name="Audio Capture Mic Source" value="BT_MIC"/>
         <ctl name="Voice Call Mic Source" value="BT_MIC"/>
     </path>
 
+    <path name="bt-mic-post">
+        <ctl name="MIC Record Soft Gain (dB)" value="0"/>
+    </path>
+
     <path name="usb-headset-mic">
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2"/>
+        <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1"/>
+        <ctl name="Audio Capture Mic Source" value="USB_MIC"/>
         <ctl name="Voice Call Mic Source" value="USB_MIC"/>
     </path>
 
-    <path name="usb-tty-full-mic">
-        <path name="usb-headset-mic"/>
-    </path>
-
-    <path name="usb-tty-hco-mic">
-        <path name="usb-headset-mic"/>
-    </path>
-
-    <path name="usb-tty-vco-mic">
-    </path>
-
-    <path name="unprocessed-usb-headset-mic">
+    <path name="usb-headset-mic-post">
+        <ctl name="MIC Record Soft Gain (dB)" value="0"/>
     </path>
 
     <!-- cs35l41 specific path to load firmware in cs35l41.c -->
