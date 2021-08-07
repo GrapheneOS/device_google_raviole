@@ -27,7 +27,8 @@
 <mixer>
     <!-- Initial default value of ALSA command -->
     <!-- PCM timeout -->
-    <ctl name="PCM Stream Wait Time in MSec" value="500"/>
+    <ctl name="PCM Stream Wait Time in MSec" value="100"/>
+    <ctl name="Voice PCM Stream Wait Time in MSec" value="500"/>
 
     <!-- TDM 0 setting -->
     <ctl name="TDM_0_RX Chan" value="Four"/>
