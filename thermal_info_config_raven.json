@@ -349,8 +349,8 @@
                 {
                     "CdevRequest": "thermal-cpufreq-1",
                     "CdevWeightForPID": [1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1],
-                    "CdevCeiling": [7, 7, 7, 8, 9, 11, 11],
-                    "LimitInfo": [0, 0, 0, 0, 9, 11, 11],
+                    "CdevCeiling": [9, 9, 9, 10, 11, 13, 13],
+                    "LimitInfo": [0, 0, 0, 0, 11, 13, 13],
                     "BindedPowerRail": "S3M_VDD_CPUCL1",
                     "PowerThreshold": [200, 200, 200, 200, 50, 0, 0],
                     "ReleaseLogic": "DECREASE"
@@ -1041,28 +1041,28 @@
             "Name":"thermal-cpufreq-0",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote",
-            "State2Power":["428", "368", "320", "244", "220", "184", "156", "116", "80", "56", "24"],
+            "State2Power":["412", "352", "308", "236", "212", "176", "152", "116", "76", "56", "24"],
             "PowerRail":"S4M_VDD_CPUCL0"
         },
         {
             "Name":"thermal-cpufreq-1",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote",
-            "State2Power":["904", "740", "594", "476", "374", "314", "236", "192", "156", "126", "90", "58"],
+            "State2Power":["1198", "1018", "854", "696", "566", "452", "356", "296", "226", "188", "152", "124", "90", "58"],
             "PowerRail":"S3M_VDD_CPUCL1"
         },
         {
             "Name":"thermal-cpufreq-2",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote",
-            "State2Power":["4406", "3874", "3500", "3052", "2704", "2334", "2176", "1864", "1492", "1362", "1116", "908", "756", "594", "478", "388", "178"],
+            "State2Power":["4208", "3692", "3370", "2898", "2562", "2240", "2084", "1780", "1424", "1276", "1042", "858", "714", "560", "448", "364", "166"],
             "PowerRail":"S2M_VDD_CPUCL2"
         },
         {
             "Name":"thermal-gpufreq-0",
             "Type":"GPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote",
-            "State2Power":["4599", "3727", "3259", "2378", "2044", "1813", "1449", "1223", "1007", "804", "633", "452"],
+            "State2Power":["4371", "3543", "3085", "2293", "1927", "1707", "1394", "1171", "967", "768", "592", "433"],
             "PowerRail":"S2S_VDD_G3D"
         },
         {
