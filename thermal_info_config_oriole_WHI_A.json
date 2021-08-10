@@ -163,22 +163,23 @@
             "Monitor":true,
             "PollingDelay":60000,
             "PassiveDelay":7000,
-            "ThrottleType":["None", "None", "None", "PID", "LIMIT", "LIMIT", "LIMIT"],
-            "K_Po":["NAN", "NAN", "NAN", 300, "NAN", "NAN", "NAN"],
-            "K_Pu":["NAN", "NAN", "NAN", 300, "NAN", "NAN", "NAN"],
-            "K_I":["NAN", "NAN", "NAN", 10, "NAN", "NAN", "NAN"],
-            "K_D":["NAN", "NAN", "NAN", 10, "NAN", "NAN", "NAN"],
-            "I_Max":["NAN", "NAN", "NAN", 500, "NAN", "NAN", "NAN"],
-            "S_Power":["NAN", "NAN", "NAN", 4000, "NAN", "NAN", "NAN"],
-            "MinAllocPower":["NAN", "NAN", "NAN", 2000, "NAN", "NAN", "NAN"],
-            "MaxAllocPower":["NAN", "NAN", "NAN", 7000, "NAN", "NAN", "NAN"],
-            "I_Cutoff":["NAN", "NAN", "NAN", 1, "NAN", "NAN", "NAN"],
+            "PIDInfo": {
+                "K_Po":["NAN", "NAN", "NAN", 300, "NAN", "NAN", "NAN"],
+                "K_Pu":["NAN", "NAN", "NAN", 300, "NAN", "NAN", "NAN"],
+                "K_I":["NAN", "NAN", "NAN", 10, "NAN", "NAN", "NAN"],
+                "K_D":["NAN", "NAN", "NAN", 10, "NAN", "NAN", "NAN"],
+                "I_Max":["NAN", "NAN", "NAN", 500, "NAN", "NAN", "NAN"],
+                "S_Power":["NAN", "NAN", "NAN", 4000, "NAN", "NAN", "NAN"],
+                "MinAllocPower":["NAN", "NAN", "NAN", 2000, "NAN", "NAN", "NAN"],
+                "MaxAllocPower":["NAN", "NAN", "NAN", 7000, "NAN", "NAN", "NAN"],
+                "I_Cutoff":["NAN", "NAN", "NAN", 1, "NAN", "NAN", "NAN"]
+            },
             "BindedCdevInfo": [
                 {
                     "CdevRequest": "thermal-cpufreq-0",
                     "CdevWeightForPID": [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9],
-                    "CdevCeiling": [6, 6, 6, 7, 8, 10, 10],
-                    "LimitInfo": [0, 0, 0, 7, 8, 10, 10],
+                    "CdevCeiling": [5, 5, 5, 6, 7, 9, 9],
+                    "LimitInfo": [0, 0, 0, 0, 7, 9, 9],
                     "BindedPowerRail": "S4M_VDD_CPUCL0",
                     "PowerThreshold": [200, 200, 200, 200, 50, 0, 0],
                     "ReleaseLogic": "DECREASE"
@@ -186,8 +187,8 @@
                 {
                     "CdevRequest": "thermal-cpufreq-1",
                     "CdevWeightForPID": [1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1],
-                    "CdevCeiling": [7, 7, 7, 8, 9, 11, 11],
-                    "LimitInfo": [0, 0, 0, 8, 9, 11, 11],
+                    "CdevCeiling": [9, 9, 9, 10, 11, 13, 13],
+                    "LimitInfo": [0, 0, 0, 0, 11, 13, 13],
                     "BindedPowerRail": "S3M_VDD_CPUCL1",
                     "PowerThreshold": [200, 200, 200, 200, 50, 0, 0],
                     "ReleaseLogic": "DECREASE"
@@ -195,8 +196,8 @@
                 {
                     "CdevRequest": "thermal-cpufreq-2",
                     "CdevWeightForPID": [2.9, 2.9, 2.9, 2.9, 2.9, 2.9, 2.9],
-                    "CdevCeiling": [10, 10, 10, 11, 12, 14, 14],
-                    "LimitInfo": [0, 0, 0, 11, 12, 14, 14],
+                    "CdevCeiling": [6, 6, 6, 7, 8, 11, 11],
+                    "LimitInfo": [0, 0, 0, 0, 8, 11, 11],
                     "BindedPowerRail": "S2M_VDD_CPUCL2",
                     "PowerThreshold": [200, 200, 200, 200, 50, 0, 0],
                     "ReleaseLogic": "DECREASE"
@@ -205,7 +206,7 @@
                     "CdevRequest": "thermal-gpufreq-0",
                     "CdevWeightForPID": [3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3],
                     "CdevCeiling": [1, 1, 1, 2, 3, 4, 4],
-                    "LimitInfo": [0, 0, 0, 2, 3, 4, 4],
+                    "LimitInfo": [0, 0, 0, 0, 3, 4, 4],
                     "BindedPowerRail": "S2S_VDD_G3D",
                     "PowerThreshold": [200, 200, 200, 200, 50, 0, 0],
                     "ReleaseLogic": "DECREASE"
@@ -717,25 +718,25 @@
             "Name":"thermal-cpufreq-0",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote",
-            "State2Power":["1100", "1050", "1000", "950", "900", "850", "800", "750", "700", "650", "600"]
+            "State2Power":["420", "332", "268", "212", "176", "148", "108", "80", "56", "24"]
         },
         {
             "Name":"thermal-cpufreq-1",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote",
-            "State2Power":["1400", "1350", "1300", "1250", "1200", "1150", "1100", "1050", "1000", "950", "900", "850", "800", "750"]
+            "State2Power":["1216", "1018", "842", "686", "538", "428", "336", "274", "212", "178", "146", "118", "86", "56"]
         },
         {
             "Name":"thermal-cpufreq-2",
             "Type":"CPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote",
-            "State2Power":["1450", "1400", "1350", "1300", "1250", "1200", "1150", "1100", "1050", "1000", "950", "900", "850", "800", "750"]
+            "State2Power":["2322", "1992", "1674", "1412", "1168", "936", "766", "590", "474", "394", "310", "162"]
         },
         {
             "Name":"thermal-gpufreq-0",
             "Type":"GPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote",
-            "State2Power":["1100", "1000", "900", "800", "700"]
+            "State2Power":["2580", "2033", "1427", "826", "358"]
         }
     ],
     "PowerRails":[
