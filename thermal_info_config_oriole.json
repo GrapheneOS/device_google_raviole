@@ -897,7 +897,13 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Monitor":true,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "tpu_cooling",
+                    "LimitInfo": [0, 0, 0, 0, 3, 3, 3]
+                }
+            ]
         },
         {
             "Name":"ocp_gpu",
@@ -997,7 +1003,13 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Monitor":true,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "tpu_cooling",
+                    "LimitInfo": [0, 0, 0, 0, 3, 3, 3]
+                }
+            ]
         },
         {
             "Name":"soft_ocp_gpu",
