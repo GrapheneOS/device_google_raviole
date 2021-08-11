@@ -399,6 +399,10 @@
                     "CdevFloorWithPowerLink": [0, 1, 1, 2, 3, 4, 4],
                     "ReleaseLogic": "RELEASE_TO_FLOOR",
                     "ThrottlingWithPowerLink":true
+                },
+                {
+                    "CdevRequest": "tpu_cooling",
+                    "LimitInfo": [0, 1, 2, 3, 4, 4, 4]
                 }
             ]
         },
@@ -1080,6 +1084,11 @@
         {
             "Name":"usbc-port",
             "Type":"BATTERY"
+        },
+        {
+            "Name":"tpu_cooling",
+            "Type":"NPU",
+            "WritePath":"/dev/thermal/cdev-by-name/tpu_cooling/user_vote"
         }
     ],
     "PowerRails":[
