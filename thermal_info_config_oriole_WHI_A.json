@@ -555,7 +555,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                10500,
+                8500,
                 "NAN",
                 "NAN"
             ],
@@ -570,7 +570,13 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Monitor":true,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "tpu_cooling",
+                    "LimitInfo": [0, 0, 0, 0, 3, 3, 3]
+                }
+            ]
         },
         {
             "Name":"ocp_gpu",
@@ -580,7 +586,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                12000,
+                9000,
                 "NAN",
                 "NAN"
             ],
@@ -655,7 +661,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                8500,
+                7500,
                 "NAN",
                 "NAN"
             ],
@@ -670,7 +676,13 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Monitor":true,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "tpu_cooling",
+                    "LimitInfo": [0, 0, 0, 0, 3, 3, 3]
+                }
+            ]
         },
         {
             "Name":"soft_ocp_gpu",
@@ -680,7 +692,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                9000,
+                8000,
                 "NAN",
                 "NAN"
             ],
@@ -737,6 +749,11 @@
             "Type":"GPU",
             "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote",
             "State2Power":["2580", "2033", "1427", "826", "358"]
+        },
+        {
+            "Name":"tpu_cooling",
+            "Type":"NPU",
+            "WritePath":"/dev/thermal/cdev-by-name/tpu_cooling/user_vote"
         }
     ],
     "PowerRails":[
