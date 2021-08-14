@@ -31,6 +31,13 @@ using aidl::android::hardware::power::stats::DisplayStateResidencyDataProvider;
 using aidl::android::hardware::power::stats::EnergyConsumerType;
 using aidl::android::hardware::power::stats::PowerStatsEnergyConsumer;
 
+const char kBootRevision[] = "ro.boot.revision";
+std::map<std::string, std::string> displayChannelNames = {
+    {"PROTO1.0", "PPVAR_VSYS_PWR_DISP"},
+    {"EVT1.0", "PPVAR_VSYS_PWR_DISP"},
+    {"EVT1.1", "VSYS_PWR_DISPLAY"},
+};
+
 void addDisplay(std::shared_ptr<PowerStats> p) {
     // Add display residency stats
     std::vector<std::string> states = {
@@ -45,13 +52,22 @@ void addDisplay(std::shared_ptr<PowerStats> p) {
             "/sys/class/backlight/panel0-backlight/state",
             states));
 
+    std::string rev = android::base::GetProperty(kBootRevision, "");
+
+    std::string channelName;
+    if (displayChannelNames.find(rev) == displayChannelNames.end()) {
+        channelName = displayChannelNames["EVT1.1"];
+    } else {
+        channelName = displayChannelNames[rev];
+    }
+
     // Add display energy consumer
     /*
      * TODO(b/167216667): Add correct display power model here. Must read from display rail
      * and include proper coefficients for display states.
      */
     p->addEnergyConsumer(PowerStatsEnergyConsumer::createMeterAndEntityConsumer(p,
-            EnergyConsumerType::DISPLAY, "display", {"PPVAR_VSYS_PWR_DISP"}, "Display",
+            EnergyConsumerType::DISPLAY, "display", {channelName}, "Display",
             {{"LP: 1080x2400@30", 1},
              {"On: 1080x2400@60", 2},
              {"On: 1080x2400@90", 3},
