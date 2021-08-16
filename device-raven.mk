@@ -125,6 +125,9 @@ PRODUCT_COPY_FILES += \
 # Display LBE
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 
+# Media Performance Class 12
+PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=31
+
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
     device/google/raviole/powerstats/raven \
