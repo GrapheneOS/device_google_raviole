@@ -555,7 +555,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                8500,
+                10500,
                 "NAN",
                 "NAN"
             ],
@@ -570,13 +570,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true,
-            "BindedCdevInfo": [
-                {
-                    "CdevRequest": "tpu_cooling",
-                    "LimitInfo": [0, 0, 0, 0, 2, 2, 2]
-                }
-            ]
+            "Monitor":true
         },
         {
             "Name":"ocp_gpu",
@@ -586,7 +580,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                9000,
+                12000,
                 "NAN",
                 "NAN"
             ],
@@ -661,7 +655,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                7500,
+                8500,
                 "NAN",
                 "NAN"
             ],
@@ -686,7 +680,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                8000,
+                9000,
                 "NAN",
                 "NAN"
             ],
