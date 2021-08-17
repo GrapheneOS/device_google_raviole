@@ -25,6 +25,11 @@
          always-on display) -->
     <string name="doze_brightness_sensor_type" translatable="false">com.google.sensor.binned_brightness</string>
 
+    <!-- Doze: whether the brightness sensor uses the proximity sensor.
+         If both this parameter and doze_selectively_register_prox are true, registration for the
+         brightness sensor won't occur when the display state is ON. -->
+    <bool name="doze_brightness_uses_prox">false</bool>
+
     <!-- Doze: can we assume the pickup sensor includes a proximity check? -->
     <bool name="doze_pickup_performs_proximity_check">true</bool>
 
