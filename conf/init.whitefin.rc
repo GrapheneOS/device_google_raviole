@@ -1,6 +1,11 @@
 # Whitefin specific init.rc
 import /vendor/etc/init/hw/init.gs101.rc
 
+on init
+    # NFC streset tool name
+    setprop persist.vendor.nfc.streset libstreset21
+    setprop persist.vendor.se.streset libstreset21
+
 on init && property:ro.build.flavor=factory_whitefin-userdebug
     import /vendor/etc/init/hw/init.factory.rc
 
