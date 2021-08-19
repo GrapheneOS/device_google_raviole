@@ -1,6 +1,11 @@
 # Slider specific init.rc
 import /vendor/etc/init/hw/init.gs101.rc
 
+on init
+    # NFC streset tool name
+    setprop persist.vendor.nfc.streset libstreset21
+    setprop persist.vendor.se.streset libstreset21
+
 # When ro.build.flavor=factory_slider-userdebug, add vendor/bin/factory to default path
 on init && property:ro.build.flavor=factory_slider-userdebug
     import /vendor/etc/init/hw/init.factory.rc
