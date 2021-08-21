@@ -44,6 +44,9 @@ on post-fs-data
     chown system system /dev/goodix_fp
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
 
+    # Speaker amp permission
+    chmod 666 /mnt/vendor/persist/audio/speaker.cal
+
     # Start the twoshay touch service
     start twoshay
 
