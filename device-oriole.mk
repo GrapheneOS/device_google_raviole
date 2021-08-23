@@ -152,7 +152,9 @@ PRODUCT_PACKAGES += \
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
-    SettingsOverlayGR1YH
+    SettingsOverlayGR1YH \
+    SettingsOverlayGB7N6 \
+    SettingsOverlayG9S9B
 
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
