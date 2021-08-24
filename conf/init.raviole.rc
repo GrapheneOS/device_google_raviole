@@ -45,7 +45,7 @@ on post-fs-data
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g6.app
 
     # Speaker amp permission
-    chmod 666 /mnt/vendor/persist/audio/speaker.cal
+    chmod 644 /mnt/vendor/persist/audio/speaker.cal
 
     # Start the twoshay touch service
     start twoshay
