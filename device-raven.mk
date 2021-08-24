@@ -69,8 +69,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Bluetooth Tx power caps for raven
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv
+    $(LOCAL_PATH)/bluetooth_power_limits_raven_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_raven_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_raven_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
+
 
 # Bluetooth SAR test tool
 PRODUCT_PACKAGES_DEBUG += \
@@ -184,7 +186,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
-    SettingsOverlayGF5KQ
+    SettingsOverlayGF5KQ \
+    SettingsOverlayGLU0G \
+    SettingsOverlayG8V0U
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
