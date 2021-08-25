@@ -15,6 +15,7 @@
 -->
 <resources>
   <bool name="nfcc_always_on_allowed">false</bool>
+  <bool name="polling_disable_allowed">true</bool>
   <string-array name="config_skuSupportsSecureNfc" translatable="false">
     <item>G9S9B</item>
     <item>GB7N6</item>
