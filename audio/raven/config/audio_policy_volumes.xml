@@ -52,10 +52,10 @@ volume index from 0 to 100.
         <point>100,-1800</point>
     </volume>
     <volume stream="AUDIO_STREAM_SYSTEM" deviceCategory="DEVICE_CATEGORY_SPEAKER">
-        <point>0,-4200</point>
-        <point>33,-2800</point>
-        <point>66,-1400</point>
-        <point>100,0</point>
+        <point>1,-4700</point>
+        <point>33,-3800</point>
+        <point>66,-2800</point>
+        <point>100,-1800</point>
     </volume>
     <volume stream="AUDIO_STREAM_SYSTEM" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                          ref="DEFAULT_SYSTEM_VOLUME_CURVE"/>
@@ -143,8 +143,12 @@ volume index from 0 to 100.
         <point>66,-2200</point>
         <point>100,-1800</point>
     </volume>
-    <volume stream="AUDIO_STREAM_ENFORCED_AUDIBLE" deviceCategory="DEVICE_CATEGORY_SPEAKER"
-                                                   ref="DEFAULT_SYSTEM_VOLUME_CURVE"/>
+    <volume stream="AUDIO_STREAM_ENFORCED_AUDIBLE" deviceCategory="DEVICE_CATEGORY_SPEAKER">
+        <point>1,-4700</point>
+        <point>33,-3800</point>
+        <point>66,-2800</point>
+        <point>100,-1800</point>
+    </volume>
     <volume stream="AUDIO_STREAM_ENFORCED_AUDIBLE" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                                    ref="DEFAULT_SYSTEM_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_ENFORCED_AUDIBLE" deviceCategory="DEVICE_CATEGORY_EXT_MEDIA"
@@ -158,10 +162,10 @@ volume index from 0 to 100.
         <point>100,-1800</point>
     </volume>
     <volume stream="AUDIO_STREAM_DTMF" deviceCategory="DEVICE_CATEGORY_SPEAKER">
-        <point>1,-4200</point>
-        <point>33,-3000</point>
-        <point>66,-1800</point>
-        <point>100,-600</point>
+        <point>1,-5700</point>
+        <point>33,-4000</point>
+        <point>66,-3000</point>
+        <point>100,-1900</point>
     </volume>
     <volume stream="AUDIO_STREAM_DTMF" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                        ref="DEFAULT_SYSTEM_VOLUME_CURVE"/>
