@@ -135,6 +135,9 @@
       <param default="1" id="2" name="numCh_" type="uint32"/>
       <param default="1" id="3" name="chMask_" type="uint32"/>
       <param id="16" name="Simple_gain" type="float"/>
+      <param default="0" id="17" name="ch0_assignFrom" type="int32"/>
+      <param default="1" id="18" name="ch1_assignFrom" type="int32"/>
+      <param default="2" id="19" name="ch2_assignFrom" type="int32"/>
     </module>
     <module id="17" name="Wind Noise Reduction">
       <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
@@ -214,6 +217,31 @@
         <param default="4" name="type" size="60" type="int32"/>
       </struct>
     </module>
+    <module id="32" name="Single Band DRC">
+      <param default="1" id="0" max="3" name="opMode_" type="uint32"/>
+      <param default="48000" id="1" name="fs_" type="uint32"/>
+      <param default="2" id="2" name="numCh_" type="uint32"/>
+      <param default="3" id="3" name="chMask_" type="uint32"/>
+      <struct id="16">
+        <param max="20" min="0" name="delay_ms" type="float"/>
+        <param default="5" max="20" min="0" minInclusive="false" name="rms_ms" type="float"/>
+        <param max="30" min="0" name="gain_dB" type="float"/>
+        <param max="30" min="-30" name="Min_Gain_dB" type="float"/>
+        <param default="1" max="3" min="1" name="numOfKnee" type="uint32"/>
+        <param name="threadhold_dB" size="3" type="float"/>
+        <param name="compressRatio" size="4" type="float"/>
+        <param name="kneeWidth" size="3" type="float"/>
+        <param name="attackTime_ms" size="4" type="float"/>
+        <param name="releaseTime_ms" size="4" type="float"/>
+        <param name="hysteresis" size="4" type="float"/>
+      </struct>
+      <struct id="17">
+        <param max="30" min="-30" name="limiter_gain_dB" type="float"/>
+        <param max="0" min="-30" name="limiter_threadhold_dB" type="float"/>
+        <param max="100" min="0" name="limiter_attackTime_ms" type="uint32"/>
+        <param max="100" min="0" name="limiter_releaseTime_ms" type="uint32"/>
+      </struct>
+    </module>
     <module id="10000" name="Eraser">
       <param id="275" name="eraser_pre_gain" type="uint32"/>
       <param id="277" name="eraser_post_gain" type="uint32"/>
@@ -239,6 +267,13 @@
         <moduleRef id="7"/>
         <moduleRef id="5"/>
         <moduleRef id="8"/>
+      </block>
+    </signalflow>
+    <signalflow id="2" name="General Mic Recording">
+      <block id="137">
+        <moduleRef id="14"/>
+        <moduleRef id="7"/>
+        <moduleRef id="32"/>
       </block>
     </signalflow>
     <signalflow id="1000" name="Smart Feature">
