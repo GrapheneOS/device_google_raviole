@@ -24,6 +24,7 @@ $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/rave
 $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/raven/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersRaven.mk)
 
+GOODIX_CONFIG_BUILD_VERSION := g6_trusty
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay
 
 include device/google/raviole/audio/raven/audio-tables.mk
