@@ -27,6 +27,9 @@ include device/google/gs101/device-common.mk
 include device/google/raviole/audio/slider/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 
+# WirelessCharger
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
+
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/raviole/conf/init.slider.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.slider.rc
