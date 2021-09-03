@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR := device/google/raviole-kernel
+TARGET_KERNEL_DIR ?= device/google/raviole-kernel
+TARGET_BOARD_KERNEL_HEADERS := device/google/raviole-kernel/kernel-headers
 
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-raven.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
