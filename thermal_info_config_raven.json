@@ -331,7 +331,7 @@
                 "K_I":["NAN", "NAN", 20, 0, "NAN", "NAN", "NAN"],
                 "K_D":["NAN", "NAN", 10, 0, "NAN", "NAN", "NAN"],
                 "I_Max":["NAN", "NAN", 1000, 0, "NAN", "NAN", "NAN"],
-                "S_Power":["NAN", "NAN", 3500, 1500, "NAN", "NAN", "NAN"],
+                "S_Power":["NAN", "NAN", 3500, 1800, "NAN", "NAN", "NAN"],
                 "MinAllocPower":["NAN", "NAN", 2500, 1500, "NAN", "NAN", "NAN"],
                 "MaxAllocPower":["NAN", "NAN", 9500, 3000, "NAN", "NAN", "NAN"],
                 "I_Cutoff":["NAN", "NAN", 2, 0, "NAN", "NAN", "NAN"]
@@ -339,7 +339,7 @@
             "BindedCdevInfo": [
                 {
                     "CdevRequest": "thermal-cpufreq-0",
-                    "CdevWeightForPID": [0.085, 0.085, 0.085, 0.085, 0.085, 0.085, 0.085],
+                    "CdevWeightForPID": [0.07, 0.07, 0.07, 0.07, 0.07, 0.07, 0.07],
                     "CdevCeiling": [3, 3, 6, 7, 8, 10, 10],
                     "LimitInfo": [0, 0, 0, 0, 8, 10, 10],
                     "BindedPowerRail": "S4M_VDD_CPUCL0",
@@ -348,7 +348,7 @@
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
-                    "CdevWeightForPID": [0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08],
+                    "CdevWeightForPID": [0.066, 0.066, 0.066, 0.066, 0.066, 0.066, 0.066],
                     "CdevCeiling": [7, 7, 8, 9, 11, 13, 13],
                     "LimitInfo": [0, 0, 0, 0, 11, 13, 13],
                     "BindedPowerRail": "S3M_VDD_CPUCL1",
@@ -357,7 +357,7 @@
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-2",
-                    "CdevWeightForPID": [0.38, 0.38, 0.38, 0.38, 0.38, 0.38, 0.38],
+                    "CdevWeightForPID": [0.313, 0.313, 0.313, 0.313, 0.313, 0.313, 0.313],
                     "CdevCeiling": [11, 11, 14, 14, 14, 16, 16],
                     "LimitInfo": [0, 0, 0, 0, 14, 16, 16],
                     "BindedPowerRail": "S2M_VDD_CPUCL2",
@@ -366,7 +366,7 @@
                 },
                 {
                     "CdevRequest": "thermal-gpufreq-0",
-                    "CdevWeightForPID": [0.455, 0.455, 0.455, 0.455, 0.455, 0.455, 0.455],
+                    "CdevWeightForPID": [0.551, 0.551, 0.551, 0.551, 0.551, 0.551, 0.551],
                     "CdevCeiling": [7, 7, 8, 9, 10, 11, 11],
                     "LimitInfo": [0, 0, 0, 0, 10, 11, 11],
                     "BindedPowerRail": "S2S_VDD_G3D",
