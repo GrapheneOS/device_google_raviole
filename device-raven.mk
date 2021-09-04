@@ -133,6 +133,7 @@ PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15
 PRODUCT_PRODUCT_PROPERTIES += \
         vendor.powerhal.adpf.rate=8333333
+ACTUATOR_MODEL := luxshare_ict_081545
 
 # Voice packs for Text-To-Speech
 PRODUCT_COPY_FILES += \
