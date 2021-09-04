@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR := device/google/raviole-kernel
+TARGET_KERNEL_DIR ?= device/google/raviole-kernel
+TARGET_BOARD_KERNEL_HEADERS := device/google/raviole-kernel/kernel-headers
 
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-oriole.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
@@ -127,6 +128,7 @@ PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15
 PRODUCT_PRODUCT_PROPERTIES += \
         vendor.powerhal.adpf.rate=11111111
+ACTUATOR_MODEL := luxshare_ict_081545
 
 # Voice packs for Text-To-Speech
 PRODUCT_COPY_FILES += \
