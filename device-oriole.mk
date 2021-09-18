@@ -33,6 +33,7 @@ include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/fingerprint/udfps_common.mk
 include device/google/gs101/telephony/pktrouter.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
+include device/google/gs101/bluetooth/bluetooth.mk
 
 ifeq ($(filter factory_oriole, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
@@ -204,7 +205,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
-	android.hardware.bluetooth@1.1-service.bcmbtlinux \
 	bt_vendor.conf
 
 # Override default distortion output gain according to UX experiments
