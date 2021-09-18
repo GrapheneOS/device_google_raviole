@@ -27,6 +27,7 @@ DEVICE_PACKAGE_OVERLAYS += device/google/raviole/whitefin/overlay
 include device/google/gs101/device-common.mk
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include device/google/raviole/audio/whitefin/audio-tables.mk
+include device/google/gs101/bluetooth/bluetooth.mk
 
 # WirelessCharger
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
@@ -85,5 +86,4 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
-	android.hardware.bluetooth@1.1-service.bcmbtlinux \
 	bt_vendor.conf
