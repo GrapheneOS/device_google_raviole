@@ -52,3 +52,6 @@ on post-fs-data
 
 on property:ro.revision=PROTO1.0
     setprop persist.fingerprint.ghbm true
+
+on late-fs
+    setprop vendor.zram.size 3GB
