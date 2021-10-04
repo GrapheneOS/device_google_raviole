@@ -42,8 +42,8 @@
         <item>-1</item> <!-- 0: OFF -->
         <item>5</item> <!-- 1: NIGHT -->
         <item>5</item> <!-- 2: LOW -->
-        <item>200</item> <!-- 3: HIGH -->
-        <item>200</item> <!-- 4: SUN -->
+        <item>16</item> <!-- 3: HIGH -->
+        <item>16</item> <!-- 4: SUN -->
     </integer-array>
 
     <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
