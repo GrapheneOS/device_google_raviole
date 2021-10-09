@@ -210,3 +210,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Override default distortion output gain according to UX experiments
 PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.hapticgenerator.distortion.output.gain=0.5
+
+# Set zram size
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.zram.size=3g
