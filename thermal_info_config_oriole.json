@@ -206,6 +206,31 @@
             "Multiplier":0.001
         },
         {
+            "Name":"VIRTUAL-QI-QUIET",
+            "Type":"UNKNOWN",
+            "VirtualSensor":true,
+            "Formula":"WEIGHTED_AVG",
+            "Combination":[
+                "qi_therm",
+                "quiet_therm"
+            ],
+            "Coefficient":[
+                "0.25",
+                "0.75"
+            ],
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":0.001
+        },
+        {
             "Name":"VIRTUAL-QI-BATT",
             "Type":"UNKNOWN",
             "VirtualSensor":true,
@@ -291,7 +316,7 @@
             "Formula":"MAXIMUM",
             "Combination":[
                 "VIRTUAL-QI-GNSS",
-                "VIRTUAL-QI-BATT",
+                "VIRTUAL-QI-QUIET",
                 "VIRTUAL-USB2-DISP",
                 "VIRTUAL-QUIET-BATT"
             ],
@@ -306,7 +331,7 @@
                 "39.0",
                 "43.0",
                 "45.0",
-                "47.0",
+                "46.5",
                 "52.0",
                 "55.0"
             ],
@@ -315,7 +340,7 @@
                 1.9,
                 1.9,
                 1.9,
-                1.9,
+                1.4,
                 1.9,
                 1.9
             ],
@@ -458,7 +483,7 @@
             "Formula":"MAXIMUM",
             "Combination":[
                 "VIRTUAL-QI-GNSS",
-                "VIRTUAL-QI-BATT",
+                "VIRTUAL-QI-QUIET",
                 "VIRTUAL-USB2-DISP",
                 "VIRTUAL-QUIET-BATT"
             ],
