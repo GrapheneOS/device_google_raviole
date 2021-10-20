@@ -5,6 +5,8 @@
             RADIO/bootloader.img \
             RADIO/radio.img \
             system_ext/etc/permissions/com.shannon.imsservice.xml \
+            system_ext/etc/permissions/com.shannon.qualifiednetworksservice.xml \
+            system_ext/etc/permissions/com.shannon.rcsservice.xml \
             system_ext/etc/permissions/oemrilhook.xml \
             system_ext/framework/oemrilhook.jar \
             system_ext/lib64/libmediaadaptor.so \
