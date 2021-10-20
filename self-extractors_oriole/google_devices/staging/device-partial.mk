@@ -27,6 +27,8 @@ PRODUCT_PACKAGES += \
 #  blob(s) necessary for oriole hardware
 PRODUCT_COPY_FILES := \
     vendor/google_devices/oriole/proprietary/com.shannon.imsservice.xml:system_ext/etc/permissions/com.shannon.imsservice.xml:samsung \
+    vendor/google_devices/oriole/proprietary/com.shannon.qualifiednetworksservice.xml:system_ext/etc/permissions/com.shannon.qualifiednetworksservice.xml:samsung \
+    vendor/google_devices/oriole/proprietary/com.shannon.rcsservice.xml:system_ext/etc/permissions/com.shannon.rcsservice.xml:samsung \
     vendor/google_devices/oriole/proprietary/oemrilhook.xml:system_ext/etc/permissions/oemrilhook.xml:samsung \
     vendor/google_devices/oriole/proprietary/oemrilhook.jar:system_ext/framework/oemrilhook.jar:samsung \
 
