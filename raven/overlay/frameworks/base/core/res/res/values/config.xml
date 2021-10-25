@@ -34,9 +34,9 @@
 
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
         M 653,0
-        h 130
+        h 145
         v 130
-        h -130
+        h -145
         Z
         @left
     </string>
@@ -195,13 +195,10 @@
          non-zero amplitudes, to bring the vibrator amplitude down to zero using this timing. -->
     <integer name="config_vibrationWaveformRampDownDuration">50</integer>
 
-    <!-- Height of the status bar in portrait. The height should be
-         Max((status bar content height + waterfall top size), top cutout size) -->
-    <dimen name="status_bar_height_portrait">145px</dimen>
-    <dimen name="status_bar_height_landscape">28dp</dimen>
-
-    <!-- Height of area above QQS where battery/time go (equal to status bar) -->
-    <dimen name="quick_qs_offset_height">145px</dimen>
+    <!-- Height of the status bar.
+         Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
+         -->
+    <dimen name="status_bar_height">28dp</dimen>
 
     <!-- If face auth sends the user directly to home/last open app, or stays on keyguard by default-->
     <bool name="config_faceAuthDismissesKeyguard">false</bool>
