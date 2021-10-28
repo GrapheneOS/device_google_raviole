@@ -40,6 +40,7 @@ endif
 
 ifeq ($(filter factory_raven, $(TARGET_PRODUCT)),)
 include device/google/gs101/uwb/uwb.mk
+include device/google/raviole/uwb/uwb_calibration.mk
 endif
 
 include hardware/google/pixel/vibrator/cs40l25/device.mk
