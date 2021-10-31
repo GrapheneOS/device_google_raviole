@@ -19,6 +19,6 @@ $(call inherit-product, device/google/raviole/device-oriole.mk)
 
 PRODUCT_NAME := aosp_oriole
 PRODUCT_DEVICE := oriole
-PRODUCT_MODEL := AOSP on Oriole
+PRODUCT_MODEL := Pixel 6
 PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
