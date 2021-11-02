@@ -69,4 +69,10 @@ PRODUCT_COPY_FILES += \
 # Mixer Path Configuration for Audio Speaker Calibration Tool crus_sp_cal
 PRODUCT_COPY_FILES += \
     device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/cs35l41/crus_sp_cal_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/crus_sp_cal_mixer_paths.xml
+
+# Waves ini/mps files for unit tests of halcontroller
+PRODUCT_COPY_FILES += \
+    device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/waves/tests/test_config.ini:$(TARGET_COPY_OUT_VENDOR)/etc/test_config.ini \
+    device/google/raviole/audio/$(AUDIO_TABLE_FOLDER)/tuning/waves/tests/test_preset.mps:$(TARGET_COPY_OUT_VENDOR)/etc/test_preset.mps
+
 endif
