@@ -28,6 +28,9 @@ include device/google/gs101/device-common.mk
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include device/google/raviole/audio/whitefin/audio-tables.mk
 
+SOONG_CONFIG_lyric_tuning_product := slider
+SOONG_CONFIG_google3a_config_target_device := slider
+
 # WirelessCharger
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
 
