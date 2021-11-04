@@ -45,6 +45,9 @@ endif
 
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 
+SOONG_CONFIG_lyric_tuning_product := raven
+SOONG_CONFIG_google3a_config_target_device := raven
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.support_kernel_idle_timer=true
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.enable_frame_rate_override=true
 
