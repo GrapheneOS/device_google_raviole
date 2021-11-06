@@ -39,6 +39,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
+SOONG_CONFIG_lyric_tuning_product := oriole
+SOONG_CONFIG_google3a_config_target_device := oriole
 
 # Init files
 PRODUCT_COPY_FILES += \
