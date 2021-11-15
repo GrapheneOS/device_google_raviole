@@ -234,8 +234,6 @@
         <param name="attackTime_ms" size="4" type="float"/>
         <param name="releaseTime_ms" size="4" type="float"/>
         <param name="hysteresis" size="4" type="float"/>
-        <param default="0" max="1" min="0" name="rms_manual_enable" type="uint32"/>
-        <param default="0" max="2" min="0" name="rms_channel" type="uint32"/>
       </struct>
       <struct id="17">
         <param max="30" min="-30" name="limiter_gain_dB" type="float"/>
@@ -275,7 +273,7 @@
       <block id="137">
         <moduleRef id="14"/>
         <moduleRef id="7"/>
-        <moduleRef id="32"/>
+        <moduleRef id="8"/>
       </block>
     </signalflow>
     <signalflow id="1000" name="Smart Feature">
