@@ -13,8 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ifdef PHONE_CAR_BOARD_CONFIG
-  include $(PHONE_CAR_BOARD_CONFIG)
+ifdef PHONE_CAR_BOARD_PRODUCT
+  include device/google_car/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk
 else
   TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
   TARGET_BOOTLOADER_BOARD_NAME := oriole
