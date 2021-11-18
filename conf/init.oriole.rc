@@ -15,8 +15,15 @@ on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_complet
 on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
     write /sys/class/spi_master/spi11/spi11.0/glove_mode 01
 
+# Thermal
 on late-init && property:ro.boot.hardware.revision=PROTO1.0
     setprop vendor.thermal.config "thermal_info_config_WHI_A.json"
+
+on late-init && property:ro.boot.hardware.revision=PROTO1.1
+    setprop vendor.disable.usb.overheat.mitigation.control 1
+
+on late-init && property:ro.boot.hardware.revision=EVT1.0
+    setprop vendor.disable.usb.overheat.mitigation.control 1
 
 # For Japan sku, always enforce camera shutter sound
 # Since this property is read by the audio server in system service,

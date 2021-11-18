@@ -375,7 +375,7 @@
                 },
                 {
                     "CdevRequest": "tpu_cooling",
-                    "LimitInfo": [0, 1, 2, 3, 4, 4, 4]
+                    "LimitInfo": [0, 2, 3, 4, 5, 5, 5]
                 }
             ]
         },
