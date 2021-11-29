@@ -192,7 +192,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay
 
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
