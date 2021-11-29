@@ -150,7 +150,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
