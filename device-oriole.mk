@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-include vendor/adevtool/build/prepare_aosp.mk
-
 TARGET_KERNEL_DIR := device/google/raviole-kernel
 
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-oriole.mk)
