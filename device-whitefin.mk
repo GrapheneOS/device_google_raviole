@@ -90,3 +90,6 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
 	bt_vendor.conf
+
+# This device is shipped with 31 (Android S)
+PRODUCT_SHIPPING_API_LEVEL := 31
