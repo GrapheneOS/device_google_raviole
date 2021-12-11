@@ -210,3 +210,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.zram.size=3g
+
+# This device is shipped with 31 (Android S)
+PRODUCT_SHIPPING_API_LEVEL := 31
