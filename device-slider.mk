@@ -28,8 +28,8 @@ include device/google/gs101/device-common.mk
 include device/google/raviole/audio/slider/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 
-SOONG_CONFIG_lyric_tuning_product := slider
-SOONG_CONFIG_google3a_config_target_device := slider
+$(call soong_config_set,lyric,tuning_product,slider)
+$(call soong_config_set,google3a_config,target_device,slider)
 
 # WirelessCharger
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
