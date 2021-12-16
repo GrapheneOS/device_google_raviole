@@ -101,7 +101,7 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/raven/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb
 
 #config of display brightness dimming
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.brightness.dimming.usage=2
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.brightness.dimming.usage=1
 
 # NFC
 PRODUCT_COPY_FILES += \
