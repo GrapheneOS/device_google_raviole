@@ -200,9 +200,6 @@
          -->
     <dimen name="status_bar_height">28dp</dimen>
 
-    <!-- If face auth sends the user directly to home/last open app, or stays on keyguard by default-->
-    <bool name="config_faceAuthDismissesKeyguard">false</bool>
-
     <!-- the number of the max cached processes in the system. -->
     <integer name="config_customizedMaxCachedProcesses">64</integer>
 </resources>
