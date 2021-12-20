@@ -90,7 +90,7 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_ALARM" deviceCategory="DEVICE_CATEGORY_HEADSET"
                                         ref="DEFAULT_NON_MUTABLE_HEADSET_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_ALARM" deviceCategory="DEVICE_CATEGORY_SPEAKER">
-        <point>1,-3600</point>
+        <point>0,-4800</point>
         <point>33,-2400</point>
         <point>66,-1200</point>
         <point>100,0</point>
