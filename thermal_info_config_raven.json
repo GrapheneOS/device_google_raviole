@@ -141,7 +141,7 @@
             "Type":"UNKNOWN",
             "HotThreshold":[
                 "NAN",
-                "35.0",
+                "40.0",
                 "NAN",
                 "NAN",
                 "NAN",
@@ -554,8 +554,8 @@
                 "USB2-MINUS-QI"
             ],
             "Coefficient":[
-                "35000",
-                "3000",
+                "40000",
+                "4500",
                 "9000"
             ],
             "HotThreshold":[
