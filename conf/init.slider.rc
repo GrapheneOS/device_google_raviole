@@ -26,3 +26,9 @@ service insmod_sh_slider /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.slid
     group root system
     disabled
     oneshot
+
+# charger driver exposes now finer grain control, map demo mode to those properties
+# NOTE: demo mode can only be exit wiping data (which reset the persist properties)
+on property:sys.retaildemo.enabled=1
+    setprop persist.vendor.charge.stop.level 35
+    setprop persist.vendor.charge.start.level 30
