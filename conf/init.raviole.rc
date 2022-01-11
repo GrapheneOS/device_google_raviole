@@ -56,3 +56,9 @@ on property:ro.revision=PROTO1.0
 # SecureElement eSE2 cts mode
 on property:persist.vendor.se.ese2.mode=ctsmode
     write /sys/class/st33spi/st33spi/st33spi_state 33
+
+# charger driver exposes now finer grain control, map demo mode to those properties
+# NOTE: demo mode can only be exit wiping data (which reset the persist properties)
+on property:sys.retaildemo.enabled=1
+    setprop persist.vendor.charge.stop.level 35
+    setprop persist.vendor.charge.start.level 30

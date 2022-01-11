@@ -36,6 +36,14 @@
         <ctl name="EP1 TX Mixer TDM_0_TX" value="1" />
     </path>
 
+    <path name="mfg-record usb-headset-mic">
+        <ctl name="Audio Capture Mic Source" value="USB_MIC"/>
+        <ctl name="USB Capture FORMAT v2" value="1" />
+        <ctl name="USB Config To AoC v2" value="1"/>
+        <ctl name="EP1 TX Mixer USB_TX" value="1"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="0" />
+    </path>
+
     <path name="mic1-status">
         <ctl name="MIC0" value="1" />
     </path>
@@ -233,12 +241,13 @@
     </path>
 
     <path name="mfg-playback usb-headphones">
-        <ctl name="USB Dev ID" value="1" />
-        <ctl name="USB Playback EP ID" value="1" />
-        <ctl name="USB Playback SR" value="48000" />
-        <ctl name="USB Playback CH" value="2" />
-        <ctl name="USB Playback BW" value="16" />
-        <ctl name="USB Config To AoC" value="1" />
+        <ctl name="USB Dev ID v2" value="2" />
+        <ctl name="USB Playback EP ID v2" value="1" />
+        <ctl name="USB Playback FORMAT v2" value="6" />
+        <ctl name="USB Playback SR v2" value="48000" />
+        <ctl name="USB Playback CH v2" value="2" />
+        <ctl name="USB Playback BW v2" value="16" />
+        <ctl name="USB Config To AoC v2" value="1" />
         <ctl name="USB_RX Mixer EP3" value="1" />
     </path>
 
@@ -300,9 +309,15 @@
     </path>
 
     <path name="loopback-usb-mic-speaker">
+        <ctl name="Audio Capture Mic Source" value="USB_MIC" />
+        <ctl name="USB Capture FORMAT v2" value="1" />
+        <ctl name="MIC Record Soft Gain (dB)" value="0" />
     </path>
 
     <path name="loopback-usb-mic-usb-headphone">
+        <ctl name="Audio Capture Mic Source" value="USB_MIC" />
+        <ctl name="USB Capture FORMAT v2" value="1" />
+        <ctl name="MIC Record Soft Gain (dB)" value="0" />
     </path>
 
     <pcm_id name="loopback-mic1" value="EP1 capture (*)"/>
