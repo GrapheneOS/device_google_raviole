@@ -21,6 +21,3 @@ PRODUCT_DEVICE := slider
 PRODUCT_MODEL := AOSP on Slider
 PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
-
-# Most sliders don't have dauntless chip, set it as default
-BOARD_WITHOUT_DTLS := true
