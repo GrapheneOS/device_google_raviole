@@ -12,6 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := raven/BoardConfigPartial.mk
-
--include vendor/google_devices/$(LOCAL_STEM)
+-include vendor/google_devices/raven/BoardConfigPartial.mk
