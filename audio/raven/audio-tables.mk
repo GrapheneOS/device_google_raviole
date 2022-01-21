@@ -37,11 +37,7 @@ PRODUCT_COPY_FILES += \
 SPK_FIRMWARE_PATH := $(AUDIO_TABLE_FOLDER)/cs35l41/fw
 SPK_FIRMWARE_FULL_PATH := device/google/raviole/audio/$(SPK_FIRMWARE_PATH)
 
-SPK_FIRMWAR_FILES := $(wildcard  $(SPK_FIRMWARE_FULL_PATH)/*)
-
-PRODUCT_COPY_FILES += $(foreach spk_firmware, \
-    $(SPK_FIRMWAR_FILES), \
-    $(spk_firmware):$(TARGET_COPY_OUT_VENDOR)/firmware/$(notdir $(spk_firmware)))
+PRODUCT_COPY_FILES += $(call copy-files,$(wildcard  $(SPK_FIRMWARE_FULL_PATH)/*),$(TARGET_COPY_OUT_VENDOR)/firmware)
 
 # Audio tuning
 PRODUCT_COPY_FILES += \
