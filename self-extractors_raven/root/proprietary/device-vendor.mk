@@ -12,6 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := raven/device-partial.mk
-
-$(call inherit-product-if-exists, vendor/google_devices/$(LOCAL_STEM))
+$(call inherit-product-if-exists, vendor/google_devices/raven/device-partial.mk)
