@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR := device/google/raviole-kernel
+TARGET_KERNEL_DIR ?= device/google/raviole-kernel
+TARGET_BOARD_KERNEL_HEADERS := device/google/raviole-kernel/kernel-headers
 
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-oriole.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
@@ -143,7 +144,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=1
+    ro.vendor.build.svn=10
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
