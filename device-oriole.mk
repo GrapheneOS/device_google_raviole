@@ -237,6 +237,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.le_audio_test=false
 endif
 
+# declare use of spatial audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.spatializer_enabled=true
+
+PRODUCT_PACKAGES += \
+	libspatialaudio
+
 # Device features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
