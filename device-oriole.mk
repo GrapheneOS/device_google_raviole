@@ -38,6 +38,9 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
+# sysconfig XML from stock
+PRODUCT_COPY_FILES += \
+	device/google/raviole/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
