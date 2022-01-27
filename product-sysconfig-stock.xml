@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+    <component-override package="com.android.settings" >
+        <!-- Display regulatory info in settings. -->
+        <component class=".RegulatoryInfoDisplayActivity" enabled="true" />
+    </component-override>
+
+    <feature name="com.google.android.feature.AER_OPTIMIZED" />
+    <feature name="com.google.android.feature.GOOGLE_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2018_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2019_MIDYEAR_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2019_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2020_MIDYEAR_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2020_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2021_MIDYEAR_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2021_EXPERIENCE" />
+
+</config>
