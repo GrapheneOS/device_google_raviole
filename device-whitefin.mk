@@ -86,5 +86,9 @@ PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 
+# Power HAL config
+PRODUCT_COPY_FILES += \
+	device/google/raviole/powerhint-whitefin.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
