@@ -191,6 +191,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "RestrictedCpuset",
+      "Path": "/dev/cpuset/restricted/cpus",
+      "Values": [
+        "0-3",
+        "0-7"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "CDHighCpusetCpus",
       "Path": "/dev/cpuset/camera-daemon-high-group/cpus",
       "Values": [
@@ -1325,6 +1334,18 @@
       "Node": "MLUclampBoost",
       "Duration": 2000,
       "Value": "512"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "RestrictedCpuset",
+      "Duration": 0,
+      "Value": "0-3"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "RestrictedCpuset",
+      "Duration": 0,
+      "Value": "0-3"
     }
   ]
 }
