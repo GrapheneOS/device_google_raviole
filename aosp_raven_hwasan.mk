@@ -1,3 +1,4 @@
+#
 # Copyright 2021 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,5 +12,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-$(call inherit-product-if-exists, vendor/google_devices/raven/device-partial.mk)
+$(call inherit-product, device/google/raviole/aosp_raven.mk)
+PRODUCT_NAME := aosp_raven_hwasan
+
+# Add "hwaddress" as a global sanitizer if it's missing.
+ifeq ($(filter hwaddress,$(SANITIZE_TARGET)),)
+  SANITIZE_TARGET := $(strip $(SANITIZE_TARGET) hwaddress)
+endif

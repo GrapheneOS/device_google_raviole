@@ -41,8 +41,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
-SOONG_CONFIG_lyric_tuning_product := oriole
-SOONG_CONFIG_google3a_config_target_device := oriole
+$(call soong_config_set,lyric,tuning_product,oriole)
+$(call soong_config_set,google3a_config,target_device,oriole)
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -61,6 +61,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/raviole/thermal_info_config_oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
 	device/google/raviole/thermal_info_config_oriole_WHI_A.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_WHI_A.json
+
+# Power HAL config
+PRODUCT_COPY_FILES += \
+	device/google/raviole/powerhint-oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -132,7 +136,7 @@ DEVICE_MANIFEST_FILE += \
 # Vibrator HAL
 PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_VENDOR_PROPERTIES += \
         vendor.powerhal.adpf.rate=11111111
 ACTUATOR_MODEL := luxshare_ict_081545
 
@@ -175,7 +179,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=19
+    ro.vendor.build.svn=24
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \

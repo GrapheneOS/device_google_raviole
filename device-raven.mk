@@ -47,8 +47,8 @@ endif
 
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 
-SOONG_CONFIG_lyric_tuning_product := raven
-SOONG_CONFIG_google3a_config_target_device := raven
+$(call soong_config_set,lyric,tuning_product,raven)
+$(call soong_config_set,google3a_config,target_device,raven)
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.support_kernel_idle_timer=true
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.enable_frame_rate_override=true
@@ -69,6 +69,10 @@ PRODUCT_COPY_FILES += \
 # Thermal Config
 PRODUCT_COPY_FILES += \
 	device/google/raviole/thermal_info_config_raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+
+# Power HAL config
+PRODUCT_COPY_FILES += \
+	device/google/raviole/powerhint-raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -103,7 +107,7 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/raven/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb
 
 #config of display brightness dimming
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.brightness.dimming.usage=2
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.brightness.dimming.usage=1
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -148,8 +152,8 @@ DEVICE_MANIFEST_FILE += \
 # Vibrator HAL
 PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15
-PRODUCT_PRODUCT_PROPERTIES += \
-        vendor.powerhal.adpf.rate=8333333
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.powerhal.adpf.rate=8333333
 ACTUATOR_MODEL := luxshare_ict_081545
 
 # Voice packs for Text-To-Speech
@@ -188,7 +192,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=19
+    ro.vendor.build.svn=24
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
@@ -205,7 +209,7 @@ PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=3
+    ro.gms.dck.eligible_wcc=2
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
