@@ -194,6 +194,10 @@ endif
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.svn=24
 
+# Set support hide display cutout feature
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_hide_display_cutout=true
+
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
