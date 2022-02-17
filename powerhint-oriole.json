@@ -196,7 +196,7 @@
         "0-3",
         "0-7"
       ],
-      "ResetOnInit": true
+      "ResetOnInit": false
     },
     {
       "Name": "CDHighCpusetCpus",
