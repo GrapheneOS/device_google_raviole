@@ -409,6 +409,12 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 5000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "CPUMidClusterMaxFreq",
       "Duration": 5000,
       "Value": "9999999"
