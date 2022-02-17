@@ -331,7 +331,7 @@
       "Name": "LittleControlTempSet",
       "Path": "/dev/thermal/tz-by-name/LITTLE/trip_point_2_temp",
       "Values": [
-        "90000",
+        "95000",
         "80000"
       ],
       "DefaultIndex": 0,
