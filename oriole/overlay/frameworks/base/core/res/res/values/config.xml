@@ -300,4 +300,7 @@
         <item>200</item>
     </integer-array>
 
+    <string-array name="config_locationExtraPackageNames" translatable="false">
+         <item>com.shannon.imsservice</item>
+    </string-array>
 </resources>
