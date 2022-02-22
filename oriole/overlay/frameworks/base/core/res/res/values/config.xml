@@ -229,4 +229,8 @@
 
     <!-- the number of the max cached processes in the system. -->
     <integer name="config_customizedMaxCachedProcesses">64</integer>
+
+    <string-array name="config_locationExtraPackageNames" translatable="false">
+         <item>com.shannon.imsservice</item>
+    </string-array>
 </resources>
