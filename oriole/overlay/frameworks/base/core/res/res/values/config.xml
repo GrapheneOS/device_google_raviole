@@ -231,6 +231,7 @@
     <integer name="config_customizedMaxCachedProcesses">64</integer>
 
     <string-array name="config_locationExtraPackageNames" translatable="false">
+         <item>com.android.bluetooth</item>
          <item>com.shannon.imsservice</item>
     </string-array>
 </resources>
