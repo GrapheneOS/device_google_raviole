@@ -183,7 +183,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=22
+    ro.vendor.build.svn=23
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
