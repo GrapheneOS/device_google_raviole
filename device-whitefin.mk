@@ -28,6 +28,12 @@ include device/google/gs101/device-common.mk
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include device/google/raviole/audio/whitefin/audio-tables.mk
 
+$(call soong_config_set,lyric,tuning_product,slider)
+$(call soong_config_set,google3a_config,target_device,slider)
+
+# WirelessCharger
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
+
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/raviole/conf/init.whitefin.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.whitefin.rc
@@ -57,10 +63,28 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-	device/google/gs101/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf
+	frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+	frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+	frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
+	frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
+	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
+	device/google/raviole/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+	device/google/raviole/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+
+PRODUCT_PACKAGES += \
+	NfcNci \
+	Tag \
+	android.hardware.nfc@1.2-service.st
+
+DEVICE_MANIFEST_FILE += \
+	device/google/raviole/nfc/manifest_nfc.xml
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
+
+# This device is shipped with 31 (Android S)
+PRODUCT_SHIPPING_API_LEVEL := 31

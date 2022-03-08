@@ -1,4 +1,5 @@
-# Copyright 2021 The Android Open Source Project
+#
+# Copyright (C) 2021 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,4 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product-if-exists, vendor/google_devices/oriole/BoardConfigPartial.mk)
+LOCAL_UWB_CAL_DIR=device/google/raviole/uwb
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_UWB_CAL_DIR)/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/UWB-calibration.conf \
+    $(LOCAL_UWB_CAL_DIR)/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/UWB-calibration-unknown.conf \
+    $(LOCAL_UWB_CAL_DIR)/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/UWB-calibration-default.conf \
