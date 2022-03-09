@@ -236,35 +236,35 @@
      -->
     <array name="config_defaultNotificationVibeWaveform">
         <item>0.0</item>
-        <item>60.0</item>
+        <item>160.0</item>
         <item>0.0</item>
 
-        <item>0.4</item>
-        <item>120.0</item>
+        <item>0.24</item>
+        <item>200.0</item>
         <item>100.0</item>
 
-        <item>0.4</item>
-        <item>120.0</item>
-        <item>100.0</item>
-
-        <item>0.0</item>
-        <item>60.0</item>
+        <item>0.24</item>
+        <item>200.0</item>
         <item>100.0</item>
 
         <item>0.0</item>
-        <item>60.0</item>
-        <item>100.0</item>
-
-        <item>0.4</item>
-        <item>120.0</item>
-        <item>100.0</item>
-
-        <item>0.4</item>
-        <item>120.0</item>
+        <item>160.0</item>
         <item>100.0</item>
 
         <item>0.0</item>
-        <item>60.0</item>
+        <item>160.0</item>
+        <item>100.0</item>
+
+        <item>0.24</item>
+        <item>200.0</item>
+        <item>100.0</item>
+
+        <item>0.24</item>
+        <item>200.0</item>
+        <item>100.0</item>
+
+        <item>0.0</item>
+        <item>160.0</item>
         <item>100.0</item>
     </array>
 
@@ -277,35 +277,35 @@
      -->
     <array name="config_notificationFallbackVibeWaveform">
         <item>0.0</item>
-        <item>60.0</item>
+        <item>160.0</item>
         <item>0.0</item>
 
-        <item>0.4</item>
-        <item>120.0</item>
+        <item>0.24</item>
+        <item>200.0</item>
         <item>50.0</item>
 
-        <item>0.4</item>
-        <item>120.0</item>
+        <item>0.24</item>
+        <item>200.0</item>
         <item>100.0</item>
 
         <item>0.0</item>
-        <item>60.0</item>
+        <item>160.0</item>
         <item>50.0</item>
 
         <item>0.0</item>
-        <item>60.0</item>
+        <item>160.0</item>
         <item>100.0</item>
 
-        <item>0.4</item>
-        <item>120.0</item>
+        <item>0.24</item>
+        <item>200.0</item>
         <item>50.0</item>
 
-        <item>0.4</item>
-        <item>120.0</item>
+        <item>0.24</item>
+        <item>200.0</item>
         <item>100.0</item>
 
         <item>0.0</item>
-        <item>60.0</item>
+        <item>160.0</item>
         <item>50.0</item>
     </array>
 
