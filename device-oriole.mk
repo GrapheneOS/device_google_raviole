@@ -175,7 +175,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=24
+    ro.vendor.build.svn=25
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
@@ -217,3 +217,16 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
+
+##############################################
+# DOLBY integration
+include vendor/dolby/ds/dolby-buildspec.mk
+$(call inherit-product, vendor/dolby/ds/dolby-product.mk)
+
+# add list of codecs, but overwrite device/google/gs101/media_codecs_bo_c2.xml
+# with same file but with Dolby codecs listed
+PRODUCT_COPY_FILES := \
+    device/google/raviole/media_codecs_bo_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(PRODUCT_COPY_FILES) 
+
+PRODUCT_RESTRICT_VENDOR_FILES := false
