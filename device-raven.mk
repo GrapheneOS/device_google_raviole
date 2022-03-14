@@ -255,3 +255,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.leaudio_offload.disabled=true \
     persist.bluetooth.le_audio_test=true
 endif
+
+# Device features
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
