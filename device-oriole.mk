@@ -42,9 +42,10 @@ endif
 SOONG_CONFIG_lyric_tuning_product := oriole
 SOONG_CONFIG_google3a_config_target_device := oriole
 
-# sysconfig XML from stock
+# sysconfig and permissions XML from stock
 PRODUCT_COPY_FILES += \
-	device/google/raviole/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml
+	$(LOCAL_PATH)/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml \
+	$(LOCAL_PATH)/product-permissions-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product-permissions-stock.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
