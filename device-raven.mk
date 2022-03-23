@@ -253,7 +253,7 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.leaudio_offload.supported=true \
     persist.bluetooth.leaudio_offload.disabled=true \
-    persist.bluetooth.le_audio_test=true
+    persist.bluetooth.le_audio_test=false
 endif
 
 # Device features
