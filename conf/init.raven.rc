@@ -47,9 +47,3 @@ on late-init && property:ro.boot.hardware.revision=EVT1.0
 # Bluetooth
 on post-fs-data
     chown bluetooth system /proc/bluetooth/timesync
-
-# For Japan sku, always enforce camera shutter sound
-# Since this property is read by the audio server in system service,
-# it should be written by the system init.
-on property:ro.boot.hardware.sku=GF5KQ
-    setprop audio.camerasound.force true
