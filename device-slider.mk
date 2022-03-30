@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc@1.2-service.st
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -96,7 +96,6 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/nfc/libse-gto-hal2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal2.conf
 
 DEVICE_MANIFEST_FILE += \
-	device/google/raviole/nfc/manifest_nfc.xml \
 	device/google/raviole/nfc/manifest_se.xml
 
 # PowerStats HAL
