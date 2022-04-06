@@ -921,7 +921,7 @@
                     "CdevRequest": "tpu_cooling",
                     "LimitInfo": [0, 0, 0, 0, 4, 4, 4]
                 }
-	    ]
+            ]
         },
         {
             "Name":"ocp_cpu1",
@@ -945,8 +945,8 @@
                 0.0
             ],
             "VrThreshold":"NAN",
-            "Multiplier":1
-            "Hidden":true,
+            "Multiplier":1,
+            "Hidden":true
         },
         {
             "Name":"ocp_cpu2",
