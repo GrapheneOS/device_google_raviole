@@ -94,7 +94,7 @@
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
          -->
     <dimen name="status_bar_height_height_default">74px</dimen>
-    <dimen name="status_bar_height_portrait">124px</dimen>
+    <dimen name="status_bar_height_portrait">118px</dimen>
     <dimen name="status_bar_height_landscape">74px</dimen>
 
     <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
