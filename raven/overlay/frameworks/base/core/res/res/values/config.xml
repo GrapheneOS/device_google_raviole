@@ -199,7 +199,7 @@
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
          -->
     <dimen name="status_bar_height_default">28dp</dimen>
-    <dimen name="status_bar_height_portrait">145px</dimen>
+    <dimen name="status_bar_height_portrait">130px</dimen>
     <dimen name="status_bar_height_landscape">28dp</dimen>
 
     <!-- If face auth sends the user directly to home/last open app, or stays on keyguard by default-->
