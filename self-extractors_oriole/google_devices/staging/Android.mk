@@ -16,10 +16,18 @@
 
 LOCAL_PATH := $(call my-dir)
 
+$(call declare-license-metadata,$(LOCAL_PATH)/vendor.img,legacy_proprietary,proprietary,$(LOCAL_PATH)/../LICENSE,"Vendor Image",vendor)
+
 ifneq ($(filter oriole,$(TARGET_DEVICE)),)
   $(call add-radio-file,bootloader.img)
+  $(call declare-license-metadata,$(LOCAL_PATH)/bootloader.img,legacy_proprietary,proprietary,$(LOCAL_PATH)/../LICENSE,"Vendor Bootloader Image",vendor)
   $(call add-radio-file,radio.img)
+  $(call declare-license-metadata,$(LOCAL_PATH)/radio.img,legacy_proprietary,proprietary,$(LOCAL_PATH)/../LICENSE,"Vendor Radio Image",vendor)
 endif
+
+$(eval $(call declare-copy-files-license-metadata,vendor/google_devices/oriole,:samsung,legacy_proprietary,proprietary,vendor/google_devices/oriole/LICENSE,))
+$(eval $(call declare-copy-files-license-metadata,vendor/google_devices/oriole,.jar,legacy_proprietary,proprietary,vendor/google_devices/oriole/LICENSE,))
+$(eval $(call declare-copy-files-license-metadata,vendor/google_devices/oriole,.xml,legacy_proprietary,proprietary,vendor/google_devices/oriole/LICENSE,))
 
 ifneq ($(filter oriole,$(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
