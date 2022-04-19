@@ -21,8 +21,6 @@ else
   TARGET_SCREEN_DENSITY := 420
   USES_DEVICE_GOOGLE_RAVIOLE := true
 
-  BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
-
   include device/google/gs101/BoardConfig-common.mk
   include device/google/gs101/wifi/BoardConfig-wifi.mk
   -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
