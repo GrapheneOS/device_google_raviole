@@ -1123,6 +1123,12 @@
       "Value": "2401000"
     },
     {
+      "PowerHint": "LOW_POWER",
+      "Node": "PMU_POLL",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
       "PowerHint": "REFRESH_120FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
