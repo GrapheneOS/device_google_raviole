@@ -136,8 +136,7 @@ DEVICE_MANIFEST_FILE += \
 # Vibrator HAL
 PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15
-PRODUCT_VENDOR_PROPERTIES += \
-        vendor.powerhal.adpf.rate=11111111
+
 ACTUATOR_MODEL := luxshare_ict_081545
 
 # Voice packs for Text-To-Speech
