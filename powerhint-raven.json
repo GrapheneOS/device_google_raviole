@@ -144,7 +144,7 @@
       "Values": [
         "553",
         "185",
-        "126",
+        "129",
         "57",
         "1",
         "183",
@@ -1235,7 +1235,7 @@
       "PowerHint": "BOOST_60HZ",
       "Node": "TAUClampBoost",
       "Duration": 200,
-      "Value": "126"
+      "Value": "129"
     },
     {
       "PowerHint": "REFRESH_120FPS",
