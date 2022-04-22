@@ -144,11 +144,11 @@
       "Values": [
         "553",
         "185",
-        "126",
+        "129",
         "56",
         "1",
         "183",
-        "125",
+        "128",
         "55"
       ],
       "ResetOnInit": true
@@ -1147,7 +1147,7 @@
       "PowerHint": "REFRESH_90FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "125"
+      "Value": "128"
     },
     {
       "PowerHint": "REFRESH_90FPS",
@@ -1221,13 +1221,13 @@
       "PowerHint": "BOOST_90HZ",
       "Node": "TAUClampBoost",
       "Duration": 200,
-      "Value": "126"
+      "Value": "129"
     },
     {
       "PowerHint": "BOOST_60HZ",
       "Node": "TAUClampBoost",
       "Duration": 200,
-      "Value": "126"
+      "Value": "129"
     },
     {
       "PowerHint": "REFRESH_120FPS",
