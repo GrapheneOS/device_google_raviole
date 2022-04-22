@@ -143,13 +143,13 @@
       "Path": "/proc/vendor_sched/ta_uclamp_min",
       "Values": [
         "553",
-        "158",
-        "108",
-        "43",
+        "185",
+        "126",
+        "56",
         "1",
-        "157",
-        "107",
-        "42"
+        "183",
+        "125",
+        "55"
       ],
       "ResetOnInit": true
     },
@@ -157,9 +157,9 @@
       "Name": "SFUClampBoost",
       "Path": "/proc/vendor_sched/sf_uclamp_min",
       "Values": [
-        "125",
-        "65",
-        "30"
+        "160",
+        "85",
+        "39"
       ],
       "ResetOnInit": true
     },
@@ -167,7 +167,7 @@
       "Name": "MLUclampBoost",
       "Path": "/proc/vendor_sched/nnapi_uclamp_min",
       "Values": [
-          "154",
+          "180",
           "512"
       ],
       "DefaultIndex": 0,
@@ -239,6 +239,15 @@
     {
       "Name": "TAPreferIdle",
       "Path": "/proc/vendor_sched/ta_prefer_idle",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "FGPreferIdle",
+      "Path": "/proc/vendor_sched/fg_prefer_idle",
       "Values": [
         "0",
         "1"
@@ -395,7 +404,7 @@
       "PowerHint": "INTERACTION",
       "Node": "SFUClampBoost",
       "Duration": 5000,
-      "Value": "65"
+      "Value": "85"
     },
     {
       "PowerHint": "DEVICE_IDLE",
@@ -407,7 +416,7 @@
       "PowerHint": "LAUNCH_120FPS",
       "Node": "SFUClampBoost",
       "Duration": 1000,
-      "Value": "125"
+      "Value": "160"
     },
     {
       "PowerHint": "LAUNCH",
@@ -418,7 +427,7 @@
       "PowerHint": "LAUNCH",
       "Node": "SFUClampBoost",
       "Duration": 5000,
-      "Value": "65"
+      "Value": "85"
     },
     {
       "PowerHint": "LAUNCH",
@@ -1132,13 +1141,13 @@
       "PowerHint": "REFRESH_120FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "157"
+      "Value": "183"
     },
     {
       "PowerHint": "REFRESH_90FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "107"
+      "Value": "125"
     },
     {
       "PowerHint": "REFRESH_90FPS",
@@ -1149,7 +1158,7 @@
       "PowerHint": "REFRESH_60FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "42"
+      "Value": "55"
     },
     {
       "PowerHint": "REFRESH_60FPS",
@@ -1206,19 +1215,19 @@
       "PowerHint": "BOOST_120HZ",
       "Node": "TAUClampBoost",
       "Duration": 200,
-      "Value": "158"
+      "Value": "185"
     },
     {
       "PowerHint": "BOOST_90HZ",
       "Node": "TAUClampBoost",
       "Duration": 200,
-      "Value": "108"
+      "Value": "126"
     },
     {
       "PowerHint": "BOOST_60HZ",
       "Node": "TAUClampBoost",
       "Duration": 200,
-      "Value": "108"
+      "Value": "126"
     },
     {
       "PowerHint": "REFRESH_120FPS",
@@ -1249,6 +1258,12 @@
       "PowerHint": "REFRESH_60FPS",
       "Type": "MaskHint",
       "Value": "BOOST_120HZ"
+    },
+    {
+      "PowerHint": "DISPLAY_IDLE",
+      "Node": "FGPreferIdle",
+      "Duration": 0,
+      "Value": "0"
     },
     {
       "PowerHint": "DISPLAY_IDLE",
