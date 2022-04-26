@@ -155,7 +155,7 @@
       "Name": "SFUClampBoost",
       "Path": "/proc/vendor_sched/sf_uclamp_min",
       "Values": [
-        "160",
+        "161",
         "85",
         "39"
       ],
