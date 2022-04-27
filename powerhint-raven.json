@@ -156,7 +156,7 @@
       "Name": "SFUClampBoost",
       "Path": "/proc/vendor_sched/sf_uclamp_min",
       "Values": [
-        "160",
+        "161",
         "85",
         "39"
       ],
@@ -425,6 +425,22 @@
       "DefaultIndex": 0
     },
     {
+      "Name": "TRUSTY_VIRTIO_HIGH",
+      "Path": "/sys/module/trusty_virtio/parameters/use_high_wq",
+      "Values": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "Name": "TRUSTY_HIGH",
+      "Path": "/sys/module/trusty_core/parameters/use_high_wq",
+      "Values": [
+        "1",
+        "0"
+      ]
+    },
+    {
       "Name": "PMU_POLL",
       "Path": "/proc/vendor_sched/pmu_poll_enable",
       "Values": [
@@ -451,7 +467,7 @@
       "PowerHint": "LAUNCH_120FPS",
       "Node": "SFUClampBoost",
       "Duration": 1000,
-      "Value": "160"
+      "Value": "161"
     },
     {
       "PowerHint": "LAUNCH",
@@ -1425,6 +1441,18 @@
     {
       "PowerHint": "FP_BOOST",
       "Node": "CPU_BIG_TSKIN_BYPASS",
+      "Duration": 1000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "FP_BOOST",
+      "Node": "TRUSTY_VIRTIO_HIGH",
+      "Duration": 1000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "FP_BOOST",
+      "Node": "TRUSTY_HIGH",
       "Duration": 1000,
       "Value": "1"
     },

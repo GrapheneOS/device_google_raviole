@@ -157,7 +157,7 @@
       "Name": "SFUClampBoost",
       "Path": "/proc/vendor_sched/sf_uclamp_min",
       "Values": [
-        "160",
+        "161",
         "85",
         "39"
       ],
@@ -407,7 +407,7 @@
       "PowerHint": "LAUNCH_120FPS",
       "Node": "SFUClampBoost",
       "Duration": 1000,
-      "Value": "160"
+      "Value": "161"
     },
     {
       "PowerHint": "LAUNCH",
