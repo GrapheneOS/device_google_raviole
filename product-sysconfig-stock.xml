@@ -12,8 +12,6 @@
     <feature name="com.google.android.feature.GOOGLE_EXPERIENCE" />
     <!-- oriole/proprietary/product/etc/sysconfig/nexus.xml -->
     <feature name="com.google.android.feature.PIXEL_EXPERIENCE" />
-    <!-- oriole/proprietary/product/etc/sysconfig/nga.xml -->
-    <feature name="com.google.android.feature.NEXT_GENERATION_ASSISTANT" />
     <!-- oriole/proprietary/product/etc/sysconfig/pixel_experience_2017.xml -->
     <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE" />
     <feature name="com.google.android.feature.AER_OPTIMIZED" />
