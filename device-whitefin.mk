@@ -76,7 +76,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc-service.st
+	android.hardware.nfc@1.2-service.st
+
+DEVICE_MANIFEST_FILE += \
+	device/google/raviole/nfc/manifest_nfc.xml
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
