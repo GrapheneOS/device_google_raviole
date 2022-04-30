@@ -268,3 +268,5 @@ PRODUCT_COPY_FILES := \
     $(PRODUCT_COPY_FILES)
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+PRODUCT_PACKAGES_DEBUG += android.hardware.biometrics.fingerprint-service.example
