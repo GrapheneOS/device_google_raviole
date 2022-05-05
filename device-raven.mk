@@ -206,6 +206,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
 
+# Fingerprint HAL
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
+
 # Keyboard side padding in dp for portrait mode
 PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_r=11
 PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
