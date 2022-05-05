@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
 
+# Fingerprint HAL
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
+
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gms.dck.eligible_wcc=2
