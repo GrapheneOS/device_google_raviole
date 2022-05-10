@@ -264,6 +264,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "NPITaskPacking",
+      "Path": "/proc/vendor_sched/npi_packing",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "LimitFlashCurrent",
       "Path": "vendor.camera.max_flash_current",
       "Values": [
@@ -457,6 +466,12 @@
       "Value": "always_on"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "NPITaskPacking",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
       "PowerHint": "DISPLAY_INACTIVE",
       "Node": "F2fsRecessModeEnable",
       "Duration": 0,
@@ -511,6 +526,12 @@
       "Value": "4-7"
     },
     {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "NPITaskPacking",
+      "Duration": 1000,
+      "Value": "0"
+    },
+    {
       "PowerHint": "CAMERA_LAUNCH_EXTENDED",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 2000,
@@ -527,6 +548,12 @@
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 2000,
       "Value": "9999999"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH_EXTENDED",
+      "Node": "NPITaskPacking",
+      "Duration": 2000,
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_THERMAL_CPU_THROTTLE",
