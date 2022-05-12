@@ -798,11 +798,11 @@
                 },
                 {
                     "CdevRequest": "thermal-gpufreq-0",
-                    "LimitInfo": [0, 0, 0, 0, 6, 6, 6]
+                    "LimitInfo": [0, 0, 0, 0, 4, 4, 4]
                 },
                 {
                     "CdevRequest": "tpu_cooling",
-                    "LimitInfo": [0, 0, 0, 0, 5, 5, 5]
+                    "LimitInfo": [0, 0, 0, 0, 6, 6, 6]
                 }
 	    ]
         },
@@ -880,7 +880,7 @@
                 },
                 {
                     "CdevRequest": "tpu_cooling",
-                    "LimitInfo": [0, 0, 0, 0, 5, 5, 5]
+                    "LimitInfo": [0, 0, 0, 0, 6, 6, 6]
                 }
 	    ]
         },
@@ -919,7 +919,7 @@
                 },
                 {
                     "CdevRequest": "tpu_cooling",
-                    "LimitInfo": [0, 0, 0, 0, 4, 4, 4]
+                    "LimitInfo": [0, 0, 0, 0, 5, 5, 5]
                 }
             ]
         },
