@@ -50,6 +50,10 @@ on post-fs-data
     # Start the twoshay touch service
     start twoshay
 
+    # Allow secure_element group to read / write ST33 SPI state
+    chown secure_element secure_element  /sys/class/st33spi/st33spi/st33spi_state
+    chmod 0660  /sys/class/st33spi/st33spi/st33spi_state
+
 on property:ro.revision=PROTO1.0
     setprop persist.fingerprint.ghbm true
 
