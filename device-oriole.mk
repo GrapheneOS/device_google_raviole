@@ -114,7 +114,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc-service.st
+	android.hardware.nfc@1.2-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -126,6 +126,7 @@ PRODUCT_COPY_FILES += \
         device/google/raviole/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
 
 DEVICE_MANIFEST_FILE += \
+	device/google/raviole/nfc/manifest_nfc.xml \
 	device/google/raviole/nfc/manifest_se.xml
 
 # Vibrator HAL
