@@ -145,7 +145,6 @@
         "553",
         "185",
         "1",
-        "128",
         "55"
       ],
       "ResetOnInit": true
@@ -1237,7 +1236,7 @@
       "PowerHint": "REFRESH_90FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "128"
+      "Value": "55"
     },
     {
       "PowerHint": "REFRESH_60FPS",
