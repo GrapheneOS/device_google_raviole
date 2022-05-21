@@ -150,6 +150,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "FGUClampBoost",
+      "Path": "/proc/vendor_sched/fg_uclamp_min",
+      "Values": [
+        "161",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "SFUClampBoost",
       "Path": "/proc/vendor_sched/sf_uclamp_min",
       "Values": [
@@ -167,6 +176,24 @@
           "512"
       ],
       "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "UClampThreshold",
+      "Path": "/proc/vendor_sched/uclamp_threshold",
+      "Values": [
+        "0",
+        "8"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "ReduceRreferIdle",
+      "Path": "/proc/vendor_sched/reduce_prefer_idle",
+      "Values": [
+        "0",
+        "1"
+      ],
       "ResetOnInit": true
     },
     {
@@ -472,6 +499,18 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "UClampThreshold",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "ReduceRreferIdle",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "FGPreferIdle",
       "Duration": 5000,
       "Value": "1"
@@ -505,6 +544,12 @@
       "Node": "TAUClampBoost",
       "Duration": 5000,
       "Value": "553"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "FGUClampBoost",
+      "Duration": 5000,
+      "Value": "161"
     },
     {
       "PowerHint": "LAUNCH",
