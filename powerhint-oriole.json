@@ -170,6 +170,24 @@
       "ResetOnInit": true
     },
     {
+      "Name": "UClampThreshold",
+      "Path": "/proc/vendor_sched/uclamp_threshold",
+      "Values": [
+        "0",
+        "8"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "ReduceRreferIdle",
+      "Path": "/proc/vendor_sched/reduce_prefer_idle",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "CDPreferIdle",
       "Path": "/proc/vendor_sched/cam_prefer_idle",
       "Values": [
@@ -469,6 +487,18 @@
       "Node": "F2fsRecessModeEnable",
       "Duration": 0,
       "Value": "2"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "UClampThreshold",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "ReduceRreferIdle",
+      "Duration": 5000,
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
