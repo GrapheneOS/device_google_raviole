@@ -251,15 +251,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "F2fsRecessModeEnable",
-      "Path": "/dev/sys/fs/by-name/userdata/gc_urgent",
-      "Values": [
-        "2",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "TAPreferHighCap",
       "Path": "/proc/vendor_sched/ta_prefer_high_cap",
       "Values": [
@@ -492,12 +483,6 @@
       "Value": "85"
     },
     {
-      "PowerHint": "DEVICE_IDLE",
-      "Node": "F2fsRecessModeEnable",
-      "Duration": 0,
-      "Value": "2"
-    },
-    {
       "PowerHint": "LAUNCH",
       "Node": "UClampThreshold",
       "Duration": 5000,
@@ -568,12 +553,6 @@
       "Node": "NPITaskPacking",
       "Duration": 5000,
       "Value": "0"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "F2fsRecessModeEnable",
-      "Duration": 0,
-      "Value": "2"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
