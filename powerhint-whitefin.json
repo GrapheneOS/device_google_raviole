@@ -246,15 +246,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "F2fsRecessModeEnable",
-      "Path": "/dev/sys/fs/by-name/userdata/gc_urgent",
-      "Values": [
-        "2",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "TAPreferHighCap",
       "Path": "/proc/vendor_sched/ta_prefer_high_cap",
       "Values": [
@@ -434,12 +425,6 @@
       "Value": "85"
     },
     {
-      "PowerHint": "DEVICE_IDLE",
-      "Node": "F2fsRecessModeEnable",
-      "Duration": 0,
-      "Value": "2"
-    },
-    {
       "PowerHint": "LAUNCH",
       "Node": "UClampThreshold",
       "Duration": 5000,
@@ -515,12 +500,6 @@
       "Node": "NPITaskPacking",
       "Duration": 5000,
       "Value": "0"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "F2fsRecessModeEnable",
-      "Duration": 0,
-      "Value": "2"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -1497,13 +1476,14 @@
       "PID_On": true,
       "PID_Po": 2.0,
       "PID_Pu": 1.0,
-      "PID_I": 0.001,
+      "PID_I": 0.0,
       "PID_I_Init": 200,
       "PID_I_High": 512,
       "PID_I_Low": -30,
       "PID_Do": 500.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
+      "UclampMin_Init": 185,
       "UclampMin_High": 384,
       "UclampMin_Low": 2,
       "SamplingWindow_P": 1,
@@ -1520,13 +1500,14 @@
       "PID_On": true,
       "PID_Po": 2.0,
       "PID_Pu": 1.0,
-      "PID_I": 0.001,
+      "PID_I": 0.0,
       "PID_I_Init": 200,
       "PID_I_High": 512,
       "PID_I_Low": -30,
       "PID_Do": 500.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
+      "UclampMin_Init": 129,
       "UclampMin_High": 384,
       "UclampMin_Low": 2,
       "SamplingWindow_P": 1,
@@ -1543,13 +1524,14 @@
       "PID_On": true,
       "PID_Po": 2.0,
       "PID_Pu": 1.0,
-      "PID_I": 0.001,
+      "PID_I": 0.0,
       "PID_I_Init": 200,
       "PID_I_High": 512,
       "PID_I_Low": -30,
       "PID_Do": 500.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
+      "UclampMin_Init": 129,
       "UclampMin_High": 384,
       "UclampMin_Low": 2,
       "SamplingWindow_P": 1,
@@ -1576,6 +1558,7 @@
       "SamplingWindow_I": 1,
       "SamplingWindow_D": 1,
       "UclampMin_On": true,
+      "UclampMin_Init": 200,
       "UclampMin_High": 157,
       "UclampMin_Low": 157,
       "ReportingRateLimitNs": 1,
@@ -1599,6 +1582,7 @@
       "SamplingWindow_I": 1,
       "SamplingWindow_D": 1,
       "UclampMin_On": true,
+      "UclampMin_Init": 200,
       "UclampMin_High": 42,
       "UclampMin_Low": 42,
       "ReportingRateLimitNs": 1,
@@ -1622,6 +1606,7 @@
       "SamplingWindow_I": 1,
       "SamplingWindow_D": 1,
       "UclampMin_On": true,
+      "UclampMin_Init": 200,
       "UclampMin_High": 0,
       "UclampMin_Low": 0,
       "ReportingRateLimitNs": 1,
