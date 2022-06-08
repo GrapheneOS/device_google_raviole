@@ -110,6 +110,10 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 PRODUCT_PACKAGES += \
 	bt_vendor.conf
 
+# tetheroffload HAL
+PRODUCT_PACKAGES += \
+	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
+
 # Power HAL config
 PRODUCT_COPY_FILES += \
 	device/google/raviole/powerhint-slider.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
