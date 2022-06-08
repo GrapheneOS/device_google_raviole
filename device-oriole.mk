@@ -188,7 +188,9 @@ PRODUCT_PRODUCT_PROPERTIES +=\
 
 # Fingerprint HAL
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
+    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true \
+    persist.vendor.udfps.als_feed_forward_supported=true
+
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
