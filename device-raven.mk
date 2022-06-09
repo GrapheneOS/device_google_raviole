@@ -228,6 +228,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
 	bt_vendor.conf
 
+# tetheroffload HAL
+PRODUCT_PACKAGES += \
+	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
+
 # Override default distortion output gain according to UX experiments
 PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.hapticgenerator.distortion.output.gain=0.5
