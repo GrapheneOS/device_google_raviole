@@ -68,6 +68,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/raviole/thermal_info_config_raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
+# Power HAL config
+PRODUCT_COPY_FILES += \
+    device/google/raviole/powerhint-raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true
@@ -143,8 +147,8 @@ DEVICE_MANIFEST_FILE += \
 # Vibrator HAL
 PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15
-PRODUCT_PRODUCT_PROPERTIES += \
-        vendor.powerhal.adpf.rate=8333333
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.powerhal.adpf.rate=8333333
 ACTUATOR_MODEL := luxshare_ict_081545
 
 # Voice packs for Text-To-Speech
@@ -183,7 +187,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=25
+    ro.vendor.build.svn=26
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
