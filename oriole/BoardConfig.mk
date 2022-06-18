@@ -13,8 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ifdef PHONE_CAR_BOARD_PRODUCT
-  include device/google_car/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk
+ifdef AUTOMOTIVE_PRODUCT_PATH
+  #RBC# include_top device/google/auto_tcu
+  #RBC# include_top device/google/pixel_tcu
+  #RBC# include_top device/google_car
+  include device/$(AUTOMOTIVE_PRODUCT_PATH)/BoardConfig.mk
 else
   TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
   TARGET_BOOTLOADER_BOARD_NAME := oriole
