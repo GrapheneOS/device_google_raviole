@@ -5,6 +5,7 @@
       "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/min_freq",
       "Values": [
         "3172000",
+        "1352000",
         "1014000",
         "421000"
       ],
@@ -1132,6 +1133,24 @@
       "Node": "NPITaskPacking",
       "Duration": 0,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_FIXED_FPS",
+      "Node": "MemFreq",
+      "Duration": 4000,
+      "Value": "1352000"
+    },
+    {
+      "PowerHint": "CAMERA_FIXED_FPS",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 4000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "CAMERA_FIXED_FPS",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 4000,
+      "Value": "1106000"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
