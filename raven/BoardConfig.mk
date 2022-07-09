@@ -24,6 +24,7 @@ else
   TARGET_BOOTLOADER_BOARD_NAME := raven
   TARGET_SCREEN_DENSITY := 560
   USES_DEVICE_GOOGLE_RAVIOLE := true
+  BOARD_KERNEL_CMDLINE += disable_dma32=on
 
   include device/google/gs101/BoardConfig-common.mk
   include device/google/gs101/wifi/BoardConfig-wifi.mk
