@@ -19,14 +19,15 @@ ifdef AUTOMOTIVE_PRODUCT_PATH
   #RBC# include_top device/google_car
   include device/$(AUTOMOTIVE_PRODUCT_PATH)/BoardConfig.mk
 else
-  TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
-  TARGET_BOOTLOADER_BOARD_NAME := oriole
   TARGET_SCREEN_DENSITY := 420
-  USES_DEVICE_GOOGLE_RAVIOLE := true
-  BOARD_KERNEL_CMDLINE += disable_dma32=on
-
-  include device/google/gs101/BoardConfig-common.mk
-  include device/google/gs101/wifi/BoardConfig-wifi.mk
-  -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
-  -include vendor/google_devices/oriole/proprietary/BoardConfigVendor.mk
 endif
+
+TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
+TARGET_BOOTLOADER_BOARD_NAME := oriole
+USES_DEVICE_GOOGLE_RAVIOLE := true
+BOARD_KERNEL_CMDLINE += disable_dma32=on
+
+include device/google/gs101/BoardConfig-common.mk
+include device/google/gs101/wifi/BoardConfig-wifi.mk
+-include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
+-include vendor/google_devices/oriole/proprietary/BoardConfigVendor.mk
