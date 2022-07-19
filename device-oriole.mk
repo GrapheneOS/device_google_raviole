@@ -68,7 +68,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.a2dp_aac.vbr_supported=true
+    persist.bluetooth.a2dp_aac.vbr_supported=true \
+    persist.bluetooth.firmware.selection=BCM.hcd
 
 # Bluetooth Tx power caps for oriole
 PRODUCT_COPY_FILES += \
