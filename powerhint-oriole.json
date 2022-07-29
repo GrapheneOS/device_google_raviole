@@ -131,15 +131,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "MIFTargetLoad",
-      "Path": "/sys/class/devfreq/17000010.devfreq_mif/interactive/target_load",
-      "Values": [
-        "20 5 80",
-        "20 10 80"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "TAUClampBoost",
       "Path": "/proc/vendor_sched/ta_uclamp_min",
       "Values": [
@@ -859,12 +850,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "MIFTargetLoad",
-      "Duration": 0,
-      "Value": "20 10 80"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "TAPreferHighCap",
       "Duration": 0,
       "Value": "1"
@@ -943,12 +928,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "MIFTargetLoad",
-      "Duration": 0,
-      "Value": "20 10 80"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "TAPreferHighCap",
       "Duration": 0,
       "Value": "1"
@@ -1027,12 +1006,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "MIFTargetLoad",
-      "Duration": 0,
-      "Value": "20 10 80"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "CDHighCpusetCpus",
       "Duration": 0,
       "Value": "6-7"
@@ -1102,12 +1075,6 @@
       "Node": "MemFreq",
       "Duration": 0,
       "Value": "1014000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_LOW",
-      "Node": "MIFTargetLoad",
-      "Duration": 0,
-      "Value": "20 10 80"
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
