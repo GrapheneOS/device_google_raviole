@@ -66,3 +66,11 @@ on property:persist.vendor.se.ese2.mode=ctsmode
 on property:sys.retaildemo.enabled=1
     setprop persist.vendor.charge.stop.level 35
     setprop persist.vendor.charge.start.level 30
+
+# Override SF and RE uclamps to 0 on boot after being set elsewhere, for adpf cpu hints
+on property:sys.boot_completed=1
+    trigger override-sf-uclamp
+
+on override-sf-uclamp
+    write /proc/vendor_sched/rt_uclamp_min 0
+    write /proc/vendor_sched/sf_uclamp_min 0
