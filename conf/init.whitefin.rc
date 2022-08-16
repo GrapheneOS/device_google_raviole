@@ -24,3 +24,9 @@ service insmod_sh_whitefin /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.wh
 on fs
     # Fingerprint
     chown system system /dev/goodix_fp
+
+# charger driver exposes now finer grain control, map demo mode to those properties
+# NOTE: demo mode can only be exit wiping data (which reset the persist properties)
+on property:sys.retaildemo.enabled=1
+    setprop persist.vendor.charge.stop.level 35
+    setprop persist.vendor.charge.start.level 30

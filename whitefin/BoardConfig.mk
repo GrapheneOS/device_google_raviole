@@ -21,4 +21,5 @@ USES_DEVICE_GOOGLE_RAVIOLE := true
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 include device/google/gs101/BoardConfig-common.mk
+include device/google/gs101/wifi/BoardConfig-wifi.mk
 -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk

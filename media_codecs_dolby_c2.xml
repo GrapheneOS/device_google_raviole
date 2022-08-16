@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<MediaCodecs>
+    <Include href="media_codecs_aosp_c2.xml" />
+    <Decoders>
+        <MediaCodec name="c2.google.av1.decoder" type="video/av01">
+          <Limit name="size" min="96x96" max="3840x2160" />
+          <Limit name="alignment" value="2x2" />
+          <Limit name="block-size" value="16x16" />
+          <Limit name="block-count" range="36-32400" />
+          <Limit name="blocks-per-second" min="24" max="1944000" />
+          <Limit name="bitrate" range="1-120000000" />
+          <Limit name="frame-rate" range="1-180" />
+          <Limit name="concurrent-instances" max="16" />
+          <Limit name="performance-point-1280x720" value="180" />
+          <Limit name="performance-point-1920x1080" value="120" />
+          <Limit name="performance-point-3840x2160" value="60" />
+          <Feature name="adaptive-playback" />
+          <Feature name="can-swap-width-height" value="1" />
+        </MediaCodec>
+        <MediaCodec name="c2.google.av1.decoder.secure" type="video/av01">
+          <Limit name="size" min="96x96" max="3840x2160" />
+          <Limit name="alignment" value="2x2" />
+          <Limit name="block-size" value="16x16" />
+          <Limit name="block-count" range="36-32400" />
+          <Limit name="blocks-per-second" min="24" max="1944000" />
+          <Limit name="bitrate" range="1-120000000" />
+          <Limit name="frame-rate" range="1-180" />
+          <Limit name="concurrent-instances" max="16" />
+          <Limit name="performance-point-1280x720" value="180" />
+          <Limit name="performance-point-1920x1080" value="120" />
+          <Limit name="performance-point-3840x2160" value="60" />
+          <Feature name="adaptive-playback" />
+          <Feature name="secure-playback" required="true" />
+          <Feature name="can-swap-width-height" value="1" />
+        </MediaCodec>
+        <MediaCodec name="c2.dolby.eac3.decoder">
+            <Type name="audio/ac3">
+                <Alias name="OMX.dolby.ac3.decoder"/>
+                <Limit name="channel-count" max="6"/>
+                <Limit name="sample-rate" ranges="32000,44100,48000"/>
+                <Limit name="bitrate" range="32000-640000"/>
+            </Type>
+            <Attribute name="software-codec"/>
+            <Type name="audio/eac3">
+                <Alias name="OMX.dolby.eac3.decoder"/>
+                <Limit name="channel-count" max="8"/>
+                <Limit name="sample-rate" ranges="32000,44100,48000"/>
+                <Limit name="bitrate" range="32000-6144000"/>
+            </Type>
+        </MediaCodec>
+    </Decoders>
+</MediaCodecs>
