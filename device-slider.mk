@@ -27,7 +27,7 @@ DEVICE_PACKAGE_OVERLAYS += device/google/raviole/slider/overlay
 include device/google/gs101/device-common.mk
 include device/google/raviole/audio/slider/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
-include device/google/gs101/bluetooth/bluetooth.mk
+include device/google/gs-common/bcmbt/bluetooth.mk
 
 $(call soong_config_set,lyric,tuning_product,slider)
 $(call soong_config_set,google3a_config,target_device,slider)
