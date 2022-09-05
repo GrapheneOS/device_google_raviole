@@ -32,7 +32,7 @@ on boot && property:ro.build.type=userdebug && \
            property:persist.vendor.fingerprint.disable.fake.override=100
     setprop vendor.fingerprint.disable.fake ${persist.vendor.fingerprint.disable.fake.override}
 
-service insmod_sh_raviole /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.${ro.hardware}.cfg
+service insmod_sh_raviole /vendor/bin/insmod.sh /vendor/etc/init.insmod.${ro.hardware}.cfg
     class main
     user root
     group root system
