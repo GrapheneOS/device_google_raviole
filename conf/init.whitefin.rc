@@ -14,7 +14,7 @@ on early-boot
     wait_for_prop vendor.common.modules.ready 1
     start insmod_sh_whitefin
 
-service insmod_sh_whitefin /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.whitefin.cfg
+service insmod_sh_whitefin /vendor/bin/insmod.sh /vendor/etc/init.insmod.whitefin.cfg
     class main
     user root
     group root system
