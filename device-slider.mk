@@ -105,10 +105,6 @@ PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/slider
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 
-# Bluetooth HAL
-PRODUCT_PACKAGES += \
-	bt_vendor.conf
-
 # tetheroffload HAL
 PRODUCT_PACKAGES += \
 	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
