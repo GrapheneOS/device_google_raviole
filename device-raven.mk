@@ -46,6 +46,8 @@ endif
 
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 
+# go/lyric-soong-variables
+$(call soong_config_set,lyric,camera_hardware,raven)
 $(call soong_config_set,lyric,tuning_product,raven)
 $(call soong_config_set,google3a_config,target_device,raven)
 
