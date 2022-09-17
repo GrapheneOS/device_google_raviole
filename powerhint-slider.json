@@ -1348,18 +1348,6 @@
       "Value": "60000"
     },
     {
-      "PowerHint": "FACE_UNLOCK_BOOST",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 1000,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FACE_UNLOCK_BOOST",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 1000,
-      "Value": "9999999"
-    },
-    {
       "PowerHint": "FP_BOOST",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 1000,
