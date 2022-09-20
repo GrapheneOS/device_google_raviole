@@ -217,11 +217,6 @@
     <!-- Default refresh rate while the device has high brightness mode enabled for HDR. -->
     <integer name="config_defaultRefreshRateInHbmHdr">60</integer>
 
-    <!-- How long it takes for the HW to start illuminating after the illumination is requested.
-      It takes 3 frames to enable the Local High-Brightness Mode (LHBM), which at 90 Hz screen
-      refresh rate equates to a 34 ms delay. -->
-    <integer name="config_udfps_illumination_transition_ms">34</integer>
-
     <!-- The max vibration strength allowed in audio haptic channels. -->
     <item name="config_hapticChannelMaxVibrationAmplitude" format="float" type="dimen">0.3</item>
 
