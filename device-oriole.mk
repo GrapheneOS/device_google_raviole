@@ -41,6 +41,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
+# go/lyric-soong-variables
+$(call soong_config_set,lyric,camera_hardware,oriole)
 $(call soong_config_set,lyric,tuning_product,oriole)
 $(call soong_config_set,google3a_config,target_device,oriole)
 
