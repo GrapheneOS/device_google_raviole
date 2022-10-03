@@ -41,6 +41,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
+# go/lyric-soong-variables
+$(call soong_config_set,lyric,camera_hardware,oriole)
 $(call soong_config_set,lyric,tuning_product,oriole)
 $(call soong_config_set,google3a_config,target_device,oriole)
 
@@ -60,6 +62,7 @@ PRODUCT_COPY_FILES += \
 # Thermal Config
 PRODUCT_COPY_FILES += \
 	device/google/raviole/thermal_info_config_oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+	device/google/raviole/thermal_info_config_charge_oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
 	device/google/raviole/thermal_info_config_oriole_WHI_A.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_WHI_A.json
 
 # Power HAL config
@@ -168,7 +171,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=37
+    ro.vendor.build.svn=40
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -213,6 +216,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
 	bt_vendor.conf
+PRODUCT_COPY_FILES += \
+	device/google/raviole/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
 
 # tetheroffload HAL
 PRODUCT_PACKAGES += \
@@ -258,3 +263,7 @@ PRODUCT_COPY_FILES := \
     $(PRODUCT_COPY_FILES)
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+# Enable adpf cpu hint session for SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_adpf_cpu_hint=true

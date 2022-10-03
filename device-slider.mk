@@ -29,6 +29,8 @@ include device/google/raviole/audio/slider/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs101/bluetooth/bluetooth.mk
 
+# go/lyric-soong-variables
+$(call soong_config_set,lyric,camera_hardware,slider)
 $(call soong_config_set,lyric,tuning_product,slider)
 $(call soong_config_set,google3a_config,target_device,slider)
 
