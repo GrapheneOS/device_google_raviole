@@ -14,6 +14,16 @@
 # limitations under the License.
 #
 
+# Enable load module in parallel
+BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
+
+# The modules which need to be loaded in sequential
+BOARD_KERNEL_CMDLINE += vh_sched.load_sequential=1
+BOARD_KERNEL_CMDLINE += exynos_mfc.load_sequential=1
+BOARD_KERNEL_CMDLINE += exynos_drm.load_sequential=1
+BOARD_KERNEL_CMDLINE += pcie-exynos-core.load_sequential=1
+BOARD_KERNEL_CMDLINE += g2d.load_sequential=1
+
 ifdef AUTOMOTIVE_PRODUCT_PATH
   #RBC# include_top device/google/auto_tcu
   #RBC# include_top device/google/pixel_tcu
