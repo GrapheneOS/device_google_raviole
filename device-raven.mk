@@ -267,3 +267,13 @@ PRODUCT_COPY_FILES += \
 # Enable adpf cpu hint session for SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.enable_adpf_cpu_hint=true
+
+# Location
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+else
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps_user.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+endif
+
