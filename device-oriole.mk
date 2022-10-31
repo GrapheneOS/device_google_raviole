@@ -257,6 +257,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.enable_adpf_cpu_hint=true
 
+# Bluetooth OPUS codec
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.opus.enabled=true
+
 # Location
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
         PRODUCT_COPY_FILES += \
