@@ -243,9 +243,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.le_audio_test=false
 endif
 
-# declare use of spatial audio: disabled
+# declare use of spatial audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.audio.spatializer_enabled=false
+    ro.audio.spatializer_enabled=true
 
 PRODUCT_PACKAGES += \
 	libspatialaudio
