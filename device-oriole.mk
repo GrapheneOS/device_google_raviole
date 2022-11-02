@@ -269,4 +269,3 @@ else
         PRODUCT_COPY_FILES += \
 		device/google/raviole/location/gps_user.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
-
