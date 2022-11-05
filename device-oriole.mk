@@ -269,3 +269,8 @@ else
         PRODUCT_COPY_FILES += \
 		device/google/raviole/location/gps_user.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
+
+# Biometrics virtual HAL for e2e testing
+PRODUCT_PACKAGES_DEBUG += \
+    android.hardware.biometrics.fingerprint-service.example
+
