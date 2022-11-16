@@ -269,6 +269,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.enable_adpf_cpu_hint=true
 
+# Display RRS default Config
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1440x3120@120
+
 # Bluetooth OPUS codec
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.opus.enabled=true
