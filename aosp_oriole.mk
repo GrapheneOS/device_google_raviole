@@ -22,3 +22,5 @@ PRODUCT_DEVICE := oriole
 PRODUCT_MODEL := AOSP on Oriole
 PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
+
+PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
