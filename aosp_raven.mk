@@ -22,3 +22,5 @@ PRODUCT_DEVICE := raven
 PRODUCT_MODEL := AOSP on Raven
 PRODUCT_BRAND := Android
 PRODUCT_MANUFACTURER := Google
+
+PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
