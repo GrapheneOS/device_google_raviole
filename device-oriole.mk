@@ -34,6 +34,7 @@ include device/google/gs101/fingerprint/udfps_common.mk
 include device/google/gs101/telephony/pktrouter.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
+include device/google/gs-common/touch/stm/stm11.mk
 
 ifeq ($(filter factory_oriole, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
