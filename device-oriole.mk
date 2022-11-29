@@ -171,7 +171,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=40
+    ro.vendor.build.svn=41
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -243,9 +243,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.le_audio_test=false
 endif
 
-# declare use of spatial audio
+# declare use of spatial audio: disabled
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.audio.spatializer_enabled=true
+    ro.audio.spatializer_enabled=false
 
 PRODUCT_PACKAGES += \
 	libspatialaudio
