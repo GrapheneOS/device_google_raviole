@@ -28,7 +28,7 @@ include device/google/gs101/device-common.mk
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include device/google/raviole/audio/whitefin/audio-tables.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
-include device/google/gs-common/touch/stm/stm11.mk
+include device/google/gs-common/touch/lsi/lsi.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,slider)
