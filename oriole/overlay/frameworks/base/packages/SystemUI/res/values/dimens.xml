@@ -52,5 +52,8 @@
 
     <!-- Alpha in duration in ms for the auth ripple to become fully vislble. If set to 0, it is immediately visible. -->
     <integer name="auth_ripple_alpha_in_duration">0</integer>
+
+    <!-- Offset should not be more than 1mm -->
+    <dimen name="udfps_burn_in_offset_y">16px</dimen>
 </resources>
 

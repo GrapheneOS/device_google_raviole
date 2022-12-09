@@ -182,6 +182,8 @@
         <usecase id="UC_DEEP_BUFFER_PLAYBACK" dev1="5" dyn_path="true" dsp_vol="false" mmap="false" period="20" period_num="4"/>
         <!-- dev1: voice-call downlink dev2: voice-clal uplink -->
         <usecase id="UC_VOICE_CALL" dev1="4" dev2="11"/>
+        <!-- for output with flag AUDIO_OUTPUT_SPATIALIZER -->
+        <usecase id="UC_IMMERSIVE_PLAYBACK" dev1="30" dyn_path="true" dsp_vol="false" mmap="false" period="10" period_num="3"/>
         <!-- for output with AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD, 4 * 128KB buffer -->
         <usecase id="UC_COMPRESSED_OFFLOAD_PLAYBACK" dev1="6" dyn_path="true" dsp_vol="true" mmap="false" period="131072" period_num="4" pre_proc_id="14"/>
         <!-- dev1: audio dev2: haptic -->
@@ -198,8 +200,8 @@
         <!-- for input wit AUDIO_INPUT_FLAG_MMAP_NOIRQ 240 periods * 1ms buffer, 32-bit,2 ch, buffer size 92160 bytes -->
         <usecase id="UC_MMAP_RECORD" dev1="9" dyn_path="true" mmap="true" period="1" period_num="240"/>
         <!-- for hifi -->
-        <usecase id="UC_HIFI_PLAYBACK" dev1="25"/>
-        <usecase id="UC_HIFI_RECORD" dev1="26"/>
+        <usecase id="UC_HIFI_PLAYBACK" dev1="25" period="20" period_num="4"/>
+        <usecase id="UC_HIFI_RECORD" dev1="26" period="20" period_num="4"/>
     </usecase_attr>
 
     <dsp_latency>
@@ -215,6 +217,10 @@
             <be_cfg be_id="OUT_USB_HEADSET_BE_CFG" latency="70000"/>
             <be_cfg be_id="OUT_USB_HEADPHONE_BE_CFG" latency="70000"/>
             <be_cfg be_id="OUT_A2DP_BE_CFG" latency="180000"/>
+        </usecase>
+
+        <usecase id="UC_IMMERSIVE_PLAYBACK" type="playback">
+            <be_cfg be_id="OUT_A2DP_BE_CFG" latency="100000"/>
         </usecase>
 
         <usecase id="UC_AUDIO_RECORD" type="capture">

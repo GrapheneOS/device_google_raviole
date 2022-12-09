@@ -143,12 +143,7 @@
       "Path": "/proc/vendor_sched/ta_uclamp_min",
       "Values": [
         "553",
-        "185",
-        "129",
-        "56",
         "1",
-        "183",
-        "128",
         "55"
       ],
       "ResetOnInit": true
@@ -1232,94 +1227,6 @@
       "Value": "1"
     },
     {
-      "PowerHint": "ADPF_DISABLE_TA_BOOST",
-      "Type": "MaskHint",
-      "Value": "BOOST_DISPLAY"
-    },
-    {
-      "PowerHint": "ADPF_DISABLE_TA_BOOST",
-      "Type": "EndHint",
-      "Value": "BOOST_120HZ"
-    },
-    {
-      "PowerHint": "ADPF_DISABLE_TA_BOOST",
-      "Type": "EndHint",
-      "Value": "BOOST_90HZ"
-    },
-    {
-      "PowerHint": "ADPF_DISABLE_TA_BOOST",
-      "Type": "EndHint",
-      "Value": "BOOST_60HZ"
-    },
-    {
-      "PowerHint": "BOOST_DISPLAY",
-      "Type": "DoHint",
-      "Value": "BOOST_120HZ"
-    },
-    {
-      "PowerHint": "BOOST_DISPLAY",
-      "Type": "DoHint",
-      "Value": "BOOST_90HZ"
-    },
-    {
-      "PowerHint": "BOOST_DISPLAY",
-      "Type": "DoHint",
-      "Value": "BOOST_60HZ"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Type": "DoHint",
-      "Value": "BOOST_DISPLAY"
-    },
-    {
-      "PowerHint": "BOOST_120HZ",
-      "Node": "TAUClampBoost",
-      "Duration": 200,
-      "Value": "185"
-    },
-    {
-      "PowerHint": "BOOST_90HZ",
-      "Node": "TAUClampBoost",
-      "Duration": 200,
-      "Value": "129"
-    },
-    {
-      "PowerHint": "BOOST_60HZ",
-      "Node": "TAUClampBoost",
-      "Duration": 200,
-      "Value": "129"
-    },
-    {
-      "PowerHint": "REFRESH_120FPS",
-      "Type": "MaskHint",
-      "Value": "BOOST_60HZ"
-    },
-    {
-      "PowerHint": "REFRESH_120FPS",
-      "Type": "MaskHint",
-      "Value": "BOOST_90HZ"
-    },
-    {
-      "PowerHint": "REFRESH_90FPS",
-      "Type": "MaskHint",
-      "Value": "BOOST_60HZ"
-    },
-    {
-      "PowerHint": "REFRESH_90FPS",
-      "Type": "MaskHint",
-      "Value": "BOOST_120HZ"
-    },
-    {
-      "PowerHint": "REFRESH_60FPS",
-      "Type": "MaskHint",
-      "Value": "BOOST_90HZ"
-    },
-    {
-      "PowerHint": "REFRESH_60FPS",
-      "Type": "MaskHint",
-      "Value": "BOOST_120HZ"
-    },
-    {
       "PowerHint": "DISPLAY_IDLE",
       "Node": "FGPreferIdle",
       "Duration": 0,
@@ -1339,21 +1246,6 @@
     {
       "PowerHint": "DISPLAY_IDLE",
       "Type": "EndHint",
-      "Value": "BOOST_120HZ"
-    },
-    {
-      "PowerHint": "DISPLAY_IDLE",
-      "Type": "EndHint",
-      "Value": "BOOST_90HZ"
-    },
-    {
-      "PowerHint": "DISPLAY_IDLE",
-      "Type": "EndHint",
-      "Value": "BOOST_60HZ"
-    },
-    {
-      "PowerHint": "DISPLAY_IDLE",
-      "Type": "EndHint",
       "Value": "DISPLAY_UPDATE_IMMINENT"
     },
     {
@@ -1361,11 +1253,6 @@
       "Node": "DisplayWakeup",
       "Duration": 50,
       "Value": "1"
-    },
-    {
-      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
-      "Type": "DoHint",
-      "Value": "BOOST_DISPLAY"
     },
     {
       "PowerHint": "THERMAL_FLASH_LED_REDUCE_CRITICAL",
@@ -1438,18 +1325,6 @@
       "Node": "G3dSwitchOnTempSet",
       "Duration": 0,
       "Value": "60000"
-    },
-    {
-      "PowerHint": "FACE_UNLOCK_BOOST",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 1000,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FACE_UNLOCK_BOOST",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 1000,
-      "Value": "9999999"
     },
     {
       "PowerHint": "FP_BOOST",
