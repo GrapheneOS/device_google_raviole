@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TARGET_PKVM_ENABLED := true
+
 $(call inherit-product, device/google/gs101/aosp_common.mk)
 $(call inherit-product, device/google/raviole/device-raven.mk)
 
