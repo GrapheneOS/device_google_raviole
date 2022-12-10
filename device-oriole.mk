@@ -36,6 +36,9 @@ include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
+# wireless_charger HAL service
+include device/google/gs-common/wireless_charger/wireless_charger.mk
+
 ifeq ($(filter factory_oriole, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
 else
@@ -102,10 +105,6 @@ endif
 # Bluetooth HAL
 PRODUCT_COPY_FILES += \
 	device/google/raviole/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
-
-
-# WirelessCharger
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
 
 # MIPI Coex Configs
 PRODUCT_COPY_FILES += \

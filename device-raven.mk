@@ -35,6 +35,10 @@ include device/google/gs101/telephony/pktrouter.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/lsi/lsi.mk
 
+# wireless_charger HAL service
+include device/google/gs-common/wireless_charger/wireless_charger.mk
+
+
 ifeq ($(filter factory_raven, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
 else
@@ -109,9 +113,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.leaudio_offload.disabled=true \
     persist.bluetooth.le_audio_test=false
 endif
-
-# WirelessCharger
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
 
 # MIPI Coex Configs
 PRODUCT_COPY_FILES += \

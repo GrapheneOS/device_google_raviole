@@ -30,13 +30,13 @@ include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
+# wireless_charger HAL service
+include device/google/gs-common/wireless_charger/wireless_charger.mk
+
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,slider)
 $(call soong_config_set,lyric,tuning_product,slider)
 $(call soong_config_set,google3a_config,target_device,slider)
-
-# WirelessCharger
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
