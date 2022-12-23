@@ -30,14 +30,13 @@ include device/google/raviole/audio/whitefin/audio-tables.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/lsi/lsi.mk
 
-# wireless_charger HAL service needs to be included specially due to no raviole-sepolicy folder
-PRODUCT_PACKAGES += vendor.google.wireless_charger-default
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/wireless_charger/compatibility_matrix.xml
-
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,slider)
 $(call soong_config_set,lyric,tuning_product,slider)
 $(call soong_config_set,google3a_config,target_device,slider)
+
+# WirelessCharger
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
