@@ -294,3 +294,5 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.enable_quick_start_flow_for_debug=true \
 
+# Window Extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
