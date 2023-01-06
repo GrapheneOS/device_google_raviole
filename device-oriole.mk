@@ -36,9 +36,6 @@ include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
-# wireless_charger HAL service
-include device/google/gs-common/wireless_charger/wireless_charger.mk
-
 ifeq ($(filter factory_oriole, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
 else

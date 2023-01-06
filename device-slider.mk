@@ -30,9 +30,6 @@ include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
-# wireless_charger HAL service
-include device/google/gs-common/wireless_charger/wireless_charger.mk
-
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,slider)
 $(call soong_config_set,lyric,tuning_product,slider)
