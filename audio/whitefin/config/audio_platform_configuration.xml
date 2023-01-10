@@ -136,8 +136,8 @@
         <!-- for input wit AUDIO_INPUT_FLAG_MMAP_NOIRQ 240 periods * 1ms buffer, 32-bit,2 ch, buffer size 92160 bytes -->
         <usecase id="UC_MMAP_RECORD" dev1="9" dyn_path="true" dsp_vol="false" mmap="true" period="1" period_num="240"/>
         <!-- for hifi -->
-        <usecase id="UC_HIFI_PLAYBACK" dev1="25"/>
-        <usecase id="UC_HIFI_RECORD" dev1="26"/>
+        <usecase id="UC_HIFI_PLAYBACK" dev1="25" period="20" period_num="4"/>
+        <usecase id="UC_HIFI_RECORD" dev1="26" period="20" period_num="4"/>
     </usecase_attr>
 
     <dsp_latency>
@@ -162,6 +162,8 @@
             <be_cfg be_id="IN_CAMCORDER_SELFIE_LANDSCAPE_BE_CFG" latency="160000"/>
             <be_cfg be_id="IN_CAMCORDER_SELFIE_INVERT_LANDSCAPE_BE_CFG" latency="160000"/>
             <be_cfg be_id="IN_CAMCORDER_SELFIE_PORTRAIT_BE_CFG" latency="160000"/>
+            <be_cfg be_id="IN_CAMCORDER_MIC_BE_CFG" latency="160000"/>
+            <be_cfg be_id="IN_CAMCORDER_TRIPLE_MIC_BE_CFG" latency="160000"/>
             <be_cfg be_id="IN_BTSCO_MIC_BE_CFG" latency="40000"/>
             <be_cfg be_id="IN_BTSCO_MIC_NREC_BE_CFG" latency="40000"/>
             <be_cfg be_id="IN_BTSCO_MIC_WB_BE_CFG" latency="40000"/>
