@@ -171,7 +171,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=42
+    ro.vendor.build.svn=45
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -246,6 +246,10 @@ endif
 # declare use of spatial audio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.spatializer_enabled=true
+
+# optimize spatializer effect
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.spatializer.effect.util_clamp_min=300
 
 PRODUCT_PACKAGES += \
 	libspatialaudio

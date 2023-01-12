@@ -180,7 +180,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=42
+    ro.vendor.build.svn=45
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -260,6 +260,10 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.spatializer_enabled=true
 
+# optimize spatializer effect
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.spatializer.effect.util_clamp_min=300
+
 PRODUCT_PACKAGES += \
 	libspatialaudio
 
@@ -280,6 +284,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 # Enable adpf cpu hint session for SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.enable_adpf_cpu_hint=true
+
+# Display RRS default Config
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1440x3120@120
 
 # Bluetooth OPUS codec
 PRODUCT_PRODUCT_PROPERTIES += \
