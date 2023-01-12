@@ -148,6 +148,7 @@
     <ctl name="BT_RX Mixer NoHost1" value="0"/>
     <ctl name="BT_RX Mixer VOIP" value="0"/>
     <ctl name="BT_RX Mixer IMSV" value="0"/>
+    <ctl name="BT_RX Mixer RAW" value="0"/>
 
     <ctl name="INCALL_RX Mixer EP1" value="0"/>
     <ctl name="INCALL_RX Mixer EP2" value="0"/>
@@ -382,6 +383,10 @@
         <ctl name="USB_RX Mixer RAW" value="1"/>
     </path>
 
+    <path name="raw-playbackP bt">
+        <ctl name="BT_RX Mixer RAW" value="1"/>
+    </path>
+
     <path name="raw-playbackP hearing-aid">
     </path>
 
@@ -394,6 +399,10 @@
 
     <path name="mmap-playbackP usb-headphone">
         <ctl name="USB_RX Mixer EP1" value="1"/>
+    </path>
+
+    <path name="mmap-playbackP bt">
+        <ctl name="BT_RX Mixer EP1" value="1"/>
     </path>
 
     <path name="mmap-playbackP usb-tty-full">
@@ -602,12 +611,20 @@
         <ctl name="EP3 TX Mixer USB_TX" value="1"/>
     </path>
 
+    <path name="low-latency-recordC bt-mic">
+        <ctl name="EP3 TX Mixer BT_TX" value="1"/>
+    </path>
+
     <path name="mmap-recordC">
         <ctl name="EP2 TX Mixer INTERNAL_MIC_TX" value="1"/>
     </path>
 
     <path name="mmap-recordC usb-headset-mic">
         <ctl name="EP2 TX Mixer USB_TX" value="1"/>
+    </path>
+
+    <path name="mmap-recordC bt-mic">
+        <ctl name="EP2 TX Mixer BT_TX" value="1"/>
     </path>
 
     <!-- codec setting -->>
