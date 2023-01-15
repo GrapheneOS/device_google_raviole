@@ -35,9 +35,6 @@ include device/google/gs101/telephony/pktrouter.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/lsi/lsi.mk
 
-# wireless_charger HAL service
-include device/google/gs-common/wireless_charger/wireless_charger.mk
-
 
 ifeq ($(filter factory_raven, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
