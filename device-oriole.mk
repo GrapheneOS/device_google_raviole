@@ -227,6 +227,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     vendor.audio.hapticgenerator.distortion.output.gain=0.5
 
+# RKPD
+PRODUCT_PRODUCT_PROPERTIES += \
+    remote_provisioning.enable_rkpd=true \
+    remote_provisioning.hostname=remoteprovisioning.googleapis.com \
+
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.zram.size=3g
