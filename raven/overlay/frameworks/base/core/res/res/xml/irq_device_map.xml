@@ -20,5 +20,8 @@
     <device name="rtc-alarm0">
         <subsystem>Alarm</subsystem>
     </device>
+    <device name="dhdpcie_host_wake">
+        <subsystem>Wifi</subsystem>
+    </device>
 </irq-device-map>
 
