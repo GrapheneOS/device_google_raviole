@@ -291,10 +291,6 @@ else
 		device/google/raviole/location/gps_user.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
 
-# Biometrics virtual HAL for e2e testing
-PRODUCT_PACKAGES_DEBUG += \
-    android.hardware.biometrics.fingerprint-service.example
-
 # Setup Wizard device-specific settings
 PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.enable_quick_start_flow_for_debug=true \
