@@ -303,4 +303,10 @@
          Note: This should be only enabled on devices with high confidence on power measurement.
     -->
     <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
+
+    <!-- The list of packages to force slowJpegMode for Apps using Camera API1 -->
+    <string-array name="config_forceSlowJpegModeList" translatable="false">
+        <item>com.facebook.orca</item>
+        <item>com.skype.raider</item>
+    </string-array>
 </resources>
