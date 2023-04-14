@@ -23,5 +23,8 @@
     <device name="dhdpcie_host_wake">
         <subsystem>Wifi</subsystem>
     </device>
+    <device name="MAILBOX_AOC2APxE00">
+        <subsystem>Sound_trigger</subsystem>
+    </device>
 </irq-device-map>
 
