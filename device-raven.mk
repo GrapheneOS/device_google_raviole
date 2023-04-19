@@ -244,6 +244,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	vendor.camera.multicam.enable_p23_multicam=true
+
 # tetheroffload HAL
 PRODUCT_PACKAGES += \
 	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
