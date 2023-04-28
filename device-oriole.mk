@@ -114,7 +114,8 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/media_profiles_oriole.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.fixed_fps_range_boost=1
+    persist.vendor.camera.fixed_fps_range_boost=1 \
+	vendor.camera.multicam.enable_p23_multicam=true
 
 # Display Config
 PRODUCT_COPY_FILES += \
@@ -271,10 +272,6 @@ else
         PRODUCT_COPY_FILES += \
 		device/google/raviole/location/gps_user.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
-
-# Setup Wizard device-specific settings
-PRODUCT_PRODUCT_PROPERTIES += \
-    setupwizard.feature.enable_quick_start_flow_for_debug=true \
 
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)

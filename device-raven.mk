@@ -240,6 +240,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	vendor.camera.multicam.enable_p23_multicam=true
+
 # tetheroffload HAL
 PRODUCT_PACKAGES += \
 	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
@@ -290,10 +293,6 @@ else
         PRODUCT_COPY_FILES += \
 		device/google/raviole/location/gps_user.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
-
-# Setup Wizard device-specific settings
-PRODUCT_PRODUCT_PROPERTIES += \
-    setupwizard.feature.enable_quick_start_flow_for_debug=true \
 
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
