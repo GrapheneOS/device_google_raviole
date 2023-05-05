@@ -84,6 +84,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
       UwbOverlayR4
 
+# Bluetooth sepolicy
+include device/google/gs101-sepolicy/raven-sepolicy.mk
+
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true \
