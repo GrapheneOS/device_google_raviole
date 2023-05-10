@@ -114,8 +114,7 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/media_profiles_oriole.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.fixed_fps_range_boost=1 \
-	vendor.camera.multicam.enable_p23_multicam=true
+    persist.vendor.camera.fixed_fps_range_boost=1
 
 # Display Config
 PRODUCT_COPY_FILES += \
