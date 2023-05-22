@@ -11,10 +11,6 @@ on init
     # Power Stats HAL
     chown system system /sys/devices/platform/10d30000.spi/spi_master/spi10/spi10.0/uwb/power_stats
 
-on fs
-    # Face
-    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/faceauth.app
-
 on property:vendor.mfgapi.touchpanel.permission=1
     chmod 0600 /sys/devices/virtual/sec/tsp/cmd
     chown system system /sys/devices/virtual/sec/tsp/cmd
