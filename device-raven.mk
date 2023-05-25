@@ -205,6 +205,10 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 
+# Android DeviceAsWebcam specific overlay
+PRODUCT_PACKAGES += \
+    DeviceAsWebcamRaven
+
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
