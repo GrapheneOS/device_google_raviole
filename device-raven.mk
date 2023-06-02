@@ -221,7 +221,8 @@ PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=3
+    ro.gms.dck.eligible_wcc=3 \
+    ro.gms.dck.se_capability=1
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
