@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 
+# Android DeviceAsWebcam specific overlay
+PRODUCT_PACKAGES += \
+    DeviceAsWebcamOriole
+
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayGR1YH \
