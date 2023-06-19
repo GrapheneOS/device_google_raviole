@@ -11,6 +11,9 @@ on init
     # Power Stats HAL
     chown system system /sys/devices/platform/10d30000.spi/spi_master/spi10/spi10.0/uwb/power_stats
 
+on init && property:ro.boot.vh_sched_available=0
+    setprop vendor.powerhal.config powerhint-mainline.json
+
 on fs
     # Face
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/faceauth.app

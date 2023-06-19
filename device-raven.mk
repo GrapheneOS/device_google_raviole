@@ -79,7 +79,8 @@ PRODUCT_COPY_FILES += \
 
 # Power HAL config
 PRODUCT_COPY_FILES += \
-	device/google/raviole/powerhint-raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+	device/google/raviole/powerhint-raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
+	device/google/raviole/powerhint-raven-mainline.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-mainline.json
 
 PRODUCT_PACKAGES += \
       UwbOverlayR4

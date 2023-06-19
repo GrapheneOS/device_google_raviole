@@ -8,6 +8,9 @@ on init
     # nvmem dump
     chown system system /sys/bus/nvmem/devices/4-00500/nvmem
 
+on init && property:ro.boot.vh_sched_available=0
+    setprop vendor.powerhal.config powerhint-mainline.json
+
 # Toggle glove_mode according to touch_sensitivity_mode
 on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_completed=1
     write /sys/class/spi_master/spi11/spi11.0/glove_mode 00
