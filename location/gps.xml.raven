@@ -61,6 +61,7 @@
        ReAidingOnHotStart="false"
        ReAidingIntervalSec="1200"
        PpsDevice="/sys/class/pps/pps0/assert_elapsed"
+       SensorsMask="0x244"
   />
 
   <gll
