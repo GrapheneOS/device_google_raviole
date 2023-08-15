@@ -176,7 +176,8 @@ DEVICE_MANIFEST_FILE += \
 PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15 \
     ro.vendor.vibrator.hal.device.mass=0.21 \
-    ro.vendor.vibrator.hal.loc.coeff=2.5
+    ro.vendor.vibrator.hal.loc.coeff=2.5 \
+    persist.vendor.vibrator.hal.chirp.enabled=0
 
 ACTUATOR_MODEL := luxshare_ict_081545
 
