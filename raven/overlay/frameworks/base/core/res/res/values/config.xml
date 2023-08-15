@@ -197,6 +197,9 @@
     <dimen name="status_bar_height_portrait">145px</dimen>
     <dimen name="status_bar_height_landscape">28dp</dimen>
 
+    <!-- If face auth sends the user directly to home/last open app, or stays on keyguard by default-->
+    <bool name="config_faceAuthDismissesKeyguard">false</bool>
+
 <integer-array name="config_ambientThresholdLevels">
     <item>2</item>
     <item>3</item>
