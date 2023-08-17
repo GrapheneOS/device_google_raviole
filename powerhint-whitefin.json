@@ -46,6 +46,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPULittleClusterDownRateLimitUs",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/sched_pixel/down_rate_limit_us",
+      "Values": [
+        "5000",
+        "500"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPUMidClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
@@ -73,6 +83,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPUMidClusterDownRateLimitUs",
+      "Path": "/sys/devices/system/cpu/cpu4/cpufreq/sched_pixel/down_rate_limit_us",
+      "Values": [
+        "20000",
+        "3000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPUBigClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq",
       "Values": [
@@ -97,6 +117,16 @@
         "1106000",
         "0"
       ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigClusterDownRateLimitUs",
+      "Path": "/sys/devices/system/cpu/cpu8/cpufreq/sched_pixel/down_rate_limit_us",
+      "Values": [
+        "20000",
+        "3000"
+      ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -135,6 +165,16 @@
       "Values": [
         "1280",
         "1100"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUTaperedDVFSHeadroomEnable",
+      "Path": "/proc/vendor_sched/tapered_dvfs_headroom_enable",
+      "Values": [
+        "0",
+        "1"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -254,18 +294,20 @@
       "Name": "TAPreferIdle",
       "Path": "/proc/vendor_sched/groups/ta/prefer_idle",
       "Values": [
-        "0",
-        "1"
+        "1",
+        "0"
       ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "FGPreferIdle",
       "Path": "/proc/vendor_sched/groups/fg/prefer_idle",
       "Values": [
-        "0",
-        "1"
+        "1",
+        "0"
       ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
