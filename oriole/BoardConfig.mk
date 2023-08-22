@@ -13,8 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ifdef PHONE_CAR_BOARD_PRODUCT
-  include device/google_car/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk
+
+# Enable load module in parallel
+BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
+
+# The modules which need to be loaded in sequential
+BOARD_KERNEL_CMDLINE += exynos_mfc.load_sequential=1
+BOARD_KERNEL_CMDLINE += exynos_drm.load_sequential=1
+BOARD_KERNEL_CMDLINE += pcie-exynos-core.load_sequential=1
+BOARD_KERNEL_CMDLINE += g2d.load_sequential=1
+
+ifdef AUTOMOTIVE_PRODUCT_PATH
+  #RBC# include_top device/google/auto_tcu
+  #RBC# include_top device/google/pixel_tcu
+  #RBC# include_top device/google_car
+  include device/$(AUTOMOTIVE_PRODUCT_PATH)/BoardConfig.mk
 else
   TARGET_SCREEN_DENSITY := 420
 endif

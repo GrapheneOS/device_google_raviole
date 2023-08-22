@@ -27,15 +27,14 @@ DEVICE_PACKAGE_OVERLAYS += device/google/raviole/slider/overlay
 include device/google/gs101/device-common.mk
 include device/google/raviole/audio/slider/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l25/device.mk
-include device/google/gs101/bluetooth/bluetooth.mk
+include device/google/gs-common/bcmbt/bluetooth.mk
+include device/google/gs-common/gps/brcm/cbd_gps.mk
+include device/google/gs-common/touch/stm/stm11.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,slider)
 $(call soong_config_set,lyric,tuning_product,slider)
 $(call soong_config_set,google3a_config,target_device,slider)
-
-# WirelessCharger
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -107,10 +106,6 @@ PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/slider
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 
-# Bluetooth HAL
-PRODUCT_PACKAGES += \
-	bt_vendor.conf
-
 # tetheroffload HAL
 PRODUCT_PACKAGES += \
 	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
@@ -125,3 +120,13 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Device features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+
+# Location
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+else
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps_user.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+endif
+

@@ -1,0 +1,11 @@
+package {
+    default_applicable_licenses: ["device_google_raviole_license"],
+}
+
+runtime_resource_overlay {
+    name: "UwbOverlayR4",
+    theme: "UwbOverlayR4",
+    certificate: "platform",
+    sdk_version: "current",
+    product_specific: true
+}

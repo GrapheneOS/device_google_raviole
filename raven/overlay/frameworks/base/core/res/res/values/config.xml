@@ -200,9 +200,6 @@
     <!-- If face auth sends the user directly to home/last open app, or stays on keyguard by default-->
     <bool name="config_faceAuthDismissesKeyguard">false</bool>
 
-    <!-- the number of the max cached processes in the system. -->
-    <integer name="config_customizedMaxCachedProcesses">64</integer>
-
 <integer-array name="config_ambientThresholdLevels">
     <item>2</item>
     <item>3</item>
@@ -304,9 +301,16 @@
     -->
     <bool name="config_bg_current_drain_auto_restrict_abusive_apps">true</bool>
 
-    <!-- The list of packages to force slowJpegMode for Apps using Camera API1 -->
-    <string-array name="config_forceSlowJpegModeList" translatable="false">
-        <item>com.facebook.orca</item>
-        <item>com.skype.raider</item>
-    </string-array>
+    <!-- A string config in svg path format for the main display shape.
+         (@see https://www.w3.org/TR/SVG/paths.html#PathData).
+
+         This config must be set unless:
+         1. {@link Configuration#isScreenRound} is true which means the display shape is circular
+            and the system will auto-generate a circular shape.
+         2. The display has no rounded corner and the system will auto-generate a rectangular shape.
+         (@see DisplayShape#createDefaultDisplayShape)
+
+         Note: If the display supports multiple resolutions, please define the path config based on
+         the highest resolution so that it can be scaled correctly in each resolution. -->
+    <string name="config_mainDisplayShape">M 176 0 C 115.02392 1.1656472 102.53447 1.6184269 71.396484 3.3847656 C 55.659057 4.4652262 48.372167 5.3816761 40.939453 7.5957031 C 36.159471 9.0195457 30.970511 11.33647 26.369141 14.238281 C 22.479829 16.691042 19.646362 19.26924 16.513672 22.466797 C 12.640699 26.419964 10.129306 29.745868 8.1074219 34.291016 C 5.3985024 40.380603 4.5627354 44.599726 3.7597656 49.205078 C 1.5206876 62.047086 2.0426694 76.127341 1.3613281 93.833984 C 0.29502583 121.54496 0.79450661 135.72186 0 176 L 0 2944 C 0.79450661 2984.2782 0.29502583 2998.4569 1.3613281 3026.168 C 2.0426694 3043.8746 2.1114381 3057.8378 4.2636719 3070.748 C 4.8913915 3074.5134 6.5432868 3080.1477 9.0664062 3085.1855 C 11.294042 3089.6334 13.056713 3092.9239 16.929688 3096.877 C 20.062376 3100.0744 22.895844 3102.6546 26.785156 3105.1074 C 31.386528 3108.0092 36.774591 3110.4649 41.513672 3112.0195 C 47.497419 3113.9823 55.924021 3115.2717 71.396484 3116.6152 C 102.53447 3118.3815 115.02392 3118.8344 176 3120 L 1264 3120 C 1324.976 3118.8344 1337.4655 3118.3815 1368.6035 3116.6152 C 1384.076 3115.2717 1392.5025 3113.9823 1398.4863 3112.0195 C 1403.2253 3110.4649 1408.6134 3108.0092 1413.2148 3105.1074 C 1417.1041 3102.6546 1419.9376 3100.0744 1423.0703 3096.877 C 1426.9432 3092.9239 1428.704 3089.6334 1430.9316 3085.1855 C 1433.4548 3080.1477 1435.1086 3074.5134 1435.7363 3070.748 C 1437.8886 3057.8378 1437.9574 3043.8746 1438.6387 3026.168 C 1439.705 2998.4569 1439.2055 2984.2782 1440 2944 L 1440 176 C 1439.2055 135.72186 1439.705 121.54496 1438.6387 93.833984 C 1437.9574 76.12734 1438.4793 62.047092 1436.2402 49.205078 C 1435.4373 44.599728 1434.6015 40.380604 1431.8926 34.291016 C 1429.8707 29.745874 1427.3593 26.419959 1423.4863 22.466797 C 1420.3536 19.269233 1417.5202 16.691047 1413.6309 14.238281 C 1409.0295 11.336467 1403.8405 9.0195403 1399.0605 7.5957031 C 1391.628 5.3816775 1384.341 4.4652314 1368.6035 3.3847656 C 1337.4655 1.6184272 1324.976 1.1656476 1264 0 L 176 0 z </string>
 </resources>

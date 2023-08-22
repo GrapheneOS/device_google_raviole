@@ -130,6 +130,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPUDVFSHeadroom",
+      "Path": "/proc/vendor_sched/dvfs_headroom",
+      "Values": [
+        "1280",
+        "1100"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "MIFTargetLoad",
       "Path": "/sys/class/devfreq/17000010.devfreq_mif/interactive/target_load",
       "Values": [
@@ -142,9 +152,9 @@
       "Name": "TAUClampBoost",
       "Path": "/proc/vendor_sched/ta_uclamp_min",
       "Values": [
-        "553",
+        "692",
         "1",
-        "55"
+        "69"
       ],
       "ResetOnInit": true
     },
@@ -152,7 +162,7 @@
       "Name": "FGUClampBoost",
       "Path": "/proc/vendor_sched/fg_uclamp_min",
       "Values": [
-        "161",
+        "202",
         "0"
       ],
       "ResetOnInit": true
@@ -161,9 +171,9 @@
       "Name": "SFUClampBoost",
       "Path": "/proc/vendor_sched/sf_uclamp_min",
       "Values": [
-        "161",
-        "85",
-        "39"
+        "202",
+        "107",
+        "49"
       ],
       "ResetOnInit": true
     },
@@ -171,8 +181,8 @@
       "Name": "MLUclampBoost",
       "Path": "/proc/vendor_sched/nnapi_uclamp_min",
       "Values": [
-          "180",
-          "512"
+          "225",
+          "640"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -408,7 +418,7 @@
       "PowerHint": "INTERACTION",
       "Node": "SFUClampBoost",
       "Duration": 5000,
-      "Value": "85"
+      "Value": "107"
     },
     {
       "PowerHint": "LAUNCH",
@@ -420,7 +430,7 @@
       "PowerHint": "LAUNCH_120FPS",
       "Node": "SFUClampBoost",
       "Duration": 1000,
-      "Value": "161"
+      "Value": "202"
     },
     {
       "PowerHint": "LAUNCH",
@@ -431,7 +441,7 @@
       "PowerHint": "LAUNCH",
       "Node": "SFUClampBoost",
       "Duration": 5000,
-      "Value": "85"
+      "Value": "107"
     },
     {
       "PowerHint": "LAUNCH",
@@ -455,13 +465,13 @@
       "PowerHint": "LAUNCH",
       "Node": "TAUClampBoost",
       "Duration": 5000,
-      "Value": "553"
+      "Value": "692"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "FGUClampBoost",
       "Duration": 5000,
-      "Value": "161"
+      "Value": "202"
     },
     {
       "PowerHint": "LAUNCH",
@@ -480,6 +490,12 @@
       "Node": "NPITaskPacking",
       "Duration": 5000,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CPU_LOAD_RESET",
+      "Node": "MemFreq",
+      "Duration": 33,
+      "Value": "1014000"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -820,6 +836,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CPUUtilThreshold",
+      "Duration": 0,
+      "Value": "1100"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "CPUDVFSHeadroom",
       "Duration": 0,
       "Value": "1100"
     },
@@ -1181,13 +1203,13 @@
       "PowerHint": "REFRESH_120FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "183"
+      "Value": "229"
     },
     {
       "PowerHint": "REFRESH_90FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "128"
+      "Value": "160"
     },
     {
       "PowerHint": "REFRESH_90FPS",
@@ -1198,7 +1220,7 @@
       "PowerHint": "REFRESH_60FPS",
       "Node": "TAUClampBoost",
       "Duration": 0,
-      "Value": "55"
+      "Value": "69"
     },
     {
       "PowerHint": "REFRESH_60FPS",
@@ -1327,7 +1349,7 @@
       "PowerHint": "ML_ACC",
       "Node": "MLUclampBoost",
       "Duration": 2000,
-      "Value": "512"
+      "Value": "640"
     }
   ],
   "AdpfConfig": [
@@ -1343,8 +1365,8 @@
       "PID_Do": 500.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 185,
-      "UclampMin_High": 384,
+      "UclampMin_Init": 232,
+      "UclampMin_High": 480,
       "UclampMin_Low": 2,
       "SamplingWindow_P": 1,
       "SamplingWindow_I": 0,
@@ -1367,8 +1389,8 @@
       "PID_Do": 500.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 129,
-      "UclampMin_High": 384,
+      "UclampMin_Init": 162,
+      "UclampMin_High": 480,
       "UclampMin_Low": 2,
       "SamplingWindow_P": 1,
       "SamplingWindow_I": 0,
@@ -1391,8 +1413,8 @@
       "PID_Do": 500.0,
       "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 129,
-      "UclampMin_High": 384,
+      "UclampMin_Init": 162,
+      "UclampMin_High": 480,
       "UclampMin_Low": 2,
       "SamplingWindow_P": 1,
       "SamplingWindow_I": 0,
@@ -1418,9 +1440,9 @@
       "SamplingWindow_I": 1,
       "SamplingWindow_D": 1,
       "UclampMin_On": true,
-      "UclampMin_Init": 200,
-      "UclampMin_High": 157,
-      "UclampMin_Low": 157,
+      "UclampMin_Init": 250,
+      "UclampMin_High": 197,
+      "UclampMin_Low": 197,
       "ReportingRateLimitNs": 1,
       "EarlyBoost_On": false,
       "EarlyBoost_TimeFactor": 0.0,
@@ -1442,9 +1464,9 @@
       "SamplingWindow_I": 1,
       "SamplingWindow_D": 1,
       "UclampMin_On": true,
-      "UclampMin_Init": 200,
-      "UclampMin_High": 42,
-      "UclampMin_Low": 42,
+      "UclampMin_Init": 250,
+      "UclampMin_High": 53,
+      "UclampMin_Low": 53,
       "ReportingRateLimitNs": 1,
       "EarlyBoost_On": false,
       "EarlyBoost_TimeFactor": 0.0,
@@ -1466,7 +1488,7 @@
       "SamplingWindow_I": 1,
       "SamplingWindow_D": 1,
       "UclampMin_On": true,
-      "UclampMin_Init": 200,
+      "UclampMin_Init": 250,
       "UclampMin_High": 0,
       "UclampMin_Low": 0,
       "ReportingRateLimitNs": 1,
