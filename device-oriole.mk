@@ -72,7 +72,8 @@ PRODUCT_COPY_FILES += \
 
 # Power HAL config
 PRODUCT_COPY_FILES += \
-	device/google/raviole/powerhint-oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+	device/google/raviole/powerhint-oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
+	device/google/raviole/powerhint-oriole-mainline.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-mainline.json \
 
 # Bluetooth sepolicy
 include device/google/gs101-sepolicy/oriole-sepolicy.mk
@@ -162,7 +163,8 @@ DEVICE_MANIFEST_FILE += \
 PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.long.frequency.shift=15 \
     ro.vendor.vibrator.hal.device.mass=0.205 \
-    ro.vendor.vibrator.hal.loc.coeff=2.25
+    ro.vendor.vibrator.hal.loc.coeff=2.25 \
+    persist.vendor.vibrator.hal.chirp.enabled=0
 
 ACTUATOR_MODEL := luxshare_ict_081545
 
@@ -189,7 +191,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=67
+    ro.vendor.build.svn=70
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
