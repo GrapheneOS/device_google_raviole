@@ -32,7 +32,9 @@ include device/google/raviole/audio/raven/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/fingerprint/udfps_common.mk
 include device/google/gs101/telephony/pktrouter.mk
-include device/google/gs101/bluetooth/bluetooth.mk
+include device/google/gs-common/bcmbt/bluetooth.mk
+include device/google/gs-common/touch/lsi/lsi.mk
+
 
 ifeq ($(filter factory_raven, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
@@ -76,6 +78,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/raviole/powerhint-raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+PRODUCT_PACKAGES += \
+      UwbOverlayR4
+
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true \
@@ -88,14 +93,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_raven_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
     $(LOCAL_PATH)/bluetooth_power_limits_raven_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
 
+# Bluetooth HAL
+PRODUCT_COPY_FILES += \
+	device/google/raviole/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
 
 # Bluetooth Hal Extension test tools
 PRODUCT_PACKAGES_DEBUG += \
     sar_test \
     hci_inject
 
-# WirelessCharger
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs101/device_framework_matrix_product_wireless.xml
+# userdebug specific
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+# Bluetooth LE Audio Hardware offload
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bluetooth.leaudio_offload.supported=true \
+    persist.bluetooth.leaudio_offload.disabled=true \
+    persist.bluetooth.le_audio_test=false
+endif
 
 # MIPI Coex Configs
 PRODUCT_COPY_FILES += \
@@ -180,7 +194,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=58
+    ro.vendor.build.svn=67
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -207,7 +221,8 @@ PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=3
+    ro.gms.dck.eligible_wcc=3 \
+    ro.gms.dck.se_capability=1
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
@@ -225,12 +240,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Enable camera exif model/make reporting
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
-
-# Bluetooth HAL
-PRODUCT_PACKAGES += \
-	bt_vendor.conf
-PRODUCT_COPY_FILES += \
-	device/google/raviole/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
 
 # tetheroffload HAL
 PRODUCT_PACKAGES += \
@@ -252,15 +261,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
 
-# userdebug specific
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-# Bluetooth LE Audio Hardware offload
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.bluetooth.leaudio_offload.supported=true \
-    persist.bluetooth.leaudio_offload.disabled=true \
-    persist.bluetooth.le_audio_test=false
-endif
-
 # declare use of spatial audio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.spatializer_enabled=true
@@ -276,23 +276,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Dolby integration
--include vendor/dolby/ds/dolby-buildspec.mk
-$(call inherit-product-if-exists, vendor/dolby/ds/dolby-product.mk)
-#  overwrite file coming from device/google/gs101/media_codecs_bo_c2.xml
-PRODUCT_COPY_FILES := \
-    device/google/raviole/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(PRODUCT_COPY_FILES)
-
-PRODUCT_RESTRICT_VENDOR_FILES := false
-
-# Enable adpf cpu hint session for SurfaceFlinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_adpf_cpu_hint=true
-
 # Display RRS default Config
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1440x3120@120
 
 # Bluetooth OPUS codec
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.opus.enabled=true
+
+# Location
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+else
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps_user.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+endif
+
+# Disable Settings large-screen optimization enabled by Window Extensions
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.settings.large_screen_opt.enabled=false

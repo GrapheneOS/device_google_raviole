@@ -20,7 +20,7 @@ on early-boot
     start insmod_sh_slider
 
 
-service insmod_sh_slider /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.slider.cfg
+service insmod_sh_slider /vendor/bin/insmod.sh /vendor/etc/init.insmod.slider.cfg
     class main
     user root
     group root system
