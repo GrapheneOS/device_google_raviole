@@ -23,6 +23,9 @@ BOARD_KERNEL_CMDLINE += exynos_drm.load_sequential=1
 BOARD_KERNEL_CMDLINE += pcie-exynos-core.load_sequential=1
 BOARD_KERNEL_CMDLINE += g2d.load_sequential=1
 
+RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_RAVEN_RADIO_DIR)
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := $(RELEASE_GOOGLE_RAVEN_BOOTLOADER_DIR)
+
 ifdef AUTOMOTIVE_PRODUCT_PATH
   #RBC# include_top device/google/auto_tcu
   #RBC# include_top device/google/pixel_tcu
