@@ -195,7 +195,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=71
+    ro.vendor.build.svn=72
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
