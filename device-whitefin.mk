@@ -88,6 +88,11 @@ PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
+ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/trusty/24Q1
+else
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/trusty/trunk
+endif
 
 # tetheroffload HAL
 PRODUCT_PACKAGES += \

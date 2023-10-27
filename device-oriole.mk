@@ -39,6 +39,11 @@ include device/google/gs-common/touch/stm/stm11.mk
 
 # Fingerprint HAL
 GOODIX_CONFIG_BUILD_VERSION := g6_trusty
+ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/firmware/fingerprint/24Q1
+else
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/firmware/fingerprint/trunk
+endif
 $(call inherit-product-if-exists, vendor/goodix/udfps/configuration/udfps_common.mk)
 ifeq ($(filter factory%, $(TARGET_PRODUCT)),)
 $(call inherit-product-if-exists, vendor/goodix/udfps/configuration/udfps_shipping.mk)
@@ -143,7 +148,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	com.android.nfcservices \
 	Tag \
-	android.hardware.nfc-service.st
+	android.hardware.nfc-service.st \
+	NfcOverlayOriole
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -191,7 +197,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=72
+    ro.vendor.build.svn=73
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -229,6 +235,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
+ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/trusty/24Q1
+else
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/trusty/trunk
+endif
 
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -288,3 +299,8 @@ endif
 # Enable DeviceAsWebcam support
 PRODUCT_VENDOR_PROPERTIES += \
     ro.usb.uvc.enabled=true
+
+# Quick Start device-specific settings
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.quick_start.oem_id=00e0 \
+    ro.quick_start.device_id=oriole
