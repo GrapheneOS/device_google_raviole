@@ -135,8 +135,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	com.android.nfcservices \
 	Tag \
-	android.hardware.nfc-service.st \
-	NfcOverlayOriole
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
