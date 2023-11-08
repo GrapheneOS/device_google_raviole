@@ -142,8 +142,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc-service.st \
-	NfcOverlayRaven
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
