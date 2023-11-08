@@ -140,7 +140,7 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/nfc/libnfc-nci-raven.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 PRODUCT_PACKAGES += \
-	com.android.nfcservices \
+	NfcNci \
 	Tag \
 	android.hardware.nfc-service.st \
 	NfcOverlayRaven
