@@ -18,5 +18,5 @@ $(call inherit-product, device/google/raviole/aosp_oriole.mk)
 PRODUCT_NAME := aosp_oriole_pgagnostic_64
 PRODUCT_MODEL := AOSP page size agnostic on Oriole 64-bit only
 
-PRODUCT_PAGE_SIZE_AGNOSTIC := true
+PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
 PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 65536
