@@ -17,18 +17,10 @@
 # Restrict the visibility of Android.bp files to improve build analysis time
 $(call inherit-product-if-exists, vendor/google/products/sources_pixel.mk)
 
-ifdef RELEASE_GOOGLE_ORIOLE_KERNEL_VERSION
-TARGET_LINUX_KERNEL_VERSION := $(RELEASE_GOOGLE_ORIOLE_KERNEL_VERSION)
-endif
-
-ifdef RELEASE_GOOGLE_ORIOLE_KERNEL_DIR
+TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_ORIOLE_VERSION)
 # Keeps flexibility for kasan and ufs builds
-TARGET_KERNEL_DIR ?= $(RELEASE_GOOGLE_ORIOLE_KERNEL_DIR)
-TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_GOOGLE_ORIOLE_KERNEL_DIR)/kernel-headers
-else
-TARGET_KERNEL_DIR ?= device/google/raviole-kernel
-TARGET_BOARD_KERNEL_HEADERS ?= device/google/raviole-kernel/kernel-headers
-endif
+TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_ORIOLE_DIR)
+TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_ORIOLE_DIR)/kernel-headers
 
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-oriole.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
