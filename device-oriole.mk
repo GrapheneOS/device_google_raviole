@@ -373,3 +373,5 @@ endif
 PLAYVIDEOS_VERSION_DIR := 4.20.6
 $(call soong_config_set_bool,playvideos,use_device_specific_version,true)
 PRODUCT_SOONG_NAMESPACES += vendor/unbundled_google/packages/PlayVideos/$(PLAYVIDEOS_VERSION_DIR)
+
+PRODUCT_VENDOR_PROPERTIES := $(filter-out ro.vendor.build.svn=% , $(PRODUCT_VENDOR_PROPERTIES))
