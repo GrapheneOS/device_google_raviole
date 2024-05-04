@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 $(call inherit-product, device/google/gs101/aosp_common.mk)
-$(call inherit-product, device/google/raviole/device-slider.mk)
+$(call inherit-product, device/google/raviole/slider_generic.mk)
 
 PRODUCT_NAME := aosp_slider
 PRODUCT_DEVICE := slider

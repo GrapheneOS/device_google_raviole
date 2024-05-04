@@ -1,5 +1,5 @@
 #
-# Copyright 2020 The Android Open-Source Project
+# Copyright 2024 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +13,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product, device/google/gs101/aosp_common.mk)
-$(call inherit-product, device/google/raviole/whitefin_generic.mk)
 
-PRODUCT_NAME := aosp_whitefin
-PRODUCT_DEVICE := whitefin
-PRODUCT_MODEL := AOSP on Whitefin
-PRODUCT_BRAND := Android
-PRODUCT_MANUFACTURER := Google
+$(call inherit-product, device/google/raviole/device-whitefin.mk)
