@@ -15,7 +15,7 @@
 #
 
 $(call inherit-product, device/google/gs101/aosp_common.mk)
-$(call inherit-product, device/google/raviole/device-raven.mk)
+$(call inherit-product, device/google/raviole/raven_generic.mk)
 
 PRODUCT_NAME := aosp_raven
 PRODUCT_NAME_FOR_ATTESTATION := raven

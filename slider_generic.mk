@@ -15,3 +15,6 @@
 #
 
 $(call inherit-product, device/google/raviole/device-slider.mk)
+
+# preloaded_nanoapps.json
+PRODUCT_SOONG_NAMESPACES += vendor/google_contexthub/devices/slider
