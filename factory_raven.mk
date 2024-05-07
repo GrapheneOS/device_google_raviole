@@ -32,3 +32,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Factory binaries of camera
 PRODUCT_PACKAGES += fatp_gn1_hat_tool fatp_imx586_hat_tool
+
+# preloaded_nanoapps.json
+PRODUCT_SOONG_NAMESPACES += vendor/google_contexthub/devices/factory
