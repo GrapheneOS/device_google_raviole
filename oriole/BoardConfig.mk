@@ -25,9 +25,9 @@ BOARD_KERNEL_CMDLINE += pcie-exynos-core.load_sequential=1
 BOARD_KERNEL_CMDLINE += g2d.load_sequential=1
 
 RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_ORIOLE_RADIO_DIR)
-RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR ?= trunk # Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR ?= pdk# Keep this for pdk TODO: b/327119000
 RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR)
-$(call soong_config_set,bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR))
+$(call soong_config_set,raviole_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR))
 
 ifdef AUTOMOTIVE_PRODUCT_PATH
   #RBC# include_top device/google/auto_tcu
