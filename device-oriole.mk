@@ -296,3 +296,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.quick_start.oem_id=00e0 \
     ro.quick_start.device_id=oriole
+
+# Disable AVF Remote Attestation
+PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true

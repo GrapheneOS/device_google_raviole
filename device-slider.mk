@@ -131,3 +131,5 @@ else
 		device/google/raviole/location/gps_user.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
 
+# Disable AVF Remote Attestation
+PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
