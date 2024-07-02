@@ -292,11 +292,21 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Location
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
         PRODUCT_COPY_FILES += \
-		device/google/raviole/location/gps.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+            device/google/raviole/location/gps.6.1.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    else
+        PRODUCT_COPY_FILES += \
+            device/google/raviole/location/gps.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    endif
 else
+    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
         PRODUCT_COPY_FILES += \
-		device/google/raviole/location/gps_user.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+            device/google/raviole/location/gps_user.6.1.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    else
+        PRODUCT_COPY_FILES += \
+            device/google/raviole/location/gps_user.xml.raven:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    endif
 endif
 
 # Enable DeviceAsWebcam support
