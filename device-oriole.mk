@@ -197,7 +197,7 @@ ifdef RELEASE_SVN_ORIOLE
 TARGET_SVN ?= $(RELEASE_SVN_ORIOLE)
 else
 # Set this for older releases that don't use build flag
-TARGET_SVN ?= 84
+TARGET_SVN ?= 85
 endif
 
 PRODUCT_VENDOR_PROPERTIES += \
