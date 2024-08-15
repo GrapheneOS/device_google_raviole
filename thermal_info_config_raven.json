@@ -459,26 +459,22 @@
         {
             "Name":"thermal-cpufreq-0",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote",
-            "State2Power":["412", "352", "308", "236", "212", "176", "152", "116", "76", "56", "24"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote"
         },
         {
             "Name":"thermal-cpufreq-1",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote",
-            "State2Power":["1198", "1018", "854", "696", "566", "452", "356", "296", "226", "188", "152", "124", "90", "58"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote"
         },
         {
             "Name":"thermal-cpufreq-2",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote",
-            "State2Power":["4208", "3692", "3370", "2898", "2562", "2240", "2084", "1780", "1424", "1276", "1042", "858", "714", "560", "448", "364", "166"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote"
         },
         {
             "Name":"thermal-gpufreq-0",
             "Type":"GPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote",
-            "State2Power":["4371", "3543", "3085", "2293", "1927", "1707", "1394", "1171", "967", "768", "592", "433"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote"
         },
         {
             "Name":"fcc",
