@@ -357,3 +357,10 @@ PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
 # Bluetooth device id
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.device_id.product_id=20487
+
+# ETM
+ifneq (,$(RELEASE_ETM_IN_USERDEBUG_ENG))
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+$(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
+endif
+endif

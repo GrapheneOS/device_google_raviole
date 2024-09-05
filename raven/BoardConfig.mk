@@ -43,3 +43,9 @@ include device/google/gs101-sepolicy/raven-sepolicy.mk
 include device/google/gs101/wifi/BoardConfig-wifi.mk
 -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
 -include vendor/google_devices/raven/proprietary/BoardConfigVendor.mk
+
+ifneq (,$(RELEASE_ETM_IN_USERDEBUG_ENG))
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+-include device/google/common/etm/BoardUserdebugModules.mk
+endif
+endif
