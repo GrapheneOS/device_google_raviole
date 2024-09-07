@@ -355,8 +355,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
 
 # Bluetooth device id
+# Raven: 0x4107
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20487
+    bluetooth.device_id.product_id=16647
 
 # ETM
 ifneq (,$(RELEASE_ETM_IN_USERDEBUG_ENG))

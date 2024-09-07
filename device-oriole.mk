@@ -345,8 +345,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
 
 # Bluetooth device id
+# Oriole: 0x4106
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20486
+    bluetooth.device_id.product_id=16646
 
 # ETM
 ifneq (,$(RELEASE_ETM_IN_USERDEBUG_ENG))
