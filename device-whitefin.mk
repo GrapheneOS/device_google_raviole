@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR ?= pdk# Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR)
+$(call soong_config_set,raviole_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR))
+
 # Keeps flexibility for kasan and ufs builds
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_ORIOLE_DIR)
 TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_ORIOLE_DIR)/kernel-headers

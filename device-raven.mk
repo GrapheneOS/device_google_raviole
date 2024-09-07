@@ -17,6 +17,14 @@
 # Restrict the visibility of Android.bp files to improve build analysis time
 $(call inherit-product-if-exists, vendor/google/products/sources_pixel.mk)
 
+ifdef RELEASE_GOOGLE_RAVEN_RADIO_DIR
+RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_RAVEN_RADIO_DIR)
+endif
+RELEASE_GOOGLE_BOOTLOADER_RAVEN_DIR ?= pdk# Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_RAVEN_DIR)
+$(call soong_config_set,raviole_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_RAVEN_DIR))
+
+
 TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_RAVEN_VERSION)
 # Keeps flexibility for kasan and ufs builds
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_RAVEN_DIR)
@@ -347,5 +355,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
 
 # Bluetooth device id
+# Raven: 0x4107
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20487
+    bluetooth.device_id.product_id=16647
+
+# ETM
+ifneq (,$(RELEASE_ETM_IN_USERDEBUG_ENG))
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+$(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
+endif
+endif

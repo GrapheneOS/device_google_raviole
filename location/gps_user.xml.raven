@@ -97,6 +97,8 @@
   />
 
   <gll_features
+       EnableQzsAutoSwitch="false"
+       EnableGloAutoSwitch="false"
        EnableNicAutoSwitch="true"
        EnableNavic="true"
   />
