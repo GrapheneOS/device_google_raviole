@@ -60,8 +60,6 @@ ifeq ($(filter factory_raven, $(TARGET_PRODUCT)),)
 include device/google/raviole/uwb/uwb_calibration.mk
 endif
 
-include hardware/google/pixel/vibrator/cs40l25/device.mk
-
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,raven)
 $(call soong_config_set,lyric,tuning_product,raven)

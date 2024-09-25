@@ -30,7 +30,6 @@ $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/whit
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/whitefin/overlay
 
 include device/google/gs101/device-common.mk
-include hardware/google/pixel/vibrator/drv2624/device.mk
 include device/google/raviole/audio/whitefin/audio-tables.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/gps/brcm/cbd_gps.mk
