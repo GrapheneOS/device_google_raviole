@@ -48,9 +48,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/gs101/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.slider.rc
 
-# insmod files
+# insmod files. Kernel 5.10 prebuilts don't provide these yet, so provide our
+# own copy if they're not in the prebuilts.
+# TODO(b/369686096): drop this when 5.10 is gone.
+ifeq ($(wildcard $(TARGET_KERNEL_DIR)/init.insmod.*.cfg),)
 PRODUCT_COPY_FILES += \
-	device/google/raviole/init.insmod.slider.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.slider.cfg
+	device/google/raviole/init.insmod.slider.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.slider.cfg
+endif
 
 # Thermal Config
 PRODUCT_COPY_FILES += \
