@@ -11,6 +11,7 @@
                      channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
         </mixPort>
         <!-- Le Audio Audio Ports -->
+        <mixPort name="le audio broadcast output" role="source" />
         <mixPort name="le audio output" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
             <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                      samplingRates="44100 48000"
@@ -51,6 +52,7 @@
         <devicePort tagName="BLE Headset Out" type="AUDIO_DEVICE_OUT_BLE_HEADSET" role="sink"/>
         <devicePort tagName="BLE Speaker Out" type="AUDIO_DEVICE_OUT_BLE_SPEAKER" role="sink"/>
         <devicePort tagName="BLE Headset In" type="AUDIO_DEVICE_IN_BLE_HEADSET" role="source"/>
+        <devicePort tagName="BLE Broadcast Out" type="AUDIO_DEVICE_OUT_BLE_BROADCAST" role="sink"/>
     </devicePorts>
     <routes>
         <route type="mix" sink="BT A2DP Out"
@@ -66,6 +68,8 @@
         <route type="mix" sink="le audio input"
                sources="BLE Headset In"/>
         <route type="mix" sink="BLE Speaker Out"
-               sources="le audio output"/>
+            sources="le audio output"/>
+        <route type="mix" sink="BLE Broadcast Out"
+            sources="le audio broadcast output"/>
     </routes>
 </module>
