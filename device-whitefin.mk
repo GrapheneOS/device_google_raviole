@@ -87,6 +87,9 @@ PRODUCT_PACKAGES += \
 	Tag \
 	android.hardware.nfc-service.st
 
+# modem_svc_sit daemon
+PRODUCT_PACKAGES += modem_svc_sit
+
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
 
