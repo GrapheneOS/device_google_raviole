@@ -31,7 +31,6 @@ DEVICE_PACKAGE_OVERLAYS += device/google/raviole/slider/overlay
 
 include device/google/gs101/device-common.mk
 include device/google/raviole/audio/slider/audio-tables.mk
-include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/gps/brcm/cbd_gps.mk
 include device/google/gs-common/touch/stm/stm11.mk
@@ -91,6 +90,9 @@ PRODUCT_PACKAGES += \
 	$(RELEASE_PACKAGE_NFC_STACK) \
 	Tag \
 	android.hardware.nfc-service.st
+
+# modem_svc_sit daemon
+PRODUCT_PACKAGES += modem_svc_sit
 
 # SecureElement
 PRODUCT_PACKAGES += \

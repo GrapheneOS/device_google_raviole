@@ -43,7 +43,6 @@ DEVICE_PACKAGE_OVERLAYS += device/google/raviole/oriole/overlay
 include device/google/raviole/audio/oriole/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/telephony/pktrouter.mk
-include hardware/google/pixel/vibrator/cs40l25/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
@@ -155,6 +154,9 @@ PRODUCT_PACKAGES += \
 	Tag \
 	android.hardware.nfc-service.st \
 	NfcOverlayOriole
+
+# modem_svc_sit daemon
+PRODUCT_PACKAGES += modem_svc_sit
 
 # SecureElement
 PRODUCT_PACKAGES += \
