@@ -91,8 +91,11 @@ PRODUCT_PACKAGES += \
 	Tag \
 	android.hardware.nfc-service.st
 
-# modem_svc_sit daemon
-PRODUCT_PACKAGES += modem_svc_sit
+# Shared Modem Platform
+SHARED_MODEM_PLATFORM_VENDOR := lassen
+
+# Shared Modem Platform
+include device/google/gs-common/modem/shared_modem_platform/shared_modem_platform.mk
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
