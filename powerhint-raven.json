@@ -319,14 +319,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "NewlyIdleBalancer",
-      "Path": "/proc/vendor_sched/idle_balancer",
-      "Values": [
-        "0",
-        "1"
-      ]
-    },
-    {
       "Name": "LimitFlashCurrent",
       "Path": "vendor.camera.max_flash_current",
       "Values": [
@@ -1070,12 +1062,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "NewlyIdleBalancer",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -1148,12 +1134,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "NewlyIdleBalancer",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -1204,12 +1184,6 @@
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "NPITaskPacking",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "NewlyIdleBalancer",
       "Duration": 0,
       "Value": "0"
     },
@@ -1270,12 +1244,6 @@
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
       "Node": "NPITaskPacking",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_LOW",
-      "Node": "NewlyIdleBalancer",
       "Duration": 0,
       "Value": "0"
     },
@@ -1471,18 +1439,6 @@
       "Node": "DisplayWakeup",
       "Duration": 50,
       "Value": "1"
-    },
-    {
-      "PowerHint": "THERMAL_FLASH_LED_REDUCE_CRITICAL",
-      "Node": "LimitFlashCurrent",
-      "Duration": 0,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "THERMAL_FLASH_LED_REDUCE_NONE",
-      "Node": "LimitFlashCurrent",
-      "Duration": 0,
-      "Value": "1500"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -1739,11 +1695,12 @@
       "TargetTimeFactor": 1.0,
       "StaleTimeFactor": 15.0,
       "HeuristicBoost_On": true,
-      "HBoostOnMissedCycles": 8,
-      "HBoostOffMaxAvgRatio": 4.0,
-      "HBoostOffMissedCycles": 5,
-      "HBoostPidPuFactor": 0.5,
-      "HBoostUclampMin": 722,
+      "HBoostModerateJankThreshold": 2,
+      "HBoostOffMaxAvgDurRatio": 4.0,
+      "HBoostSevereJankPidPu": 0.5,
+      "HBoostSevereJankThreshold": 8,
+      "HBoostUclampMinCeilingRange": [480, 722],
+      "HBoostUclampMinFloorRange": [230, 410],
       "JankCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
@@ -1773,11 +1730,12 @@
       "TargetTimeFactor": 1.0,
       "StaleTimeFactor": 15.0,
       "HeuristicBoost_On": true,
-      "HBoostOnMissedCycles": 8,
-      "HBoostOffMaxAvgRatio": 4.0,
-      "HBoostOffMissedCycles": 5,
-      "HBoostPidPuFactor": 0.5,
-      "HBoostUclampMin": 722,
+      "HBoostModerateJankThreshold": 2,
+      "HBoostOffMaxAvgDurRatio": 4.0,
+      "HBoostSevereJankPidPu": 0.5,
+      "HBoostSevereJankThreshold": 8,
+      "HBoostUclampMinCeilingRange": [480, 722],
+      "HBoostUclampMinFloorRange": [230, 410],
       "JankCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
@@ -1807,11 +1765,12 @@
       "TargetTimeFactor": 1.0,
       "StaleTimeFactor": 15.0,
       "HeuristicBoost_On": true,
-      "HBoostOnMissedCycles": 8,
-      "HBoostOffMaxAvgRatio": 4.0,
-      "HBoostOffMissedCycles": 5,
-      "HBoostPidPuFactor": 0.5,
-      "HBoostUclampMin": 722,
+      "HBoostModerateJankThreshold": 2,
+      "HBoostOffMaxAvgDurRatio": 4.0,
+      "HBoostSevereJankPidPu": 0.5,
+      "HBoostSevereJankThreshold": 8,
+      "HBoostUclampMinCeilingRange": [480, 722],
+      "HBoostUclampMinFloorRange": [230, 410],
       "JankCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300

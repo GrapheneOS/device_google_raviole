@@ -15,9 +15,6 @@
 #
 TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := whitefin
-RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR ?= pdk# Keep this for pdk TODO: b/327119000
-RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR)
-$(call soong_config_set,raviole_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR))
 TARGET_SCREEN_DENSITY := 440
 USES_DEVICE_GOOGLE_RAVIOLE := true
 
@@ -26,3 +23,4 @@ BOARD_BOOTCONFIG += androidboot.selinux=permissive
 include device/google/gs101/BoardConfig-common.mk
 include device/google/gs101/wifi/BoardConfig-wifi.mk
 -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
+include device/google/gs-common/check_current_prebuilt/check_current_prebuilt.mk

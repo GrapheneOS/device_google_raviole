@@ -36,7 +36,6 @@
                 0.0,
                 0.0
             ],
-            "TempPath":"/dev/thermal/tz-by-name/neutral_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001,
             "PollingDelay":60000,
@@ -54,7 +53,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/gnss_tcxo_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -70,7 +68,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/qi_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -717,26 +714,22 @@
         {
             "Name":"thermal-cpufreq-0",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote",
-            "State2Power":["420", "332", "268", "212", "176", "148", "108", "80", "56", "24"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote"
         },
         {
             "Name":"thermal-cpufreq-1",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote",
-            "State2Power":["1216", "1018", "842", "686", "538", "428", "336", "274", "212", "178", "146", "118", "86", "56"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote"
         },
         {
             "Name":"thermal-cpufreq-2",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote",
-            "State2Power":["2322", "1992", "1674", "1412", "1168", "936", "766", "590", "474", "394", "310", "162"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote"
         },
         {
             "Name":"thermal-gpufreq-0",
             "Type":"GPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote",
-            "State2Power":["2580", "2033", "1427", "826", "358"]
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote"
         },
         {
             "Name":"tpu_cooling",

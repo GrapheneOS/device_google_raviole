@@ -5,16 +5,15 @@
        BaudRate="921600"
        GpioNStdbyPath="/sys/devices/platform/10940000.spi/spi_master/spi5/spi5.0/nstandby"
        CustGpioDelayMs="250"
-       LogEnabled="true"
+       LogEnabled="false"
        Log="JAVA"
-       SecondaryConfigPath="/data/vendor/gps/overlay/gps_overlay.xml"
        LogDirectory="/sdcard/gps/broadcom/storage/"
        CtrlPipe="/data/vendor/gps/glgpsctrl"
        NmeaOutName="/data/vendor/gps/nmea_out"
 
        acSuplServer="supl.google.com"
        SuplPort="7275"
-       SuplLogEnable="true"
+       SuplLogEnable="false"
        SuplLogFullName="/data/vendor/gps/suplflow.txt"
        tlsEnable="true"
 
@@ -56,13 +55,12 @@
 
        AttributionAppPkgName="com.google.android.carrierlocation"
 
-       AssertEnabled="true"
-       ExitOnComFailure="true"
+       AssertEnabled="false"
        CpLppeCancelDbhOnAgnssProvideLoc="true"
        CpLppeUseAgnssLocForEmptyDbh="true"
        ReAidingOnHotStart="false"
        ReAidingIntervalSec="3600"
-       PpsDevice="/sys/class/pps/pps0/assert_elapsed"
+       PpsDevice="/sys/devices/platform/bbd_pps/pps_assert"
        SensorsMask="0x244"
        MaxThreadNum="13"
   />
@@ -89,7 +87,7 @@
        RfPathLossDb_Cp_L5="4.1"
        OnChipGpsCarrierType="3,2,3,3,2,3,2,3,3,3,1,2,1,3,2,1,2,3,1,1,1,1,3,3,3,3,3,1,2,3,2,3"
 
-       EnableOnChipStopNotification="2"
+       EnableOnChipStopNotification="false"
        PowerMode="3"
        MinGpsWeekNumber="2216"
        OnChipAccMask="50"
@@ -103,7 +101,6 @@
        EnableGloAutoSwitch="false"
        EnableNicAutoSwitch="true"
        EnableNavic="true"
-       ConstellationAutoSwitchOffNavOnly="true"
   />
 
 </glgps>

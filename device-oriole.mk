@@ -17,6 +17,14 @@
 # Restrict the visibility of Android.bp files to improve build analysis time
 $(call inherit-product-if-exists, vendor/google/products/sources_pixel.mk)
 
+ifdef RELEASE_GOOGLE_ORIOLE_RADIO_DIR
+RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_ORIOLE_RADIO_DIR)
+endif
+RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR ?= pdk# Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR)
+$(call soong_config_set,raviole_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_ORIOLE_DIR))
+
+
 TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_ORIOLE_VERSION)
 # Keeps flexibility for kasan and ufs builds
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_ORIOLE_DIR)
@@ -197,11 +205,30 @@ ifdef RELEASE_SVN_ORIOLE
 TARGET_SVN ?= $(RELEASE_SVN_ORIOLE)
 else
 # Set this for older releases that don't use build flag
-TARGET_SVN ?= 85
+TARGET_SVN ?= 86
 endif
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.build.svn=$(TARGET_SVN)
+
+# Set device family property for SMR builds
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.device_family=O6R4B9
+
+# Set build properties for SMR builds
+ifeq ($(RELEASE_IS_SMR), true)
+    ifneq (,$(RELEASE_BASE_OS_ORIOLE))
+        PRODUCT_BASE_OS := $(RELEASE_BASE_OS_ORIOLE)
+    endif
+endif
+
+# Set build properties for EMR builds
+ifeq ($(RELEASE_IS_EMR), true)
+    ifneq (,$(RELEASE_BASE_OS_ORIOLE))
+        PRODUCT_PROPERTY_OVERRIDES += \
+        ro.build.version.emergency_base_os=$(RELEASE_BASE_OS_ORIOLE)
+    endif
+endif
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -253,8 +280,8 @@ PRODUCT_PACKAGES += \
 	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
 
 # Override default distortion output gain according to UX experiments
-PRODUCT_PRODUCT_PROPERTIES += \
-    vendor.audio.hapticgenerator.distortion.output.gain=0.5
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.hapticgenerator.distortion.output.gain=0.32
 
 # RKPD
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -288,11 +315,21 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Location
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
         PRODUCT_COPY_FILES += \
-		device/google/raviole/location/gps.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+            device/google/raviole/location/gps.6.1.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    else
+        PRODUCT_COPY_FILES += \
+            device/google/raviole/location/gps.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    endif
 else
+    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
         PRODUCT_COPY_FILES += \
-		device/google/raviole/location/gps_user.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+            device/google/raviole/location/gps_user.6.1.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    else
+        PRODUCT_COPY_FILES += \
+            device/google/raviole/location/gps_user.xml.oriole:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    endif
 endif
 
 # Enable DeviceAsWebcam support
@@ -306,3 +343,15 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Disable AVF Remote Attestation
 PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
+
+# Bluetooth device id
+# Oriole: 0x4106
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.device_id.product_id=16646
+
+# ETM
+ifneq (,$(RELEASE_ETM_IN_USERDEBUG_ENG))
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+$(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
+endif
+endif

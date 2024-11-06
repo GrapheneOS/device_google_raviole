@@ -62,7 +62,7 @@
        CpLppeUseAgnssLocForEmptyDbh="true"
        ReAidingOnHotStart="false"
        ReAidingIntervalSec="3600"
-       PpsDevice="/sys/class/pps/pps0/assert_elapsed"
+       PpsDevice="/sys/devices/platform/bbd_pps/pps_assert"
        SensorsMask="0x244"
        MaxThreadNum="13"
   />
@@ -75,7 +75,7 @@
        MultiCarrRFMode="GL_MULTI_CARR_RF_MODE_L1_L5"
        MultiCarrLnaMask="L1_EXT_ON|L5_EXT_ON"
        RfType="GL_RF_4776_BRCM"
-       ExtL5Bias="9.3"
+       ExtL5Bias="10.6"
        EnableFilteringForLTEB13="true"
 
        WarmStandbyTimeout1Seconds="10"
@@ -83,10 +83,10 @@
 
        EnableGnssPropagateInStandby="true"
 
-       RfPathLossDb_Ap="4.2"
-       RfPathLossDb_Cp="4.2"
-       RfPathLossDb_Ap_L5="4.1"
-       RfPathLossDb_Cp_L5="4.1"
+       RfPathLossDb_Ap="4.1"
+       RfPathLossDb_Cp="4.1"
+       RfPathLossDb_Ap_L5="4"
+       RfPathLossDb_Cp_L5="4"
        OnChipGpsCarrierType="3,2,3,3,2,3,2,3,3,3,1,2,1,3,2,1,2,3,1,1,1,1,3,3,3,3,3,1,2,3,2,3"
 
        EnableOnChipStopNotification="2"
@@ -103,7 +103,6 @@
        EnableGloAutoSwitch="false"
        EnableNicAutoSwitch="true"
        EnableNavic="true"
-       ConstellationAutoSwitchOffNavOnly="true"
   />
 
 </glgps>

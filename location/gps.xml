@@ -49,6 +49,7 @@
        LtoSyncThresholdDays="1"
 
        GnssYearOfHardware="2020"
+       CpEarlyFixGuardTimeSec="1"
        CpGuardTimeSec="1"
        CpLppGuardTimeSec="1"
        IgnoreInjectedSystemTime="true"
@@ -56,6 +57,7 @@
        AttributionAppPkgName="com.google.android.carrierlocation"
 
        AssertEnabled="true"
+       ExitOnComFailure="true"
        CpLppeCancelDbhOnAgnssProvideLoc="true"
        CpLppeUseAgnssLocForEmptyDbh="true"
        ReAidingOnHotStart="false"
@@ -97,6 +99,8 @@
   />
 
   <gll_features
+       EnableQzsAutoSwitch="false"
+       EnableGloAutoSwitch="false"
        EnableNicAutoSwitch="true"
        EnableNavic="true"
   />
