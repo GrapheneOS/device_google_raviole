@@ -69,10 +69,6 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/conf/init.raviole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.raviole.rc \
 	device/google/raviole/conf/init.oriole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.oriole.rc
 
-# Recovery files
-PRODUCT_COPY_FILES += \
-	device/google/gs101/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.oriole.rc
-
 # insmod files. Kernel 5.10 prebuilts don't provide these yet, so provide our
 # own copy if they're not in the prebuilts.
 # TODO(b/369686096): drop this when 5.10 is gone.

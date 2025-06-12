@@ -48,10 +48,6 @@ $(call soong_config_set,google3a_config,target_device,slider)
 PRODUCT_COPY_FILES += \
 	device/google/raviole/conf/init.whitefin.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.whitefin.rc
 
-# Recovery files
-PRODUCT_COPY_FILES += \
-	device/google/gs101/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.whitefin.rc
-
 # insmod files. Kernel 5.10 prebuilts don't provide these yet, so provide our
 # own copy if they're not in the prebuilts.
 # TODO(b/369686096): drop this when 5.10 is gone.
