@@ -110,9 +110,6 @@ PRODUCT_COPY_FILES += \
 DEVICE_MANIFEST_FILE += \
 	device/google/raviole/nfc/manifest_se.xml
 
-# PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/slider
-
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 

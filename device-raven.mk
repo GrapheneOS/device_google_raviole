@@ -202,7 +202,6 @@ PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=31
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/raviole/powerstats/raven \
     device/google/raviole
 
 

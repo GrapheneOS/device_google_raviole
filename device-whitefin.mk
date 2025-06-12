@@ -93,9 +93,6 @@ SHARED_MODEM_PLATFORM_VENDOR := lassen
 # Shared Modem Platform
 include device/google/gs-common/modem/modem_svc_sit/shared_modem_platform.mk
 
-# PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
-
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
 
