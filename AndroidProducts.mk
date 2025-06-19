@@ -33,8 +33,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/factory_slider.mk \
     $(LOCAL_DIR)/full_slider.mk \
     $(LOCAL_DIR)/aosp_whitefin.mk \
-    $(LOCAL_DIR)/aosp_whitefin_pkvm.mk \
-    $(LOCAL_DIR)/aosp_whitefin_hwasan.mk
+    $(LOCAL_DIR)/aosp_whitefin_pkvm.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_slider-trunk_staging-userdebug \
