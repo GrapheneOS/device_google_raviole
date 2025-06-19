@@ -26,8 +26,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/haiku.mk \
     $(LOCAL_DIR)/aosp_raven_pgagnostic_64.mk \
     $(LOCAL_DIR)/aosp_raven_pkvm.mk \
-    $(LOCAL_DIR)/aosp_raven_64.mk \
-    $(LOCAL_DIR)/factory_raven.mk
+    $(LOCAL_DIR)/aosp_raven_64.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_slider-trunk_staging-userdebug \
