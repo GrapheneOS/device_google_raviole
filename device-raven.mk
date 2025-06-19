@@ -161,14 +161,6 @@ PRODUCT_PACKAGES += \
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
 
-# declare use of spatial audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.audio.spatializer_enabled=true
-
-# optimize spatializer effect
-PRODUCT_PROPERTY_OVERRIDES += \
-    audio.spatializer.effect.util_clamp_min=300
-
 PRODUCT_PACKAGES += \
 	libspatialaudio
 
