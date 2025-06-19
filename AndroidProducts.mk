@@ -20,7 +20,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_oriole_pgagnostic_64.mk \
     $(LOCAL_DIR)/aosp_oriole_pkvm.mk \
     $(LOCAL_DIR)/aosp_oriole_64.mk \
-    $(LOCAL_DIR)/factory_oriole.mk \
     $(LOCAL_DIR)/aosp_raven.mk
 
 COMMON_LUNCH_CHOICES := \
