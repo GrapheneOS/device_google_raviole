@@ -88,11 +88,6 @@ PRODUCT_PACKAGES += \
 # Bluetooth sepolicy
 include device/google/gs101-sepolicy/raven-sepolicy.mk
 
-# Bluetooth Hal Extension test tools
-PRODUCT_PACKAGES_DEBUG += \
-    sar_test \
-    hci_inject
-
 # userdebug specific
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 # Bluetooth LE Audio Hardware offload
