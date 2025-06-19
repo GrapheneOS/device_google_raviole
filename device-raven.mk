@@ -101,10 +101,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.le_audio_test=false
 endif
 
-# Camera
-PRODUCT_COPY_FILES += \
-	device/google/raviole/media_profiles_raven.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
-
 # Display Config
 PRODUCT_COPY_FILES += \
 	device/google/raviole/raven/display_golden_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_cal0.pb \
