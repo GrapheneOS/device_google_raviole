@@ -130,7 +130,6 @@ ACTUATOR_MODEL := luxshare_ict_081545
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/raviole/powerstats/oriole \
     device/google/raviole
 
 # Keyboard bottom padding in dp for portrait mode
