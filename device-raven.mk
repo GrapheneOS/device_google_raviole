@@ -92,11 +92,6 @@ PRODUCT_PACKAGES += \
 # Bluetooth sepolicy
 include device/google/gs101-sepolicy/raven-sepolicy.mk
 
-# Bluetooth
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.a2dp_aac.vbr_supported=true \
-    persist.bluetooth.firmware.selection=BCM.hcd
-
 # Bluetooth Tx power caps for raven
 PRODUCT_COPY_FILES += \
     device/google/raviole/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
