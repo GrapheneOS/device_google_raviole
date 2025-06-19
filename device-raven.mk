@@ -152,11 +152,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DeviceAsWebcamRaven
 
-# DCK properties based on target
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=3 \
-    ro.gms.dck.se_capability=1
-
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayGF5KQ \
