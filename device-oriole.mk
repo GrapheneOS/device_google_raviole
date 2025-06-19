@@ -162,10 +162,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayGB7N6 \
     SettingsOverlayG9S9B
 
-# RKPD
-PRODUCT_PRODUCT_PROPERTIES += \
-    remote_provisioning.hostname=remoteprovisioning.googleapis.com \
-
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.zram.size=3g
