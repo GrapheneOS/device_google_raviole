@@ -92,13 +92,6 @@ PRODUCT_PACKAGES += \
 # Bluetooth sepolicy
 include device/google/gs101-sepolicy/raven-sepolicy.mk
 
-# Bluetooth Tx power caps for raven
-PRODUCT_COPY_FILES += \
-    device/google/raviole/bluetooth_power_limits_raven.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-    device/google/raviole/bluetooth_power_limits_raven_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
-    device/google/raviole/bluetooth_power_limits_raven_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
-    device/google/raviole/bluetooth_power_limits_raven_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
-
 # Bluetooth Hal Extension test tools
 PRODUCT_PACKAGES_DEBUG += \
     sar_test \
