@@ -128,10 +128,6 @@ ACTUATOR_MODEL := luxshare_ict_081545
 PRODUCT_SOONG_NAMESPACES += \
     device/google/raviole
 
-# Display
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=1500
-
 # Media Performance Class 12
 PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=31
 
