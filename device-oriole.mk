@@ -162,10 +162,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayGB7N6 \
     SettingsOverlayG9S9B
 
-# Set zram size
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.zram.size=3g
-
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
 
