@@ -169,10 +169,6 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Bluetooth OPUS codec
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.opus.enabled=true
-
 # Location
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
