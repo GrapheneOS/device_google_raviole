@@ -86,11 +86,6 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/init.insmod.raven.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.raven.cfg
 endif
 
-# Thermal Config
-PRODUCT_COPY_FILES += \
-	device/google/raviole/thermal_info_config_raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
-	device/google/raviole/thermal_info_config_charge_raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json
-
 # Power HAL config
 PRODUCT_COPY_FILES += \
 	device/google/raviole/powerhint-raven.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
