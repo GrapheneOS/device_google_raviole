@@ -29,8 +29,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_raven_64.mk \
     $(LOCAL_DIR)/factory_raven.mk \
     $(LOCAL_DIR)/aosp_slider.mk \
-    $(LOCAL_DIR)/aosp_slider_hwasan.mk \
-    $(LOCAL_DIR)/factory_slider.mk
+    $(LOCAL_DIR)/aosp_slider_hwasan.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_slider-trunk_staging-userdebug \
