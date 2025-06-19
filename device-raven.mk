@@ -134,9 +134,7 @@ ACTUATOR_MODEL := luxshare_ict_081545
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/raviole/powerstats/raven \
     device/google/raviole
-
 
 # userdebug specific
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
