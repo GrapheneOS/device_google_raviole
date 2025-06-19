@@ -170,10 +170,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayGLU0G \
     SettingsOverlayG8V0U
 
-# Set zram size
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.zram.size=3g
-
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
 
