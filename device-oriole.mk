@@ -62,7 +62,6 @@ $(call soong_config_set,google3a_config,target_device,oriole)
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/google/raviole/conf/init.raviole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.raviole.rc \
 	device/google/raviole/conf/init.oriole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.oriole.rc
 
 # Recovery files
