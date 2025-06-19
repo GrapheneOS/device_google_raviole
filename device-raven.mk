@@ -170,9 +170,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayGLU0G \
     SettingsOverlayG8V0U
 
-# Trusty liboemcrypto.so
-PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
-
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
