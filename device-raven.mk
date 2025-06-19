@@ -170,10 +170,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayGLU0G \
     SettingsOverlayG8V0U
 
-# Override default distortion output gain according to UX experiments
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.audio.hapticgenerator.distortion.output.gain=0.32
-
 # RKPD
 PRODUCT_PRODUCT_PROPERTIES += \
     remote_provisioning.hostname=remoteprovisioning.googleapis.com \
