@@ -164,10 +164,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DeviceAsWebcamRaven
 
-# Keyboard side padding in dp for portrait mode
-PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_r=11
-PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
-
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gms.dck.eligible_wcc=3 \
