@@ -77,11 +77,6 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/init.insmod.oriole.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.oriole.cfg
 endif
 
-# Power HAL config
-PRODUCT_COPY_FILES += \
-	device/google/raviole/powerhint-oriole.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
-	device/google/raviole/powerhint-oriole-mainline.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-mainline.json \
-
 # Bluetooth sepolicy
 include device/google/gs101-sepolicy/oriole-sepolicy.mk
 
