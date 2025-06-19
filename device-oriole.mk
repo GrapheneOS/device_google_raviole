@@ -132,9 +132,6 @@ ACTUATOR_MODEL := luxshare_ict_081545
 PRODUCT_SOONG_NAMESPACES += \
     device/google/raviole
 
-# Media Performance Class 12
-PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=31
-
 # userdebug specific
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     PRODUCT_COPY_FILES += \
