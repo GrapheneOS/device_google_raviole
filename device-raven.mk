@@ -155,10 +155,6 @@ ifeq ($(RELEASE_IS_SMR), true)
     endif
 endif
 
-# Set support hide display cutout feature
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_hide_display_cutout=true
-
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
