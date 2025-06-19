@@ -126,13 +126,6 @@ PRODUCT_COPY_FILES += \
 DEVICE_MANIFEST_FILE += \
 	device/google/raviole/nfc/manifest_se.xml
 
-# Vibrator HAL
-PRODUCT_PRODUCT_PROPERTIES +=\
-    ro.vendor.vibrator.hal.long.frequency.shift=15 \
-    ro.vendor.vibrator.hal.device.mass=0.205 \
-    ro.vendor.vibrator.hal.loc.coeff=2.25 \
-    persist.vendor.vibrator.hal.chirp.enabled=0
-
 ACTUATOR_MODEL := luxshare_ict_081545
 
 # PowerStats HAL
