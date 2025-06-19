@@ -16,7 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_oriole.mk \
-    $(LOCAL_DIR)/aosp_oriole_hwasan.mk \
     $(LOCAL_DIR)/aosp_raven.mk
 
 COMMON_LUNCH_CHOICES := \
