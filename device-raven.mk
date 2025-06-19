@@ -80,6 +80,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/gs101/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.raven.rc
 
+# TODO: This can probably be removed, but do it after we get a successful boot.
 # insmod files. Kernel 5.10 prebuilts don't provide these yet, so provide our
 # own copy if they're not in the prebuilts.
 # TODO(b/369686096): drop this when 5.10 is gone.
