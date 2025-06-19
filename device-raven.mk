@@ -136,9 +136,6 @@ DEVICE_MANIFEST_FILE += \
 
 ACTUATOR_MODEL := luxshare_ict_081545
 
-# Media Performance Class 12
-PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=31
-
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
     device/google/raviole/powerstats/raven \
