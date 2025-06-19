@@ -170,10 +170,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayGLU0G \
     SettingsOverlayG8V0U
 
-# Enable camera exif model/make reporting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.exif_reveal_make_model=true
-
 # tetheroffload HAL
 PRODUCT_PACKAGES += \
 	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
