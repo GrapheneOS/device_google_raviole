@@ -135,8 +135,8 @@ DEVICE_MANIFEST_FILE += \
 ACTUATOR_MODEL := luxshare_ict_081545
 
 # PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += \
-    device/google/raviole
+##PRODUCT_SOONG_NAMESPACES += \
+#    device/google/raviole
 
 # Increment the SVN for any official public releases
 ifdef RELEASE_SVN_RAVEN
