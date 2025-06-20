@@ -30,7 +30,6 @@ TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_RAVEN_VERSION)
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_RAVEN_DIR)
 TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_RAVEN_DIR)/kernel-headers
 
-$(call inherit-product, device/google/raviole/uwb/uwb_calibration_country.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/prebuilts/device-vendor-raven.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
