@@ -15,6 +15,3 @@
 #
 
 $(call inherit-product, device/google/raviole/device-raven.mk)
-
-# preloaded_nanoapps.json
-PRODUCT_SOONG_NAMESPACES += vendor/google_contexthub/devices/raven
