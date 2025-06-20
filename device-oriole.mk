@@ -40,7 +40,6 @@ $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/Wall
 
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/oriole/overlay
 
-include device/google/raviole/audio/oriole/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/telephony/pktrouter.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
