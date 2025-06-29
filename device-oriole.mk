@@ -38,8 +38,6 @@ $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/orio
 $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/oriole/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersOriole.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/google/raviole/oriole/overlay
-
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/telephony/pktrouter.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
@@ -96,8 +94,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	$(RELEASE_PACKAGE_NFC_STACK) \
 	Tag \
-	android.hardware.nfc-service.st \
-	NfcOverlayOriole
+	android.hardware.nfc-service.st
 
 # Shared Modem Platform
 SHARED_MODEM_PLATFORM_VENDOR := lassen
@@ -134,16 +131,6 @@ endif
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
-
-# Android DeviceAsWebcam specific overlay
-PRODUCT_PACKAGES += \
-    DeviceAsWebcamOriole
-
-# SKU specific RROs
-PRODUCT_PACKAGES += \
-    SettingsOverlayGR1YH \
-    SettingsOverlayGB7N6 \
-    SettingsOverlayG9S9B
 
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
