@@ -38,8 +38,6 @@ $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/rave
 $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/raven/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersRaven.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay
-
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/telephony/pktrouter.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
@@ -84,9 +82,6 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/init.insmod.raven.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.raven.cfg
 endif
 
-PRODUCT_PACKAGES += \
-      UwbOverlayR4
-
 # Bluetooth sepolicy
 include device/google/gs101-sepolicy/raven-sepolicy.mk
 
@@ -111,8 +106,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	$(RELEASE_PACKAGE_NFC_STACK) \
 	Tag \
-	android.hardware.nfc-service.st \
-	NfcOverlayRaven
+	android.hardware.nfc-service.st
 
 # Shared Modem Platform
 SHARED_MODEM_PLATFORM_VENDOR := lassen
@@ -157,16 +151,6 @@ endif
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
-
-# Android DeviceAsWebcam specific overlay
-PRODUCT_PACKAGES += \
-    DeviceAsWebcamRaven
-
-# SKU specific RROs
-PRODUCT_PACKAGES += \
-    SettingsOverlayGF5KQ \
-    SettingsOverlayGLU0G \
-    SettingsOverlayG8V0U
 
 # This device is shipped with 31 (Android S)
 PRODUCT_SHIPPING_API_LEVEL := 31
