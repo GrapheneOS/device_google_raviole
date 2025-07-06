@@ -59,10 +59,6 @@ $(call soong_config_set,lyric,camera_hardware,oriole)
 $(call soong_config_set,lyric,tuning_product,oriole)
 $(call soong_config_set,google3a_config,target_device,oriole)
 
-# Init files
-PRODUCT_COPY_FILES += \
-	device/google/raviole/conf/init.oriole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.oriole.rc
-
 # Recovery files
 PRODUCT_COPY_FILES += \
 	device/google/gs101/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.oriole.rc
